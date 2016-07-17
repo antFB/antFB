@@ -72,10 +72,14 @@ export default class Footer extends React.Component {
             <div>
               <a target="_blank" href="https://github.com/ant-design/antd-init">antd-init</a> - 脚手架
             </div>
+	    <div>
+              <a target="_blank" href="https://github.com/ZhangCheck/antFB-init">antFB-init</a> - 脚手架
+            </div>
             <div>
               <a target="_blank" href="http://ant-tool.github.io">ant-tool</a> - 开发工具
             </div>
           </li>
+
           <li>
             <h2>相关站点</h2>
             <div><a href="https://g2.alipay.com/">G2</a> - 数据可视化</div>

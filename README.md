@@ -1,10 +1,10 @@
 <p align="center">
   <a href="http://ant.design">
-    <img width="320" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg">
+    <img width="320" src="http://www.flashpretty.com/images/icon.svg">
   </a>
 </p>
 
-# Ant Design Extended For FABLE SOFT [![](https://img.shields.io/travis/ant-design/ant-design.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design) [![npm package](https://img.shields.io/npm/v/antd.svg?style=flat-square)](https://www.npmjs.org/package/antd) [![NPM downloads](http://img.shields.io/npm/dm/antd.svg?style=flat-square)](https://npmjs.org/package/antd) [![Dependency Status](https://david-dm.org/ant-design/ant-design.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design) [![Join the chat at https://gitter.im/ant-design/ant-design](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ant-design/ant-design?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# AntFB base on Ant-Design [![](https://img.shields.io/travis/ant-design/ant-design.svg?style=flat-square)](https://travis-ci.org/ZhangCheck/antFB) [![npm package](https://img.shields.io/npm/v/antd.svg?style=flat-square)](https://www.npmjs.org/package/antd) [![NPM downloads](http://img.shields.io/npm/dm/antd.svg?style=flat-square)](https://npmjs.org/package/antd) [![Dependency Status](https://david-dm.org/ant-design/ant-design.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design) [![Join the chat at https://gitter.im/ant-design/ant-design](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ant-design/ant-design?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 An enterprise-class UI design language and React-based implementation Extends for FABLE SOFT.
 
@@ -85,9 +85,8 @@ tsconfig.json
 
 ## Links
 
-- [Home page](http://diy-design.me/n.html?%2Fcheck%2FantFB%2Findex.html&port=8055)
+- [Home page](http://diy-design.me/n.html?%2&port=8001)
 - [Ant Design](http://ant.design)
-- [React UI page](http://diy-design.me/n.html?%2Fcheck%2FantFB%2Findex.html%3F%2F%23%2Fdocs%2Freact%2Fintroduce&port=8055)
 - [ChangeLog](CHANGELOG.md)
 - [Scaffold tool](https://github.com/ant-design/antd-init/)
 - [Development tool](http://ant-tool.github.io/)
@@ -101,4 +100,4 @@ tsconfig.json
 
 ## Contributing
 
-We welcome all contributions, please read our [CONTRIBUTING.md](https://github.com/antFB/antFB/blob/master/.github/CONTRIBUTING.md) first. You can submit any ideas as [pull requests](https://github.com/antFB/antFB/pulls) or as a [GitHub issue](https://github.com/ant-design/ant-design/issues). If you'd like to improve code, check out the [Development Instruction](https://github.com/antFB/antFB/wiki/Development) and have a good time! :)
+We welcome all contributions, please read our [CONTRIBUTING.md](https://github.com/ZhangCheck/antFB/blob/master/.github/CONTRIBUTING.md) first. You can submit any ideas as [pull requests](https://github.com/ZhangCheck/antFB/pulls) or as a [GitHub issue](https://github.com/ZhangCheck/antFB/issues). If you'd like to improve code, check out the [Development Instruction](https://github.com/ZhangCheck/antFB/wiki/Development) and have a good time! :)

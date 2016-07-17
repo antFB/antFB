@@ -68,7 +68,7 @@ import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
 
 ## 链接
 
-- [首页](http://diy-design.me/n.html?%2Fcheck%2FantFB%2Findex.html&port=8055)
+- [首页](http://diy-design.me/n.html?%2&port=8001)
 - [Ant Design](http://ant.design/)
 - [更新日志](/changelog)
 - [开发脚手架](https://github.com/ant-design/antd-init/)

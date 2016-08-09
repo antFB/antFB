@@ -18,7 +18,7 @@ Stable version：
 $ npm install antd --save
 ```
 
-You can Subscribe to this feed for new version notification: https://github.com/ant-design/ant-design/releases.atom
+You can Subscribe to this feed for new version notification: https://github.com/antFB/antFB/releases.atom
 
 
 Beta version：
@@ -29,7 +29,7 @@ Beta version：
 $ npm install antd@beta --save
 ```
 
-> **Past releases**：https://github.com/ant-design/ant-design/releases
+> **Past releases**：https://github.com/antFB/antFB/releases
 
 ## Import in Browser
 

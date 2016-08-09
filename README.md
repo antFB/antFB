@@ -10,7 +10,7 @@ An enterprise-class UI design language and React-based implementation.
 
 ## :loudspeaker: Document Translation Recruitment
 
-We are now working on translate components document to English, and we need some translator and reviewer. https://github.com/ant-design/ant-design/issues/1471
+We are now working on translate components document to English, and we need some translator and reviewer. https://github.com/antFB/antFB/issues/1471
 
 ## Features
 
@@ -94,11 +94,11 @@ tsconfig.json
 - [Mobile UI](http://mobile.ant.design)
 - [React style guide](https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-code-style.md)
 - [React component design guide](https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-design.md)
-- [Developer Instruction](https://github.com/ant-design/ant-design/wiki/Development)
-- [Versioning Release Note](https://github.com/ant-design/ant-design/wiki/%E8%BD%AE%E5%80%BC%E8%A7%84%E5%88%99%E5%92%8C%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B)
-- [FAQ](https://github.com/ant-design/ant-design/wiki/FAQ)
+- [Developer Instruction](https://github.com/antFB/antFB/wiki/Development)
+- [Versioning Release Note](https://github.com/antFB/antFB/wiki/%E8%BD%AE%E5%80%BC%E8%A7%84%E5%88%99%E5%92%8C%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B)
+- [FAQ](https://github.com/antFB/antFB/wiki/FAQ)
 - [CodePen boilerplate](http://codepen.io/anon/pen/wGOWGW?editors=001) for bug reports
 
 ## Contributing
 
-We welcome all contributions, please read our [CONTRIBUTING.md](https://github.com/ant-design/ant-design/blob/master/.github/CONTRIBUTING.md) first. You can submit any ideas as [pull requests](https://github.com/ant-design/ant-design/pulls) or as a [GitHub issue](https://github.com/ant-design/ant-design/issues). If you'd like to improve code, check out the [Development Instruction](https://github.com/ant-design/ant-design/wiki/Development) and have a good time! :)
+We welcome all contributions, please read our [CONTRIBUTING.md](https://github.com/antFB/antFB/blob/master/.github/CONTRIBUTING.md) first. You can submit any ideas as [pull requests](https://github.com/antFB/antFB/pulls) or as a [GitHub issue](https://github.com/antFB/antFB/issues). If you'd like to improve code, check out the [Development Instruction](https://github.com/antFB/antFB/wiki/Development) and have a good time! :)

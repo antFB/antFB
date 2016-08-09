@@ -17,7 +17,7 @@ title: 安装
 $ npm install antd --save
 ```
 
-你可以订阅：https://github.com/ant-design/ant-design/releases.atom 来获得稳定版发布的通知。
+你可以订阅：https://github.com/antFB/antFB/releases.atom 来获得稳定版发布的通知。
 
 开发版本：
 
@@ -27,7 +27,7 @@ $ npm install antd --save
 $ npm install antd@beta --save
 ```
 
-> **历史版本**：https://github.com/ant-design/ant-design/releases
+> **历史版本**：https://github.com/antFB/antFB/releases
 
 
 ## 浏览器引入

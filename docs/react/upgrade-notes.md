@@ -81,7 +81,7 @@ import 'antd/style/index.less';
 
 ### TimePicker locale 结构改变
 
-属性 `locale` 结构发生了 [变化](https://github.com/ant-design/ant-design/commit/fd1312803fd49586ded9af39d923457540c515cc#diff-fe4bfc98d91fc3dab8f391e3258622d4L1)，需要将原有的属性改为现有的[结构](https://github.com/ant-design/ant-design/issues/1270#issuecomment-201181384)。
+属性 `locale` 结构发生了 [变化](https://github.com/antFB/antFB/commit/fd1312803fd49586ded9af39d923457540c515cc#diff-fe4bfc98d91fc3dab8f391e3258622d4L1)，需要将原有的属性改为现有的[结构](https://github.com/antFB/antFB/issues/1270#issuecomment-201181384)。
 
 ### 其他
 
@@ -133,7 +133,7 @@ import 'antd/style/index.less';
 <Tabs size="small"> ... </Tabs>
 ```
 
-详情可参考：https://github.com/ant-design/ant-design/issues/415
+详情可参考：https://github.com/antFB/antFB/issues/415
 
 ### 其他
 
@@ -146,4 +146,4 @@ import 'antd/style/index.less';
 - Slider 的 `withDots` `isIncluded` 属性修改为 `dots` `included`。
 - iconfont 的基线更新，可能导致原有图标的位置偏移。
 
-新版本变化较大，以上升级指南可能有遗漏，全部改动可以参考 [更新日志](/changelog)。在升级过程中遇到问题，欢迎 [报告](https://github.com/ant-design/ant-design/issues/new) 给我们。
+新版本变化较大，以上升级指南可能有遗漏，全部改动可以参考 [更新日志](/changelog)。在升级过程中遇到问题，欢迎 [报告](https://github.com/antFB/antFB/issues/new) 给我们。

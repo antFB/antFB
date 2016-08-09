@@ -66,8 +66,12 @@ export default class Footer extends React.Component {
         <ul>
           <li>
             <h2>GitHub</h2>
+            
             <div>
-              <a target="_blank " href="https://github.com/ant-design/ant-design">仓库</a>
+              <a target="_blank " href="https://github.com/antFB/antFB">AntFB仓库</a>
+            </div>
+            <div>
+              <a target="_blank " href="https://github.com/antFB/antFB">AntDesign仓库</a>
             </div>
             <div>
               <a target="_blank" href="https://github.com/ant-design/antd-init">antd-init</a> - 脚手架
@@ -78,7 +82,8 @@ export default class Footer extends React.Component {
           </li>
           <li>
             <h2>相关站点</h2>
-            <div><a href="http://mobile.ant.design">Ant Design Mobile</a> - 移动版</div>
+            <div><a href="http://diy-design.me/n.html?%2F&port=8002">AntFB Mobile</a> - AntFB移动版</div>
+            <div><a href="http://mobile.ant.design">Ant Design Mobile</a> - AntDesign移动版</div>
             <div><a href="https://g2.alipay.com/">G2</a> - 数据可视化</div>
             <div><a href="https://antv.alipay.com/">AntV</a> - 数据可视化规范</div>
             <div><a href="http://motion.ant.design">Ant Motion</a> - 设计动效</div>
@@ -87,7 +92,7 @@ export default class Footer extends React.Component {
           <li>
             <h2>联系我们</h2>
             <div>
-              <a target="_blank" href="https://github.com/ant-design/ant-design/issues">
+              <a target="_blank" href="https://github.com/antFB/antFB/issues">
                 反馈和建议
               </a>
             </div>
@@ -97,7 +102,7 @@ export default class Footer extends React.Component {
               </a>
             </div>
             <div>
-              <a target="_blank" href="https://github.com/ant-design/ant-design/issues/new">
+              <a target="_blank" href="https://github.com/antFB/antFB/issues/new">
                 报告 Bug
               </a>
             </div>

@@ -12,7 +12,7 @@ export default function Page4() {
         leaveReverse type="bottom"
       >
         <h2 key="h2">微小·确定·幸福</h2>
-        <p key="p">这是一套致力于提升『用户』和『设计者』使用体验的中后台设计语言,基于AntDesign的Fable扩展版。</p>
+        <p key="p">这是一套致力于提升『用户』和『设计者』使用体验的中后台设计语言。</p>
       </QueueAnim>
       <TweenOne key="image" className="image4 bottom-wrapper" animation={{ y: 0, opacity: 1, duration: 550, delay: 550 }}
         style={{ transform: 'translateY(50px)', opacity: 0 }}

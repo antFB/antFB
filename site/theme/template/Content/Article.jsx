@@ -14,11 +14,16 @@ export default class Article extends React.Component {
       return;
     }
     const checkImgUrl = 'http://alipay-rmsdeploy-dev-image.oss-cn-hangzhou-zmf.aliyuncs.com/rmsportal/JdVaTbZzPxEldUi.png';
-    utils.ping(checkImgUrl, status => {
+    this.pingTimer = utils.ping(checkImgUrl, status => {
       if (status === 'responded') {
         links.forEach(link => (link.style.display = 'block'));
+      } else {
+        links.forEach(link => link.parentNode.removeChild(link));
       }
     });
+  }
+  componentWillUnmount() {
+    clearTimeout(this.pingTimer);
   }
   getArticle(article) {
     const { content } = this.props;
@@ -28,13 +33,18 @@ export default class Article extends React.Component {
     }
     const timelineItems = [];
     let temp = [];
-    Children.forEach(article.props.children, (child, i) => {
+    let i = 1;
+    Children.forEach(article.props.children, child => {
       if (child.type === 'h2' && temp.length > 0) {
         timelineItems.push(<Timeline.Item key={i}>{temp}</Timeline.Item>);
         temp = [];
+        i += 1;
       }
       temp.push(child);
     });
+    if (temp.length > 0) {
+      timelineItems.push(<Timeline.Item key={i}>{temp}</Timeline.Item>);
+    }
     return cloneElement(article, {
       children: <Timeline>{timelineItems}</Timeline>,
     });
@@ -45,6 +55,7 @@ export default class Article extends React.Component {
 
     const { meta, description } = content;
     const { title, subtitle, chinese, english } = meta;
+
     return (
       <DocumentTitle title={`${title || chinese || english} - Ant Design`}>
         <article className="markdown">
@@ -62,7 +73,7 @@ export default class Article extends React.Component {
               )
           }
           {
-            !(content.toc && meta.toc) ? null :
+            (!content.toc || content.toc.length <= 1 || meta.toc === false) ? null :
               <section className="toc">{props.utils.toReactComponent(content.toc)}</section>
           }
           {

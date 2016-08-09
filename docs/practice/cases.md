@@ -4,11 +4,11 @@ chinese: 实践案例
 english: Cases
 ---
 
-AntFB 是面向中台的 UI 设计语言, 继承和扩展自[Ant Design](http://ant.design)。
+Ant Design 是面向中台的 UI 设计语言。
 
 从 2015 年 4 月起，Ant Design 在蚂蚁金服中后台产品线迅速推广，对接多条业务线，覆盖系统 40 个以上。定位于中台业务的 Ant Design 兼顾专业和非专业的设计人员，具有学习成本低、上手速度快、实现效果好等特点，并且提供从界面设计到前端开发的全链路生态，可以大大提升设计和开发的效率。
 
-从2016年7月起，Fable基于Ant Design V1.6.5开发和维护AntFB,用于定制公司中前端项目。
+Ant Design 目前在外部也有 [许多产品实践](https://github.com/ant-design/ant-design/issues/477)，如果你的公司和产品从中受益，欢迎留言。
 
 ## 最佳实践
 

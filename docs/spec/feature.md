@@ -3,7 +3,7 @@ order: 1
 english: 三大特性
 ---
 
-与众不同的是，AntFB(Ant Design) 不但追求『用户』的使用体验，还追求『设计者』的使用体验，真真正正贯彻和践行『以人为本』的设计理念。
+与众不同的是，Ant Design 不但追求『用户』的使用体验，还追求『设计者』的使用体验，真真正正贯彻和践行『以人为本』的设计理念。
 
 <div style="margin-left:-40px;margin-right:-40px;overflow:hidden;margin-top:30px;">
   <div class="ant-col-8 features">
@@ -84,7 +84,7 @@ english: 三大特性
 
 ### 通俗而科学的设计原则
 
-详见[『十大原则』](./principle)。
+详见[『十大原则』](/docs/spec/principle)。
 
 ---
 

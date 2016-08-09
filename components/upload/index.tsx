@@ -5,6 +5,8 @@ import getFileItem from './getFileItem';
 import classNames from 'classnames';
 const prefixCls = 'ant-upload';
 import assign from 'object-assign';
+import { UploadProps } from './interface';
+
 function noop() {
 }
 
@@ -26,6 +28,7 @@ function fileToObject(file) {
     error: file.error,
     percent: 0,
     originFileObj: file,
+    status: null,
   };
 }
 
@@ -52,14 +55,17 @@ function genPercentAdd() {
   };
 }
 
+export { UploadProps };
+
 export function Dragger(props) {
-  return <Upload {...props} type="drag" style={{ height: props.height }} />;
+  return <Upload {...props} type="drag" style={{ height: props.height }}/>;
 }
 
-export default class Upload extends React.Component {
+export default class Upload extends React.Component<UploadProps, any> {
   static Dragger = Dragger;
 
   static defaultProps = {
+    prefixCls: 'ant-upload-btn',
     type: 'select',
     // do not set
     // name: '',
@@ -73,6 +79,9 @@ export default class Upload extends React.Component {
     listType: 'text', // or pictrue
     className: '',
   };
+
+  recentUploadStatus: boolean | PromiseLike<any>;
+  progressTimer: any;
 
   constructor(props) {
     super(props);
@@ -106,7 +115,7 @@ export default class Upload extends React.Component {
       fileList: nextFileList,
     });
     // fix ie progress
-    if (!window.FormData) {
+    if (!(window as any).FormData) {
       this.autoUpdateProgress(0, targetItem);
     }
   }
@@ -139,7 +148,8 @@ export default class Upload extends React.Component {
       if (typeof response === 'string') {
         response = JSON.parse(response);
       }
-    } catch (e) { /* do nothing */ }
+    } catch (e) { /* do nothing */
+    }
     let fileList = this.state.fileList;
     let targetItem = getFileItem(file, fileList);
     // removed
@@ -199,9 +209,9 @@ export default class Upload extends React.Component {
   }
 
   handleManualRemove = (file) => {
-    /*eslint-disable */
+    /* eslint-disable */
     file.status = 'removed';
-    /*eslint-enable */
+    /* eslint-enable */
     if ('onRemove' in this.props) {
       this.props.onRemove(file);
     } else {
@@ -246,7 +256,8 @@ export default class Upload extends React.Component {
     let uploadList;
     if (this.props.showUploadList) {
       uploadList = (
-        <UploadList listType={this.props.listType}
+        <UploadList
+          listType={this.props.listType}
           items={this.state.fileList}
           onPreview={props.onPreview}
           onRemove={this.handleManualRemove}
@@ -260,7 +271,8 @@ export default class Upload extends React.Component {
         ? `${prefixCls}-drag-hover` : '';
       return (
         <span className={this.props.className}>
-          <div className={`${prefixCls} ${prefixCls}-drag ${dragUploadingClass} ${draggingClass}`}
+          <div
+            className={`${prefixCls} ${prefixCls}-drag ${dragUploadingClass} ${draggingClass}`}
             onDrop={this.onFileDrop}
             onDragOver={this.onFileDrop}
             onDragLeave={this.onFileDrop}
@@ -286,9 +298,11 @@ export default class Upload extends React.Component {
       ? <div className={uploadButtonCls}><RcUpload {...props} /></div>
       : null;
 
+    const className = this.props.className;
+
     if (this.props.listType === 'picture-card') {
       return (
-        <span className={this.props.className}>
+        <span className={className}>
           {uploadList}
           {uploadButton}
         </span>
@@ -296,7 +310,7 @@ export default class Upload extends React.Component {
     }
 
     return (
-      <span className={this.props.className}>
+      <span className={className}>
         {uploadButton}
         {uploadList}
       </span>

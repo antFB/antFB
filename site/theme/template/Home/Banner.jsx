@@ -21,8 +21,8 @@ export default class Banner extends React.Component {
       <section id="banner">
         <ScrollElement scrollName="banner" className="page">
           <QueueAnim className="banner-text-wrapper" type={this.typeFunc} delay={300}>
-            <h2 key="h2"> <p>AntFB</p> baseon Ant-Design</h2>
-            <p key="content">Fable基于AntDesign的通用库</p>
+            <h2 key="h2">ANT <p>FABLE</p></h2>
+            <p key="content">基于ANT-DESIGN设计语言</p>
             <span className="line" key="line" />
             <div key="button" className="start-button clearfix">
               <Link to="/docs/spec/introduce">
@@ -30,7 +30,7 @@ export default class Banner extends React.Component {
               </Link>
             </div>
             <GitHubButton key="github-button" type="stargazers"
-              namespace="antFB" repo="antFB"
+              namespace="ant-design" repo="ant-design"
             />
           </QueueAnim>
           <Icon type="down" className="down" />

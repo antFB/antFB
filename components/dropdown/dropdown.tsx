@@ -1,6 +1,5 @@
 import * as React from 'react';
 import RcDropdown from 'rc-dropdown';
-import splitObject from '../_util/splitObject';
 
 export default class Dropdown extends React.Component {
   static defaultProps = {
@@ -11,12 +10,6 @@ export default class Dropdown extends React.Component {
   };
 
   render() {
-    const [{ overlay }, others] = splitObject(this.props, ['overlay']);
-    const menu = React.cloneElement(overlay, {
-      openTransitionName: 'zoom-big',
-    });
-    return (
-      <RcDropdown {...others} overlay={menu} />
-    );
+    return <RcDropdown {...this.props} />;
   }
 }

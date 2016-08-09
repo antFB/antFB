@@ -67,21 +67,18 @@ export default class Footer extends React.Component {
           <li>
             <h2>GitHub</h2>
             <div>
-              <a target="_blank " href="https://github.com/ZhangCheck/antFB">仓库</a>
+              <a target="_blank " href="https://github.com/ant-design/ant-design">仓库</a>
             </div>
             <div>
               <a target="_blank" href="https://github.com/ant-design/antd-init">antd-init</a> - 脚手架
-            </div>
-	    <div>
-              <a target="_blank" href="https://github.com/ZhangCheck/antFB-init">antFB-init</a> - 脚手架
             </div>
             <div>
               <a target="_blank" href="http://ant-tool.github.io">ant-tool</a> - 开发工具
             </div>
           </li>
-
           <li>
             <h2>相关站点</h2>
+            <div><a href="http://mobile.ant.design">Ant Design Mobile</a> - 移动版</div>
             <div><a href="https://g2.alipay.com/">G2</a> - 数据可视化</div>
             <div><a href="https://antv.alipay.com/">AntV</a> - 数据可视化规范</div>
             <div><a href="http://motion.ant.design">Ant Motion</a> - 设计动效</div>
@@ -90,7 +87,7 @@ export default class Footer extends React.Component {
           <li>
             <h2>联系我们</h2>
             <div>
-              <a target="_blank" href="https://github.com/ZhangCheck/antFB/issues">
+              <a target="_blank" href="https://github.com/ant-design/ant-design/issues">
                 反馈和建议
               </a>
             </div>
@@ -100,14 +97,13 @@ export default class Footer extends React.Component {
               </a>
             </div>
             <div>
-              <a target="_blank" href="https://github.com/ZhangCheck/antFB/issues/new">
+              <a target="_blank" href="https://github.com/ant-design/ant-design/issues/new">
                 报告 Bug
               </a>
             </div>
           </li>
           <li>
-            <div>©2016 飞博研究院前端组出品 </div>
-	    <div> 源码继承自<a href="https://github.com/ant-design">AntDesign</a></div>
+            <div>©2016 蚂蚁金服体验技术部出品</div>
             <div>Powered by <a href="https://github.com/benjycui/bisheng">BiSheng</a></div>
             <div style={{ marginTop: 10 }}>
               文档版本：

@@ -6,7 +6,7 @@ title: 选择框属性
 配置选择框的默认属性。
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'antFB';
 
 const columns = [{
   title: '姓名',

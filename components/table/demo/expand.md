@@ -6,7 +6,7 @@ title: 可展开
 当表格内容较多不能一次性完全展示时。
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'antFB';
 
 const columns = [
   { title: '姓名', dataIndex: 'name', key: 'name' },

@@ -6,7 +6,7 @@ title: 顶部导航
 水平的顶部导航菜单。
 
 ````jsx
-import { Menu, Icon } from 'antd';
+import { Menu, Icon } from 'antFB';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 

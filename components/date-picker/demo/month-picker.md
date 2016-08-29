@@ -14,7 +14,7 @@ title:
 You can get a month selector by using `MonthPicker`.
 
 ````jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'antFB';
 const MonthPicker = DatePicker.MonthPicker;
 ReactDOM.render(
   <MonthPicker defaultValue="2015-12" />

@@ -14,7 +14,7 @@ title:
 `Collapse` is nested inside the `Accordion`.
 
 ````jsx
-import { Collapse } from 'antd';
+import { Collapse } from 'antFB';
 const Panel = Collapse.Panel;
 
 function callback(key) {

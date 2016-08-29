@@ -12,7 +12,7 @@ title: 迷你型
 Small size can be uesed in Modal.
 
 ````jsx
-import { Tabs } from 'antd';
+import { Tabs } from 'antFB';
 const TabPane = Tabs.TabPane;
 
 ReactDOM.render(

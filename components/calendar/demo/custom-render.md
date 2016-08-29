@@ -14,7 +14,7 @@ title:
 This component can be rendered by using `dateCellRender` and `monthCellRender` with the data you need.
 
 ````jsx
-import { Calendar } from 'antd';
+import { Calendar } from 'antFB';
 
 function dateCellRender(value) {
   return <div>自定义日数据 {value.getDayOfMonth()}</div>;

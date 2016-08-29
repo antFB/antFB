@@ -14,7 +14,7 @@ title: 头像
 Customize suggestions
 
 ````jsx
-import { Mention } from 'antd';
+import { Mention } from 'antFB';
 const Nav = Mention.Nav;
 
 const webFrameworks = [

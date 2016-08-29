@@ -14,7 +14,7 @@ title:
 Raster intervals and often need to cooperate, you can use the `gutter`` Row` property, we recommend using `(16 + 8n) px` as grid spacing.
 
 ````jsx
-import { Row, Col } from 'antd';
+import { Row, Col } from 'antFB';
 
 ReactDOM.render(
   <div className="gutter-example">

@@ -14,7 +14,7 @@ title:
 To set the properties like time zone, language and etc. en_US, zh_CN are supported by default.
 
 ````jsx
-import { Calendar } from 'antd';
+import { Calendar } from 'antFB';
 import enUS from 'antd/lib/calendar/locale/en_US';
 
 function onPanelChange(value, mode) {

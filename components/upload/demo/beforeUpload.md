@@ -8,7 +8,7 @@ title: 限制用户上传的文件
 也支持异步检查，`beforeUpload` 的返回值可以是一个 Promise：[示例](http://react-component.github.io/upload/examples/beforeUpload.html)。
 
 ````jsx
-import { Upload, Button, Icon, message } from 'antd';
+import { Upload, Button, Icon, message } from 'antFB';
 
 const props = {
   action: '/upload.do',

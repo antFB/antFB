@@ -15,7 +15,7 @@ Autocomplete select with search field.
 
 
 ````jsx
-import { Input, Select, Button, Icon } from 'antd';
+import { Input, Select, Button, Icon } from 'antFB';
 import jsonp from 'jsonp';
 import querystring from 'querystring';
 import classNames from 'classnames';

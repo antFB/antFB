@@ -6,7 +6,7 @@ title: 各种类型
 四种颜色的标签。
 
 ````jsx
-import { Tag } from 'antd';
+import { Tag } from 'antFB';
 
 ReactDOM.render(<div>
   <Tag closable color="blue">蓝色</Tag>

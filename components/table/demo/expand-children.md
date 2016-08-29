@@ -8,7 +8,7 @@ title: 树形数据展示
 > 注：暂不支持父子数据递归关联选择。
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'antFB';
 
 const columns = [{
   title: '姓名',

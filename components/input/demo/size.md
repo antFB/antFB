@@ -8,7 +8,7 @@ title: 三种大小
 注意： 在表单里面，我们只使用大尺寸的输入框。
 
 ````jsx
-import { Input } from 'antd';
+import { Input } from 'antFB';
 
 ReactDOM.render(
   <div className="example-input">

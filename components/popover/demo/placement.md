@@ -6,7 +6,7 @@ title: 位置
 位置有十二个方向。
 
 ````jsx
-import { Popover, Button } from 'antd';
+import { Popover, Button } from 'antFB';
 
 const text = <span>标题</span>;
 const content = (

@@ -14,7 +14,7 @@ title:
 Specifies default value by an array.
 
 ````jsx
-import { Cascader } from 'antd';
+import { Cascader } from 'antFB';
 
 const options = [{
   value: 'zhejiang',

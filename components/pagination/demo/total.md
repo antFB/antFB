@@ -14,7 +14,7 @@ title:
 You can show the total number of data by setting `showTotal`.
 
 ````jsx
-import { Pagination, Select } from 'antd';
+import { Pagination, Select } from 'antFB';
 
 ReactDOM.render(
   <Pagination

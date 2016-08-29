@@ -6,7 +6,7 @@ title: 自定义
 自定义关闭按钮的样式和文字。
 
 ````jsx
-import { Button, notification } from 'antd';
+import { Button, notification } from 'antFB';
 
 const close = function () {
   console.log('我被默认的关闭按钮关闭了！');

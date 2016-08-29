@@ -6,7 +6,7 @@ title: 国际化
 设置 `okText` `cancelText` 以自定义按钮文字。
 
 ````jsx
-import { Popconfirm } from 'antd';
+import { Popconfirm } from 'antFB';
 
 ReactDOM.render(
   <Popconfirm title="Are you sure？" okText="Yes" cancelText="No">

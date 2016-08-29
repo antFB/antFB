@@ -15,7 +15,7 @@ A disabled state of the `TimePicker`.
 
 
 ````jsx
-import { TimePicker } from 'antd';
+import { TimePicker } from 'antFB';
 
 ReactDOM.render(
   <TimePicker defaultValue="12:08:23" disabled />

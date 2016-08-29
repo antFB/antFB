@@ -14,7 +14,7 @@ title:
 Provide validation for fllowing input filed: `Select` `Radio` `DatePicker` `InputNumber` `Cascader`. To use `validateFieldsAndScroll` with form validation, it will scroll the form to the failed input field which is not in visible area.
 
 ````jsx
-import { Select, Radio, Checkbox, Button, DatePicker, TimePicker, InputNumber, Form, Cascader, Icon } from 'antd';
+import { Select, Radio, Checkbox, Button, DatePicker, TimePicker, InputNumber, Form, Cascader, Icon } from 'antFB';
 const Option = Select.Option;
 const RadioGroup = Radio.Group;
 const createForm = Form.create;

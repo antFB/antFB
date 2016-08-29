@@ -10,7 +10,7 @@ title: 远程加载数据
 **注意，此示例使用 [模拟接口](https://randomuser.me)，展示数据可能不准确，请打开网络面板查看请求。**
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'antFB';
 import reqwest from 'reqwest';
 
 const columns = [{

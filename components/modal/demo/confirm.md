@@ -6,7 +6,7 @@ title: 确认对话框
 使用 `confirm()` 可以快捷地弹出确认框。
 
 ````jsx
-import { Modal, Button } from 'antd';
+import { Modal, Button } from 'antFB';
 const confirm = Modal.confirm;
 
 function showConfirm() {

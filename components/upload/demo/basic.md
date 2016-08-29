@@ -6,7 +6,7 @@ title: 点击上传
 经典款式，用户点击按钮弹出文件选择框。
 
 ````jsx
-import { Upload, message, Button, Icon } from 'antd';
+import { Upload, message, Button, Icon } from 'antFB';
 
 const props = {
   name: 'file',

@@ -1,11 +1,12 @@
 {
-  "name": "antd",
+  "name": "antFB",
   "version": "1.8.0",
-  "title": "Ant Design",
-  "description": "一个 UI 设计语言",
-  "homepage": "http://ant.design/",
+  "title": "Ant Fable",
+  "description": "Base on Ant Design",
+  "homepage": "http://diy-design.me/n.html?%2F&port=8001",
   "keywords": [
     "ant",
+    "fable",
     "design",
     "react",
     "react-component",
@@ -16,7 +17,7 @@
     "frontend"
   ],
   "contributors": [
-    "ant"
+    "antFB"
   ],
   "repository": {
     "type": "git",
@@ -25,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/antFB/antFB/issues"
   },
-  "main": "dist/antd",
+  "main": "dist/antFB",
   "files": [
     "dist",
     "lib"

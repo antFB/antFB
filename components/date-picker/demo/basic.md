@@ -14,7 +14,7 @@ title:
 The most basic usage.
 
 ````jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'antFB';
 
 function onChange(value, dateString) {
   console.log(value, dateString);

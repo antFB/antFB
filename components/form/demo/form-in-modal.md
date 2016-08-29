@@ -14,7 +14,7 @@ title:
 If you use Form in Modal, when you click the Modal, it could invoke `this.props.form.getFieldsValue` to get values of form.
 
 ````jsx
-import { Button, Form, Input, Modal } from 'antd';
+import { Button, Form, Input, Modal } from 'antFB';
 const createForm = Form.create;
 const FormItem = Form.Item;
 

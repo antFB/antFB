@@ -9,7 +9,7 @@ router 组合的进场与出场动画。
 ````jsx
 const ReactRouter = require('react-router');
 let { Router, Route, Link, hashHistory } = ReactRouter;
-import { QueueAnim, Menu } from 'antd';
+import { QueueAnim, Menu } from 'antFB';
 
 function App(props) {
   const key = props.location.pathname;

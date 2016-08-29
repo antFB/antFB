@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://ant.design">
+  <a href="http://diy-design.me/n.html?%2F&port=8001">
     <img width="320" src="/images/icon.svg">
   </a>
 </p>
@@ -21,27 +21,14 @@ We are now working on translate components document to English, and we need some
 ## Install
 
 ```bash
-npm install antd
+npm install antFB
 ```
 
 ## Usage
 
-### Use prebuilt bundle
-
-```jsx
-import { DatePicker } from 'antd';
-ReactDOM.render(<DatePicker />, mountNode);
-```
-
-And import style manually:
-
-```jsx
-import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
-```
-
 ### Use modularized antd
 
-- Use [babel-plugin-antd](https://github.com/ant-design/babel-plugin-antd) (Recommended)
+- Use [babel-plugin-antd](https://github.com/antFB/babel-plugin-antd) (Recommended)
 
    ```js
    // .babelrc
@@ -54,13 +41,13 @@ import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
 
    ```jsx
    // import js and css modularly, parsed by babel-plugin-antd
-   import { DatePicker } from 'antd';
+   import { DatePicker } from 'antFB';
    ```
 
 - Manually import
 
    ```jsx
-   import DatePicker from 'antd/lib/date-picker';  // just for js
+   import DatePicker from 'antFB/lib/date-picker';  // just for js
    ```
 
 

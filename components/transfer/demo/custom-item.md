@@ -14,7 +14,7 @@ title:
 Custom each Transfer Item, and in this way you can render a complex datasource.
 
 ````jsx
-import { Transfer, Icon } from 'antd';
+import { Transfer, Icon } from 'antFB';
 
 const App = React.createClass({
   getInitialState() {

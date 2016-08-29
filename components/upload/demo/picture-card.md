@@ -6,7 +6,7 @@ title: 图片卡片样式
 上传文件为图片，可展示本地缩略图。
 
 ````jsx
-import { Upload, Icon, Modal } from 'antd';
+import { Upload, Icon, Modal } from 'antFB';
 
 const ImageUploadList = React.createClass({
   getInitialState() {

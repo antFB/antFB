@@ -13,7 +13,7 @@ You can add extra actions to the right of Tabs.
 
 
 ````jsx
-import { Tabs, Button } from 'antd';
+import { Tabs, Button } from 'antFB';
 const TabPane = Tabs.TabPane;
 
 const operations = <Button>Extra Action</Button>;

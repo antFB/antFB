@@ -6,7 +6,7 @@ title: 表单动画进出场
 表单组合的进场与出场动画。
 
 ````jsx
-import { QueueAnim, Button, Radio, Input, Form, Row, Col } from 'antd';
+import { QueueAnim, Button, Radio, Input, Form, Row, Col } from 'antFB';
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
 

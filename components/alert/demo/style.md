@@ -14,7 +14,7 @@ title:
 There are 4 kinds of Alert: `success`, `info`, `warning`, `error`.
 
 ````jsx
-import { Alert } from 'antd';
+import { Alert } from 'antFB';
 
 ReactDOM.render(<div>
   <Alert message="Success Text" type="success" />

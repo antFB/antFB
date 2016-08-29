@@ -14,7 +14,7 @@ title:
 By using `format`, you can customize the format(such as `yyyy/MM/dd`) the date is displayed in. 
 
 ````jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'antFB';
 
 ReactDOM.render(
   <DatePicker defaultValue="2015/01/01" format="yyyy/MM/dd" />

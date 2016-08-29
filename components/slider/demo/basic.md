@@ -14,7 +14,7 @@ title:
 Basic slider. When `range` is `true`, display as dual thumb mode. When `disable` is `true`, the slider will not be interactable.
 
 ````jsx
-import { Slider } from 'antd';
+import { Slider } from 'antFB';
 
 ReactDOM.render(<div>
   <Slider defaultValue={30} />

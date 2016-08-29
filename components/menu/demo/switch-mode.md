@@ -6,7 +6,7 @@ title: 切换菜单类型
 展示动态切换模式。
 
 ````jsx
-import { Menu, Icon, Switch } from 'antd';
+import { Menu, Icon, Switch } from 'antFB';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 

@@ -6,7 +6,7 @@ title: 基本
 最简单的用法。
 
 ````jsx
-import { Popconfirm, message } from 'antd';
+import { Popconfirm, message } from 'antFB';
 
 function confirm() {
   message.success('点击了确定');

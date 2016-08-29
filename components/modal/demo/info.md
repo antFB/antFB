@@ -6,7 +6,7 @@ title: 信息提示
 各种类型的信息提示，只提供一个按钮用于关闭。
 
 ````jsx
-import { Modal, Button } from 'antd';
+import { Modal, Button } from 'antFB';
 
 function info() {
   Modal.info({

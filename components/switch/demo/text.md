@@ -14,7 +14,7 @@ title:
 With text and icon.
 
 ````jsx
-import { Switch, Icon } from 'antd';
+import { Switch, Icon } from 'antFB';
 
 ReactDOM.render(<div>
   <Switch checkedChildren="开" unCheckedChildren="关" />

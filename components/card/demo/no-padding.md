@@ -15,7 +15,7 @@ Customizing default width and margin.
 
 
 ````jsx
-import { Card } from 'antd';
+import { Card } from 'antFB';
 
 ReactDOM.render(
   <Card style={{ width: 240 }} bodyStyle={{ padding: 0 }}>

@@ -14,7 +14,7 @@ title:
 A button is on the left, and a related functional menu is on the right.
 
 ````jsx
-import { Menu, Dropdown } from 'antd';
+import { Menu, Dropdown } from 'antFB';
 const DropdownButton = Dropdown.Button;
 
 function handleButtonClick(e) {

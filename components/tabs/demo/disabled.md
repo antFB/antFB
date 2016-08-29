@@ -12,7 +12,7 @@ title: 禁用
 Disabled a tab.
 
 ````jsx
-import { Tabs } from 'antd';
+import { Tabs } from 'antFB';
 const TabPane = Tabs.TabPane;
 
 ReactDOM.render(

@@ -14,7 +14,7 @@ title: 自定义建议
 Customize suggestions.
 
 ````jsx
-import { Mention } from 'antd';
+import { Mention } from 'antFB';
 const Nav = Mention.Nav;
 
 const webFrameworks = [

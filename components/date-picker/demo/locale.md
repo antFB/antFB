@@ -15,7 +15,7 @@ Use locale to set the properties like time zone, language and etc. en_US, zh_CN 
 
 
 ````jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'antFB';
 import enUS from 'antd/lib/date-picker/locale/en_US';
 
 const customLocale = {

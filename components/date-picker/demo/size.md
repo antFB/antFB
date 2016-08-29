@@ -15,7 +15,7 @@ The input box comes in three sizes. `large` is used in the form, while the mediu
 
 
 ````jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'antFB';
 
 ReactDOM.render(
   <div>

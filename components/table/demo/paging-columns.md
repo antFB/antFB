@@ -7,7 +7,7 @@ hidden: true
 对于列数很多的数据，可以进行横向的分页，通过切换符切换当前展现的列。
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'antFB';
 
 const columns = [
   { title: '姓名', dataIndex: 'name', key: 'name' },

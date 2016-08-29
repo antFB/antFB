@@ -6,7 +6,7 @@ title: 传入已上传的文件
 对已上传的文件进行编辑。
 
 ````jsx
-import { Upload, Button, Icon } from 'antd';
+import { Upload, Button, Icon } from 'antFB';
 
 const props = {
   action: '/upload.do',

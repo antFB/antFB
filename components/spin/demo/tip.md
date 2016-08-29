@@ -14,7 +14,7 @@ title:
 Customize description content, specified tip content will replace the dots in `Spin`.
 
 ````jsx
-import { Spin, Alert } from 'antd';
+import { Spin, Alert } from 'antFB';
 
 ReactDOM.render(
   <Spin tip="正在读取数据...">

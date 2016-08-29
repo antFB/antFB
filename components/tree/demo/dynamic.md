@@ -14,7 +14,7 @@ title:
 To load data asynchronously when click to expand a treeNode.
 
 ````jsx
-import { Tree } from 'antd';
+import { Tree } from 'antFB';
 const TreeNode = Tree.TreeNode;
 
 function generateTreeNodes(treeNode) {

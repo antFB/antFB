@@ -10,7 +10,7 @@ title: 固定列
 > 若列头与内容不对齐，请指定每列宽度 `width`。
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'antFB';
 
 const columns = [
   { title: '姓名', width: 100, dataIndex: 'name', key: 'name', fixed: 'left' },

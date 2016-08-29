@@ -12,7 +12,7 @@ title: 新增和关闭页签
 Only card type Tabs support adding & closeable.
 
 ````jsx
-import { Tabs } from 'antd';
+import { Tabs } from 'antFB';
 const TabPane = Tabs.TabPane;
 
 const Demo = React.createClass({

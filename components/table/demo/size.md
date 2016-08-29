@@ -6,7 +6,7 @@ title: 紧凑型
 紧凑型的列表, 中型列表用于需要数据紧凑展示的情况，小型列表只用于对话框内。
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'antFB';
 
 const columns = [{
   title: '姓名',

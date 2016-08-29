@@ -6,7 +6,7 @@ title: 添加与删除
 场景里有增加或删除条目时也会触发动画。
 
 ````jsx
-import { QueueAnim, Button } from 'antd';
+import { QueueAnim, Button } from 'antFB';
 
 const Test = React.createClass({
   getInitialState() {

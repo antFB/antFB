@@ -14,7 +14,7 @@ title:
 Basic usage.
 
 ````jsx
-import { Carousel } from 'antd';
+import { Carousel } from 'antFB';
 
 function onChange(a, b, c) {
   console.log(a, b, c);

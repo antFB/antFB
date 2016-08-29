@@ -14,7 +14,7 @@ title:
 Use `tipFormatter` to formart content of `Toolip`. If `tipFormatter` is null, hide it. 
 
 ````jsx
-import { Slider } from 'antd';
+import { Slider } from 'antFB';
 
 function formatter(value) {
   return `${value}%`;

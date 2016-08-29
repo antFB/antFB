@@ -6,7 +6,7 @@ title: 不可用
 点击按钮切换可用状态。
 
 ````jsx
-import { InputNumber, Button } from 'antd';
+import { InputNumber, Button } from 'antFB';
 
 const Test = React.createClass({
   getInitialState() {

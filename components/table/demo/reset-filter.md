@@ -12,7 +12,7 @@ title: 重置筛选和排序
 > 3. 务必指定 `column.key`。
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'antFB';
 
 const data = [{
   key: '1',

@@ -6,7 +6,7 @@ title: 小数
 和原生的数字输入框一样，value 的精度由 step 的小数位数决定。
 
 ````jsx
-import { InputNumber } from 'antd';
+import { InputNumber } from 'antFB';
 
 function onChange(value) {
   console.log('changed', value);

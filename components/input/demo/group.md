@@ -6,7 +6,7 @@ title: 输入框组合
 输入框的组合展现。
 
 ````jsx
-import { Input, Col } from 'antd';
+import { Input, Col } from 'antFB';
 const InputGroup = Input.Group;
 
 ReactDOM.render(

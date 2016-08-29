@@ -14,7 +14,7 @@ title:
 There are three kinds of combination, large medium and small. It can coordinate with input box.
 
 ```jsx
-import { Radio } from 'antd';
+import { Radio } from 'antFB';
 const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
 

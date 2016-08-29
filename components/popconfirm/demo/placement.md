@@ -6,7 +6,7 @@ title: 位置
 位置有十二个方向。
 
 ````jsx
-import { Popconfirm, message, Button } from 'antd';
+import { Popconfirm, message, Button } from 'antFB';
 
 const text = '确定要删除这个任务吗？';
 

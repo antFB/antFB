@@ -6,7 +6,7 @@ title: 基本
 第一个对话框。
 
 ````jsx
-import { Modal, Button } from 'antd';
+import { Modal, Button } from 'antFB';
 
 const App = React.createClass({
   getInitialState() {

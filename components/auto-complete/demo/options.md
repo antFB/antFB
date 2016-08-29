@@ -15,7 +15,7 @@ Items in dataSource could be an `AutoComplete.Option`.
 
 
 ````jsx
-import { AutoComplete } from 'antd';
+import { AutoComplete } from 'antFB';
 const Option = AutoComplete.Option;
 
 const Complete = React.createClass({

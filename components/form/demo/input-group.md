@@ -14,7 +14,7 @@ title:
 Input group of different type input controls.
 
 ````jsx
-import { Form, Input, Select, Col } from 'antd';
+import { Form, Input, Select, Col } from 'antFB';
 const FormItem = Form.Item;
 const InputGroup = Input.Group;
 const Option = Select.Option;

@@ -14,7 +14,7 @@ title:
 How to use `Form.create` to get and update values of form.
 
 ````jsx
-import { Form, Input, Button, Checkbox, Radio, Tooltip, Icon } from 'antd';
+import { Form, Input, Button, Checkbox, Radio, Tooltip, Icon } from 'antFB';
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
 

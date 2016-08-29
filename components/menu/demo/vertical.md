@@ -6,7 +6,7 @@ title: 垂直菜单
 子菜单是弹出的形式。
 
 ````jsx
-import { Menu, Icon } from 'antd';
+import { Menu, Icon } from 'antFB';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 

@@ -6,7 +6,7 @@ title: 边框，页头和页脚
 添加表格边框线，页头和页脚。
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'antFB';
 
 const columns = [{
   title: '姓名',

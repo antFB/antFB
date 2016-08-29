@@ -6,7 +6,7 @@ title: 基本用法
 简单的 checkbox。
 
 ````jsx
-import { Checkbox } from 'antd';
+import { Checkbox } from 'antFB';
 
 function onChange(e) {
   console.log(`checked = ${e.target.checked}`);

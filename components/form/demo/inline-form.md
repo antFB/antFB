@@ -14,7 +14,7 @@ title:
 Inline form is often used for login. 
 
 ````jsx
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Checkbox } from 'antFB';
 const FormItem = Form.Item;
 
 let Demo = React.createClass({

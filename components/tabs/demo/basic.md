@@ -12,7 +12,7 @@ title: 基本
 Default activate first tab.
 
 ````jsx
-import { Tabs } from 'antd';
+import { Tabs } from 'antFB';
 const TabPane = Tabs.TabPane;
 
 function callback(key) {

@@ -6,7 +6,7 @@ title: 选择和操作
 选择后进行操作，完成后清空选择，通过 `rowSelection.selectedRowKeys` 来控制选中项。
 
 ````jsx
-import { Table, Button } from 'antd';
+import { Table, Button } from 'antFB';
 
 const columns = [{
   title: '姓名',

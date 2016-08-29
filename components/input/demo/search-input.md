@@ -6,7 +6,7 @@ title: 搜索框
 带有搜索按钮的输入框。
 
 ````jsx
-import { Input, Button } from 'antd';
+import { Input, Button } from 'antFB';
 import classNames from 'classnames';
 const InputGroup = Input.Group;
 

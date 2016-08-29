@@ -6,7 +6,7 @@ title: 基本
 数字输入框。
 
 ````jsx
-import { InputNumber } from 'antd';
+import { InputNumber } from 'antFB';
 
 function onChange(value) {
   console.log('changed', value);

@@ -6,7 +6,7 @@ title: 加载中的表格
 用属性 `loading` 控制表格加载中状态。
 
 ````jsx
-import { Table, Button } from 'antd';
+import { Table, Button } from 'antFB';
 
 const columns = [{
   title: '姓名',

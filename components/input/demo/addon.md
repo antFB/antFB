@@ -6,7 +6,7 @@ title: 前置/后置标签
 用于配置一些固定组合。
 
 ````jsx
-import { Input, Select } from 'antd';
+import { Input, Select } from 'antFB';
 const Option = Select.Option;
 
 const selectBefore = (

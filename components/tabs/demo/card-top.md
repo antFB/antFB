@@ -11,7 +11,7 @@ title: 卡片式页签容器
 Should be used at the top of container, needs to override styles.
 
 ````jsx
-import { Tabs } from 'antd';
+import { Tabs } from 'antFB';
 const TabPane = Tabs.TabPane;
 
 ReactDOM.render(

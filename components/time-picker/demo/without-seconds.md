@@ -14,7 +14,7 @@ title:
 The `seconds` options are hidden and cannot be selected.
 
 ````jsx
-import { TimePicker } from 'antd';
+import { TimePicker } from 'antFB';
 
 ReactDOM.render(
   <TimePicker defaultValue="12:08:23" format="HH:mm" />

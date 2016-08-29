@@ -1,10 +1,10 @@
 <p align="center">
   <a href="http://diy-design.me/n.html?%2F&port=8001">
-    <img width="320" src="/images/icon.svg">
+    <img width="320" src="http://diy-design.me/n.html?%2Fimages%2Ficon.svg&port=8001">
   </a>
 </p>
 
-# Ant Design [![](https://img.shields.io/travis/ant-design/ant-design.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design) [![npm package](https://img.shields.io/npm/v/antd.svg?style=flat-square)](https://www.npmjs.org/package/antd) [![NPM downloads](http://img.shields.io/npm/dm/antd.svg?style=flat-square)](https://npmjs.org/package/antd) [![Dependency Status](https://david-dm.org/ant-design/ant-design.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design) [![Join the chat at https://gitter.im/ant-design/ant-design](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ant-design/ant-design?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# Ant Fable 
 
 An enterprise-class UI design language and React-based implementation.
 
@@ -26,9 +26,9 @@ npm install antFB
 
 ## Usage
 
-### Use modularized antd
+### Use modularized antFB
 
-- Use [babel-plugin-antd](https://github.com/antFB/babel-plugin-antd) (Recommended)
+- Use [babel-plugin-antd](https://github.com/ant-design/babel-plugin-antd) (Recommended)
 
    ```js
    // .babelrc
@@ -55,6 +55,11 @@ npm install antFB
 
 Normal browsers and Internet Explorer 8+.
 
+use antFB-init for ie8 project;
+npm install antFB-init
+mkdir demoIe8 & cd demoIe8
+antFB-init --ie8
+
 > [IE8 issues](https://github.com/xcatliu/react-ie8)
 
 ## TypeScript
@@ -72,13 +77,14 @@ tsconfig.json
 
 ## Links
 
-- [Home page](http://ant.design/)
-- [React UI page](http://ant.design/#/docs/react/introduce)
+- [Home page](http://diy-design.me/n.html?%2F&port=8001)
+- [Ant Design](http://ant.design)
+- [React UI page](http://diy-design.me/n.html?%2F&port=8001/#/docs/react/introduce)
 - [ChangeLog](CHANGELOG.md)
-- [Scaffold tool](https://github.com/ant-design/antd-init/)
+- [Scaffold tool](https://github.com/antFB/antFB-init/)
 - [Development tool](http://ant-tool.github.io/)
 - [React components](http://react-component.github.io/)
-- [Mobile UI](http://mobile.ant.design)
+- [Mobile UI](http://diy-design.me/n.html?%2F&port=8002)
 - [React style guide](https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-code-style.md)
 - [React component design guide](https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-design.md)
 - [Developer Instruction](https://github.com/antFB/antFB/wiki/Development)

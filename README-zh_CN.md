@@ -1,12 +1,12 @@
 <p align="center">
-  <a href="http://ant.design">
-    <img width="320" src="images/icon.svg">
+  <a href="http://diy-design.me/n.html?%2F&port=8001">
+    <img width="320" src="http://diy-design.me/n.html?%2Fimages%2Ficon.svg&port=8001">
   </a>
 </p>
 
-# Ant Design [![](/images/icon.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design) [![npm package](https://img.shields.io/npm/v/antd.svg?style=flat-square)](https://www.npmjs.org/package/antd) [![NPM downloads](http://img.shields.io/npm/dm/antd.svg?style=flat-square)](https://npmjs.org/package/antd) [![Dependency Status](https://david-dm.org/ant-design/ant-design.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design) [![Join the chat at https://gitter.im/ant-design/ant-design](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ant-design/ant-design?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# Ant Fable
 
-一套企业级的 UI 设计语言和 React 实现。
+一套企业级的 UI 设计语言和 React 实现, 基于ant-design。
 
 ## 特性
 
@@ -17,13 +17,13 @@
 ## 安装
 
 ```bash
-npm install antd
+npm install antFB
 ```
 
 ## 示例
 
 ```jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'antFB';
 ReactDOM.render(<DatePicker />, mountNode);
 ```
 
@@ -40,6 +40,11 @@ import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
 
 现代浏览器和 IE8 及以上。
 
+使用 antFB-init 快速构建 ie8 项目;
+npm install antFB-init
+mkdir demoIe8 & cd demoIe8
+antFB-init --ie8
+
 > [IE8 issues](https://github.com/xcatliu/react-ie8)
 
 ## TypeScript
@@ -51,13 +56,14 @@ import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
 
 ## 链接
 
-- [首页](http://ant.design/)
-- [React 实现](http://ant.design/#/docs/react/introduce)
+- [首页](http://diy-design.me/n.html?%2F&port=8001)
+- [ant-design](http://ant.design)
+- [React 实现](http://diy-design.me/n.html?%2F&port=8001/#/docs/react/introduce)
 - [修改记录](CHANGELOG.md)
-- [开发脚手架](https://github.com/ant-design/antd-init/)
+- [开发脚手架](https://github.com/antFB/antFB-init/)
 - [开发工具文档](http://ant-tool.github.io/)
 - [React 基础组件](http://react-component.github.io/)
-- [移动端组件](http://mobile.ant.design)
+- [移动端组件](http://diy-design.me/n.html?%2F&port=8002)
 - [React 代码规范](https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-code-style.md)
 - [组件设计原则](https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-design.md)
 - [网站和组件开发说明](https://github.com/antFB/antFB/wiki/%E7%BD%91%E7%AB%99%E5%92%8C%E7%BB%84%E4%BB%B6%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E)

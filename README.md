@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://diy-design.me/n.html?%2F&port=8001">
-    <img width="320" src="http://diy-design.me/n.html?%2Fimages%2Ficon.svg&port=8001">
+    <img width="320" src="images/icon.svg">
   </a>
 </p>
 
@@ -55,10 +55,13 @@ npm install antFB
 
 Normal browsers and Internet Explorer 8+.
 
-use antFB-init for ie8 project;
+use antFB-init for ie8 project:
+
+```
 npm install antFB-init
 mkdir demoIe8 & cd demoIe8
 antFB-init --ie8
+```
 
 > [IE8 issues](https://github.com/xcatliu/react-ie8)
 

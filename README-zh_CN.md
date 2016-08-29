@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://diy-design.me/n.html?%2F&port=8001">
-    <img width="320" src="http://diy-design.me/n.html?%2Fimages%2Ficon.svg&port=8001">
+    <img width="320" src="images/icon.svg">
   </a>
 </p>
 
@@ -40,10 +40,13 @@ import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
 
 现代浏览器和 IE8 及以上。
 
-使用 antFB-init 快速构建 ie8 项目;
+使用 antFB-init 快速构建 ie8 项目:
+
+```
 npm install antFB-init
 mkdir demoIe8 & cd demoIe8
 antFB-init --ie8
+```
 
 > [IE8 issues](https://github.com/xcatliu/react-ie8)
 

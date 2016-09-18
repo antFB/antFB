@@ -1,6 +1,6 @@
 ---
 order: 2
-title: 
+title:
   zh-CN: 自定义选项
   en-US: Customized
 ---
@@ -15,7 +15,8 @@ Items in dataSource could be an `AutoComplete.Option`.
 
 
 ````jsx
-import { AutoComplete } from 'antFB';
+import { AutoComplete } from 'antd';
+
 const Option = AutoComplete.Option;
 
 const Complete = React.createClass({

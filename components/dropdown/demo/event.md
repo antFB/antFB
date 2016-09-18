@@ -14,7 +14,7 @@ title:
 An event will be triggered when you click menu items, in which you can make different operations according to item's key.
 
 ````jsx
-import { Menu, Dropdown, Icon } from 'antFB';
+import { Menu, Dropdown, Icon } from 'antd';
 const onClick = function ({ key }) {
   console.log(`点击了菜单${key}`);
 };

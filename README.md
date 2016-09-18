@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="http://diy-design.me/n.html?%2F&port=8001">
-    <img width="320" src="images/icon.svg">
+  <a href="http://ant.design">
+    <img width="320" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg">
   </a>
 </p>
 
-# Ant Fable 
+# Ant Fable [![](https://img.shields.io/travis/ant-design/ant-design.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design) [![npm package](https://img.shields.io/npm/v/antd.svg?style=flat-square)](https://www.npmjs.org/package/antd) [![NPM downloads](http://img.shields.io/npm/dm/antd.svg?style=flat-square)](https://npmjs.org/package/antd) [![Dependency Status](https://david-dm.org/ant-design/ant-design.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design) [![Join the chat at https://gitter.im/ant-design/ant-design](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ant-design/ant-design?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 An enterprise-class UI design language and React-based implementation.
 
@@ -19,64 +19,26 @@ We are now working on translate components document to English, and we need some
 - A npm + webpack + babel + dora [workflow](http://ant-tool.github.io/index.html).
 
 ## Install
-
 ```bash
-npm install antFB
+npm install antFB-init -g
+antFB-init --ie8
+npm start
 ```
 
 ## Usage
 
-### Use modularized antFB
+### Use prebuilt bundle
 
-- Use [babel-plugin-antd](https://github.com/ant-design/babel-plugin-antd) (Recommended)
-
-   ```js
-   // .babelrc
-   {
-     "plugins": [["antd", { style: "css" }]]
-   }
-   ```
-
-   Then you can import components from antd directly.
-
-   ```jsx
-   // import js and css modularly, parsed by babel-plugin-antd
-   import { DatePicker } from 'antFB';
-   ```
-
-- Manually import
-
-   ```jsx
-   import DatePicker from 'antFB/lib/date-picker';  // just for js
-   ```
-
+```jsx
+import { DatePicker } from 'antFB';
+ReactDOM.render(<DatePicker />, mountNode);
+```
 
 ## Browser Support
 
 Normal browsers and Internet Explorer 8+.
 
-use antFB-init for ie8 project:
-
-```
-npm install antFB-init
-mkdir demoIe8 & cd demoIe8
-antFB-init --ie8
-```
-
 > [IE8 issues](https://github.com/xcatliu/react-ie8)
-
-## TypeScript
-
-tsconfig.json
-
-```
-{
-  "compilerOptions": {
-    "moduleResolution": "node",
-    "jsx": "preserve"
-  }
-}
-```
 
 ## Links
 

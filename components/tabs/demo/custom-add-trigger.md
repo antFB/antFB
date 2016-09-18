@@ -1,6 +1,8 @@
 ---
 order: 11
-title: 自定义新增页签触发器
+title: 
+  zh-CN: 自定义新增页签触发器
+  en-US: Customized trigger of new tab
 ---
 ## zh-CN
 
@@ -12,7 +14,7 @@ Hide default plus icon, and bind event for customized trigger.
 
 
 ````jsx
-import { Tabs, Button } from 'antFB';
+import { Tabs, Button } from 'antd';
 const TabPane = Tabs.TabPane;
 
 const Demo = React.createClass({

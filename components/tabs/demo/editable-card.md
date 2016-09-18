@@ -1,6 +1,8 @@
 ---
 order: 9
-title: 新增和关闭页签
+title:
+  zh-CN: 新增和关闭页签
+  en-US: Add & close tab
 ---
 
 ## zh-CN
@@ -12,7 +14,7 @@ title: 新增和关闭页签
 Only card type Tabs support adding & closeable.
 
 ````jsx
-import { Tabs } from 'antFB';
+import { Tabs } from 'antd';
 const TabPane = Tabs.TabPane;
 
 const Demo = React.createClass({

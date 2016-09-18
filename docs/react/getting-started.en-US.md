@@ -3,11 +3,11 @@ order: 1
 title: Getting Started
 ---
 
-Ant Design React is dedicated to providing a **good development experience** for programmers.
+Ant Fable React is dedicated to providing a **good development experience** for programmers.
 
 ---
 
-Before delving into Ant Design React, a good knowledge of [React](http://facebook.github.io/react/) and [JavaScript ES2015](http://babeljs.io/docs/learn-es2015/) is needed.
+Before delving into Ant Fable React, a good knowledge of [React](http://facebook.github.io/react/) and [JavaScript ES2015](http://babeljs.io/docs/learn-es2015/) is needed.
 
 ## First Example
 
@@ -29,7 +29,7 @@ Such features, together with packaging the production version are covered in thi
 $ npm install antd-init -g
 ```
 
-Read [the documentation of `antd-init`](https://github.com/ant-design/antd-init/) and [the documentation of `ant-tool`](http://ant-tool.github.io/) to explore more features.
+Read [the documentation of `antd-init`](https://github.com/antFB/antFB-init/) and [the documentation of `ant-tool`](http://ant-tool.github.io/) to explore more features.
 
 > Also, you can use scaffold/demo which is provided by community:
 >
@@ -44,13 +44,13 @@ Read [the documentation of `antd-init`](https://github.com/ant-design/antd-init/
 A new project can be created using CLI tools.
 
 ```bash
-$ mkdir antd-demo && cd antd-demo
-$ antd-init --type plain-react
+$ mkdir antFB-demo && cd antFB-demo
+$ antFB-init --ie8
 ```
 
-`antd-init` will run `npm install` after a project is created. If it fails, you can run `npm install` by yourself.
+`antFB-init` will run `npm install` after a project is created. If it fails, you can run `npm install` by yourself.
 
-### 3. Use antd's Components
+### 3. Use antFB's Components
 
 By default, besides the scaffolding needed to start the development, a fully working Todo application is created.
 You may study this example later. For now, just follow this guide in order to get some experience working with the result of `antd-init`.
@@ -61,7 +61,7 @@ As you can see, there is no difference between antd's components and usual React
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { DatePicker, message } from 'antd';
+import { DatePicker, message } from 'antFB';
 
 class App extends React.Component {
   constructor(props) {
@@ -110,7 +110,7 @@ Entry files will be built and generated in `dist` directory, then we can deploy 
 
 ## Compatibility
 
-Ant Design React supports all the modern browsers and IE8+.
+Ant Fable React supports all the modern browsers and IE8+.
 
 But we need to provide [es5-shim](https://facebook.github.io/react/docs/working-with-the-browser.html#browser-support) and other polyfills for IE8/9, and [babel-polyfill](https://babeljs.io/docs/usage/polyfill/) is a better choice. What's more, use [react@0.14.x](https://facebook.github.io/react/blog/2016/01/12/discontinuing-ie8-support.html) to support IE8.
 
@@ -137,7 +137,7 @@ But we need to provide [es5-shim](https://facebook.github.io/react/docs/working-
 
 You may encounter problems like [#28](https://github.com/ant-tool/atool-build/issues/28) and [#858](https://github.com/antFB/antFB/issues/858), since `babel@6.x` doesn't support IE8.
 
-[antd-init](http://github.com/ant-design/antd-init) had solved those problems and you can refer to this [webpack config](https://github.com/ant-design/antd-init/blob/f5fb9479ca973fade51fd6754e50f8b3fafbb1df/boilerplate/webpack.config.js#L4-L8).
+[antFB-init](https://github.com/antFB/antFB-init/) had solved those problems and you can refer to this [webpack config](https://github.com/antFB/antFB-init/blob/f5fb9479ca973fade51fd6754e50f8b3fafbb1df/boilerplate/webpack.config.js#L4-L8).
 
 > More about how to use React in IE8: https://github.com/xcatliu/react-ie8
 
@@ -167,8 +167,8 @@ And this plugin can also load styles on demand. See the [usage](https://github.c
 
 ## Customization
 
-- [Customize Theme](https://github.com/ant-design/antd-init/tree/master/examples/customize-antd-theme)
-- [Local Iconfont](https://github.com/ant-design/antd-init/tree/master/examples/local-iconfont)
+- [Customize Theme](https://github.com/antFB/antFB-init/tree/master/examples/customize-antd-theme)
+- [Local Iconfont](https://github.com/antFB/antFB-init/tree/master/examples/local-iconfont)
 
 ## Tips
 

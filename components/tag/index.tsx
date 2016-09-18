@@ -1,10 +1,10 @@
 import * as React from 'react';
-import ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom';
 import Animate from 'rc-animate';
 import Icon from '../icon';
 import classNames from 'classnames';
 import splitObject from '../_util/splitObject';
-import omit from 'object.omit';
+import omit from 'omit.js';
 
 export interface TagProps {
   /** 标签是否可以关闭 */
@@ -40,7 +40,7 @@ export default class Tag extends React.Component<TagProps, any> {
     if (e.defaultPrevented) {
       return;
     }
-    const dom = ReactDOM.findDOMNode(this);
+    const dom = ReactDOM.findDOMNode(this) as HTMLElement;
     dom.style.width = `${dom.getBoundingClientRect().width}px`;
     // It's Magic Code, don't know why
     dom.style.width = `${dom.getBoundingClientRect().width}px`;

@@ -9,32 +9,87 @@ timeline: true
 
 ---
 
+## 1.11.1
+
+`2016-09-14`
+
+- 修复 Menu 设置成 `theme=dark` 后，链接点击无效的问题。[#2929](https://github.com/antFB/antFB/issues/2929)
+- 修复迷你型 Table 表头与内容不对齐的问题。[#2933](https://github.com/antFB/antFB/issues/2933)
+- 修复 Cascader hover 样式。[#3015](https://github.com/antFB/antFB/issues/3015)
+- 修复 Upload 上传多个文件时，`onChange` 调用不正确的问题。[#3001](https://github.com/antFB/antFB/issues/3001)
+- 修复 TimePicker 报错样式的问题。[#2973](https://github.com/antFB/antFB/issues/2973)
+- 修复 Calendar 控件的年度选择下拉内容截断的问题。[#2927](https://github.com/antFB/antFB/issues/2927)
+
+## 1.11.0
+
+`2016-09-01`
+
+- `Tooltip` `Popover` `Popconfirm` 修正默认对齐方式为边缘对齐，增加 arrowPointAtCenter 属性用于箭头指向中心的行为。[commit 977e2e3](https://github.com/antFB/antFB/commit/977e2e32fc40968846c8201ed72bdc3818375d2f)
+- `Table`
+  - 移除数据中添加的 `indexForSort`。[#2501](https://github.com/antFB/antFB/issues/2501)
+  - 修复 `pagination` 属性中 `defaultPageSize` 不生效的问题。[#2874](https://github.com/antFB/antFB/issues/2874)
+  - 修复数据为空时固定列出现重复提示的问题。[#2812](https://github.com/antFB/antFB/issues/2812)
+  - 给树形子数据增加排序功能。[#2839](https://github.com/antFB/antFB/issues/2839)
+- `InputNumber` 样式问题修复。[#2876](https://github.com/antFB/antFB/issues/2876)
+- 修复手动导入 less 文件时 input error 样式被 focus 样式覆盖的问题。[#2916](https://github.com/antFB/antFB/issues/2916)
+- index.d.ts 中补充了一些缺失的声明，修复 `Form` 中 typescript 语法检查报错的问题。[#2885](https://github.com/antFB/antFB/issues/2885)
+- 升级 react-slick 依赖到 `0.13`。
+
+## 1.10.0
+
+`2016-08-20`
+
+- Affix 和 BackTop 新增 `target` 属性，支持指定滚动容器。[#2718](https://github.com/antFB/antFB/issues/2718)
+- 文档页面加上编辑按钮，方便社区贡献。[#2325](https://github.com/antFB/antFB/issues/2325)
+- 升级 rc-cascader 依赖，修复一个 `loadData` 属性和表单结合使用的问题。[#2767](https://github.com/antFB/antFB/issues/2767)
+- 修复 `editable-card` 类型的 Tabs 没有关闭图标的问题。[#2747](https://github.com/antFB/antFB/issues/2747)
+- Menu 修正默认 `z-index`。[#2762](https://github.com/antFB/antFB/issues/2762)
+- 修正 Select 组件在 IE 下的一些样式问题。[#2741](https://github.com/antFB/antFB/issues/2741)
+
+## 1.9.1
+
+`2016-08-16`
+
+- 修复 `editable-card` 类型的 Tabs 设置 `activeKey` 无效的问题。[#2725](https://github.com/antFB/antFB/issues/2725)
+- 修复一个 Table 的样式兼容性问题。[#2723](https://github.com/antFB/antFB/issues/2723)
+- 更新 axure 部件库。[#2714](https://github.com/antFB/antFB/issues/2714)
+
+## 1.9.0
+
+`2016-08-15`
+
+- Transfer 修复在火狐下 item 文案过长时只显示省略号的问题。[#2674](https://github.com/antFB/antFB/issues/2674)
+- Input 修复 `autosize` 模式下特定场景中不能输入中文及光标定位不准的问题。[#2666](https://github.com/antFB/antFB/issues/2666) [#2239](https://github.com/antFB/antFB/issues/2239)
+- Tabs 修复 `type="editable-card"` 模式下的 `children` 解析问题。[#2658](https://github.com/antFB/antFB/issues/2658)
+- Radio 修复若干 less 硬编码问题。[#2424](https://github.com/antFB/antFB/issues/2424)
+- Upload 的 rc-upload 依赖升级至 2.x，引入的变化有：
+  - 增加 `disabled` 属性。[#2645](https://github.com/antFB/antFB/issues/2645)
+  - 取消上传时会自动 abort 上传请求。[#2571](https://github.com/antFB/antFB/issues/2571) [#2518](https://github.com/antFB/antFB/issues/2518)
+- Table
+  - 修复 spin 在可滚动区域的定位问题。[#2652](https://github.com/antFB/antFB/issues/2652)
+  - 修复无数据时 提示样式错位的问题。[#2663](https://github.com/antFB/antFB/issues/2663)
+- Popover 修复设定 `getTooltipContainer` 后会导致内嵌 DatePicker 样式失效的问题。[#2675](https://github.com/antFB/antFB/issues/2675)
+- Modal 修复重复卸载组件导致的报错。[#2688](https://github.com/antFB/antFB/issues/2688)
+-  升级 rc-slider 组件依赖。
+
 ## 1.8.0
 
 `2016-08-08`
 
-- Tabs
-  - 修复可关闭 Tabs 组件只有一个 Tab 的时候报错的问题。[#2559](https://github.com/antFB/antFB/issues/2559)
-- Datepicker
-  - 修复 IE8 下关闭图标。[#2584](https://github.com/antFB/antFB/issues/2584)
-- Tags
-  - 支持自定义标签颜色。[#2585](https://github.com/antFB/antFB/issues/2585)
-- TreeSelect
-  - 修复未找到内容时的样式。[9cee9f](https://github.com/antFB/antFB/commit/9cee9f103a4729572358206c81cba84e2fdc20f5)
-- Modal
-  - 适配小屏幕。[#2597](https://github.com/antFB/antFB/issues/2597)
-- Layout
-  - 修复了 Row 组件在同一行闭合会报错的问题。[#2603](https://github.com/antFB/antFB/issues/2603)
-- Table
-  - `rowSelection.onChange` 的参数 `selectedRows` 现在和 `selectedRowKeys` 保持一致。[#2566](https://github.com/antFB/antFB/issues/2603)
-- Checkbox
-  - 支持了 `onClick` 事件。
+- 修复可关闭 Tabs 组件只有一个 Tab 的时候报错的问题。[#2559](https://github.com/antFB/antFB/issues/2559)
+- 修复 Datepicker 在 IE8 下关闭图标。[#2584](https://github.com/antFB/antFB/issues/2584)
+- Tags 支持自定义标签颜色。[#2585](https://github.com/antFB/antFB/issues/2585)
+- TreeSelect 修复未找到内容时的样式。[9cee9f](https://github.com/antFB/antFB/commit/9cee9f103a4729572358206c81cba84e2fdc20f5)
+- Modal 适配小屏幕。[#2597](https://github.com/antFB/antFB/issues/2597)
+- 修复了 Row 组件在同一行闭合会报错的问题。[#2603](https://github.com/antFB/antFB/issues/2603)
+- Table 的 `rowSelection.onChange` 的参数 `selectedRows` 现在和 `selectedRowKeys` 保持一致。[#2566](https://github.com/antFB/antFB/issues/2603)
+- Checkbox 和 Radio 现在支持 `onClick` 属性。
 
 ## 1.7.0
 
 `2016-07-30`
 
-友情提示 [Ant Design Mobile](http://mobile.ant.design) 已经发布。
+友情提示 [Ant Fable Mobile](http://mobile.ant.design) 已经发布。
 
 - Table
   - 现可以定义页头。[demo](http://ant.design/components/table#components-table-demo-bordered)
@@ -231,7 +286,7 @@ timeline: true
 - 修复 Select combobox 模式下无法重置 `optionLabelProp` 的问题。[#1773](https://github.com/antFB/antFB/issues/1773)
 - 修复了 Tag 组件为 closeable 时，内部链接无法点击的问题 [#1862](https://github.com/antFB/antFB/issues/1862)
 - Tab 组件新增 `hideAdd` 属性，用于关闭右边的添加按钮 [#1750](https://github.com/antFB/antFB/issues/1750)
-- 修复了一个在某些情况下找不到 `normalize.css/normalize.css` 文件的问题。[ant-design/antd-init#52](https://github.com/ant-design/antd-init/issues/52)
+- 修复了一个在某些情况下找不到 `normalize.css/normalize.css` 文件的问题。[ant-design/antd-init#52](https://github.com/antFB/antFB-init/issues/52)
 - 修复构建文件在 IE8 下报错的问题。[#1804](https://github.com/antFB/antFB/issues/1804)
 - 更新了第三方依赖。
 
@@ -310,7 +365,7 @@ timeline: true
 
 这里的改动在升级后控制台会出现警告提示，请按提示进行修改。
 
-- 废弃 QueueAnim，可以直接 import [rc-queue-anim](https://github.com/react-component/queue-anim) 用以代替。Ant Design 的动效方案已移至 [Ant Motion](http://motion.ant.design/components/queue-anim)，欢迎前往探索。
+- 废弃 QueueAnim，可以直接 import [rc-queue-anim](https://github.com/react-component/queue-anim) 用以代替。Ant Fable 的动效方案已移至 [Ant Motion](http://motion.ant.design/components/queue-anim)，欢迎前往探索。
 - Affix 的 `offset` 属性重命名为 `offsetTop`。
 - Popover 的 `overlay` 属性重命名为 `content`。
 - Progress.Line 使用方式改为 `<Progress />` 或 `<Progress type="line" />`。
@@ -383,7 +438,7 @@ timeline: true
 
 ### 相关工具发布
 
-- [antd-init](http://github.com/ant-design/antd-init) 同步发布 `1.0.0` 版本，享受最新 [ant-tool](https://github.com/ant-tool/) 工具带来的流畅开发体验。
+- [antd-init](https://github.com/antFB/antFB-init/) 同步发布 `1.0.0` 版本，享受最新 [ant-tool](https://github.com/ant-tool/) 工具带来的流畅开发体验。
 - [Ant Motion](http://motion.ant.design) 全新的动效设计解决方案。
 - [Ant UX](http://ux.ant.design/) 发布 1.0 版本，提供多种平台的流程素材支持。
 

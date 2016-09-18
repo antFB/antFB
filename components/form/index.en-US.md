@@ -13,11 +13,11 @@ There are many types of form items including checkbox, radio, input, select, and
 You can align the controls of a `form` using one of the following attributes：
 
 - `horizontal`：to horizontally align the `label`s and controls of the fields.
-- `inline`：to render the labels and controls of the fields in one line (by setting the display property of form controls to `inline-block`). 
+- `inline`：to render the labels and controls of the fields in one line (by setting the display property of form controls to `inline-block`).
 
 ## Form fields
 
-A form consists of one or more form fields whose type includes input, textarea, checkbox, radio, select, tag, and more. 
+A form consists of one or more form fields whose type includes input, textarea, checkbox, radio, select, tag, and more.
 A form field is defined using `<Form.Item />`.
 
 ```jsx
@@ -36,7 +36,7 @@ A form field is defined using `<Form.Item />`.
 
 | Property  | Description                              | Type       | Default Value |
 |-----------|------------------------------------------|------------|---------|
-| form | Decorated by `Form.create()` will be automatically set `this.props.form` property, so just pass to form, you don't need to set it by yourself after 1.7.0. | object | n/a 
+| form | Decorated by `Form.create()` will be automatically set `this.props.form` property, so just pass to form, you don't need to set it by yourself after 1.7.0. | object | n/a
 | vertical | Use vertical layout. | boolean | false |
 | horizontal | Use horizontal layout. | boolean  | false    |
 | inline | Use inline alignment. | boolean | false |
@@ -66,42 +66,38 @@ If the form has been decorated by `Form.create` then it has `this.props.form` pr
 |-----------|------------------------------------------|------------|
 | getFieldsValue | Get the specified fields' values. If you don't specify a parameter, you will get all fields' values. | Function([fieldNames: string[]]) |
 | getFieldValue | Get the value of a field. | Function(fieldName: string) |
-| setFieldsValue | Set the value of a field. | Function(obj: object) |
+| setFieldsValue | Set the value of a field.(Note: please don't use it in `componentWillReceiveProps`, otherwise, it will cause an endless loop, [more](https://github.com/antFB/antFB/issues/2985)) | Function({ [fieldName]: value } |
 | setFields | Set the value and error of a field. | Function(obj: object) |
 | validateFields | Validate the specified fields and get theirs values and errors. | Function([fieldNames: string[]], [options: object], callback: Function(errors, values)) |
 | validateFieldsAndScroll | This function is similar to `validateFields`, but after validation, if the target field is not in visible area of form, form will be automatically scrolled to the target field area. | same as `validateFields` |
 | getFieldError | Get the error of a field. | Function(name) |
 | isFieldValidating | Check if the specified field is being validated. | Function(name) |
 | resetFields | Reset the specified fields' value and status. If you don't specify a parameter, all the fields will be reset. | Function([names: string[]]) |
-| getFieldProps | Two-way binding for form, please read below for details. | |
+| getFieldDecorator | Two-way binding for form, please read below for details. | |
 
-### this.props.form.getFieldProps(id, options)
+### this.props.form.getFieldDecorator(id, options)
 
 #### Special attention
 
-If you use `react@<15.3.0`, then, you can't use `getFieldProps` in functional components: https://github.com/facebook/react/pull/6534
+If you use `react@<15.3.0`, then, you can't use `getFieldDecorator` in stateless component: https://github.com/facebook/react/pull/6534
 
-The return value of `getFieldProps` contains `id`、`value`(or any other props `valuePropName` that you specified),`ref`,`onChange`(or any other `trigger` `validateTrigger` that you specified), **shouldn't set same property again** in order to avoid conflict. If you concerntate on the details on return value, you can print them to console by `console.log`.
-
-> Don't use `defaultValue` in form, please use `initialValue` instead of it.
-
-#### getFieldProps options
+#### getFieldDecorator's parameters
 
 | Property      | Description                                     | Type | Default Value |
 |-----------|-----------------------------------------|-----|--------|
 | options.id | The unique identifier is required. | string | |
-| options.valuePropName | Props of children node, for exmaple, the prop of Switch is 'checked'. | string | 'value' |
+| options.valuePropName | Props of children node, for example, the prop of Switch is 'checked'. | string | 'value' |
 | options.initialValue | You can specify initial value, type, optional value of children node. | | n/a |
 | options.trigger | When to collect the value of children node | string | 'onChange' |
 | options.getValueFromEvent | To convert parameters of onChange to the value of control, for example, set value of DatePicker: `(date, dateString) => dateString` | function(..args) | [reference](https://github.com/react-component/form#optiongetvaluefromevent) |
 | options.validateTrigger | When to validate the value of children node. | string | 'onChange' |
 | options.rules | Includes validation rules. Please refer to [async-validator](https://github.com/yiminghe/async-validator) for details. | array | n/a |
-| options.onXXX | Because `getFieldProps` will replace events like `onChange`, `trigger`, `validateTrigger`, if you still want to bind these events, you may set them in `options` | function | n/a |
 | options.exclusive | Whether it is exclusive with other controls, particularly for Radio. | boolean | false |
 
 ### Form.Item
 
-> If Form.Item has multiple children, `help`, `required`, and `validateStatus` can't be generated automatically.
+> * If Form.Item has multiple children, `help`, `required`, and `validateStatus` can't be generated automatically.
+> * Form controls must be child of Form.Item, otherwise, you need to set `help`, `required` and `validateStatus` by yourself.
 
 | Property      | Description                                     | Type       |  Optional | Default Value |
 |-----------|------------------------------------------|-----------|-------|--------|

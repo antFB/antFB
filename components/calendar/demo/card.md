@@ -14,7 +14,7 @@ title:
 Nested inside a container element for rendering in limited space.
 
 ````jsx
-import { Calendar } from 'antFB';
+import { Calendar } from 'antd';
 
 function onPanelChange(value, mode) {
   console.log(value, mode);

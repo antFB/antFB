@@ -15,7 +15,7 @@ title:
 Cooperate with `<a href="/components/time-picker">time-picker</a>`
 
 ````jsx
-import { DatePicker, TimePicker } from 'antFB';
+import { DatePicker, TimePicker } from 'antd';
 
 const DateTimePicker = React.createClass({
   handleChange(from, value) {

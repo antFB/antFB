@@ -14,7 +14,7 @@ title:
 A borderless card on a gray background.
 
 ````jsx
-import { Card } from 'antFB';
+import { Card } from 'antd';
 
 ReactDOM.render(
   <div style={{ background: '#ECECEC', padding: '30px' }}>

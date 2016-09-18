@@ -19,7 +19,7 @@ Because the width of label is not fixed, you may need to adjust it by customizin
 
 
 ````jsx
-import { Form, Input, Row, Col, Button, DatePicker } from 'antFB';
+import { Form, Input, Row, Col, Button, DatePicker } from 'antd';
 const FormItem = Form.Item;
 
 ReactDOM.render(

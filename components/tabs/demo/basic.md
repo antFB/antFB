@@ -1,6 +1,8 @@
 ---
 order: 0
-title: 基本
+title: 
+  zh-CN: 基本
+  en-US: Basic
 ---
 
 ## zh-CN
@@ -12,7 +14,7 @@ title: 基本
 Default activate first tab.
 
 ````jsx
-import { Tabs } from 'antFB';
+import { Tabs } from 'antd';
 const TabPane = Tabs.TabPane;
 
 function callback(key) {

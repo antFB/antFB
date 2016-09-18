@@ -14,7 +14,7 @@ title:
 Wrap your app with `LocaleProvider`, and apply the corresponding language package.
 
 ````jsx
-import { Pagination, LocaleProvider } from 'antFB';
+import { Pagination, LocaleProvider } from 'antd';
 import enUS from 'antd/lib/locale-provider/en_US';
 
 function App() {

@@ -12,7 +12,7 @@ title:
 Search the options while expanded.
 
 ````jsx
-import { Select } from 'antFB';
+import { Select } from 'antd';
 const Option = Select.Option;
 
 function handleChange(value) {
@@ -22,14 +22,14 @@ function handleChange(value) {
 ReactDOM.render(
   <Select showSearch
     style={{ width: 200 }}
-    placeholder="请选择人员"
+    placeholder="Select a person"
     optionFilterProp="children"
-    notFoundContent="无法找到"
+    notFoundContent="Nothing found"
     onChange={handleChange}
   >
-    <Option value="jack">杰克</Option>
-    <Option value="lucy">露西</Option>
-    <Option value="tom">汤姆</Option>
+    <Option value="jack">Jack</Option>
+    <Option value="lucy">Lucy</Option>
+    <Option value="tom">Tom</Option>
   </Select>
 , mountNode);
 ````

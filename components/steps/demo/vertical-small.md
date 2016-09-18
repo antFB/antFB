@@ -14,7 +14,7 @@ title:
 A simple mini version step bar in the vertical direction.
 
 ````jsx
-import { Steps } from 'antFB';
+import { Steps } from 'antd';
 const Step = Steps.Step;
 
 ReactDOM.render(

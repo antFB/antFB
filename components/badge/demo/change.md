@@ -14,7 +14,7 @@ title:
 The count will be animated as it changes.
 
 ````jsx
-import { Badge, Button, Icon } from 'antFB';
+import { Badge, Button, Icon } from 'antd';
 const ButtonGroup = Button.Group;
 
 const Test = React.createClass({
@@ -44,10 +44,10 @@ const Test = React.createClass({
     return (
       <div>
         <Badge count={this.state.count}>
-          <a href="#" className="head-example"></a>
+          <a href="#" className="head-example" />
         </Badge>
         <Badge dot={this.state.show}>
-          <a href="#" className="head-example"></a>
+          <a href="#" className="head-example" />
         </Badge>
         <div style={{ marginTop: 10 }}>
           <ButtonGroup>

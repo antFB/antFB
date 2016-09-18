@@ -19,7 +19,7 @@ Using the [AutoComplete](/components/auto-complete) component is strongly recomm
 
 
 ````jsx
-import { Select } from 'antFB';
+import { Select } from 'antd';
 const Option = Select.Option;
 
 const Test = React.createClass({
@@ -41,13 +41,13 @@ const Test = React.createClass({
     this.setState({ options });
   },
   render() {
-    // filterOption 需要设置为 false，数据是动态设置的
+    // filterOption needs to be false，as the value is dynamically generated
     return (
       <Select combobox
         style={{ width: 200 }}
         onChange={this.handleChange}
         filterOption={false}
-        placeholder="请输入账户名"
+        placeholder="Enter the account name"
       >
         {this.state.options}
       </Select>

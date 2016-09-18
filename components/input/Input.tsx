@@ -3,7 +3,7 @@ import { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import calculateNodeHeight from './calculateNodeHeight';
 import assign from 'object-assign';
-import omit from 'object.omit';
+import omit from 'omit.js';
 
 function fixControlledValue(value) {
   if (typeof value === 'undefined' || value === null) {
@@ -27,14 +27,41 @@ function clearNextFrameAction(nextFrameId) {
   }
 }
 
-export default class Input extends Component {
+export interface AutoSizeType {
+  minRows?: number;
+  maxRows?: number;
+};
+
+export interface InputProps {
+  prefixCls?: string;
+  className?: string;
+  type?: string;
+  id?: number | string;
+  value?: any;
+  defaultValue?: any;
+  placeholder?: string;
+  size?: 'large' | 'default' | 'small';
+  disabled?: boolean;
+  readOnly?: boolean;
+  addonBefore?: React.ReactNode;
+  addonAfter?: React.ReactNode;
+  onPressEnter?: React.FormEventHandler;
+  onKeyDown?: React.FormEventHandler;
+  onChange?: React.FormEventHandler;
+  onClick?: React.FormEventHandler;
+  onBlur?: React.FormEventHandler;
+  autosize?: boolean | AutoSizeType;
+}
+
+export default class Input extends Component<InputProps, any> {
+  static Group: any;
   static defaultProps = {
-    defaultValue: '',
     disabled: false,
     prefixCls: 'ant-input',
     type: 'text',
     onPressEnter() {},
     onKeyDown() {},
+    onChange() {},
     autosize: false,
   };
 
@@ -55,6 +82,12 @@ export default class Input extends Component {
     autosize: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
     onPressEnter: PropTypes.func,
     onKeyDown: PropTypes.func,
+  };
+
+  nextFrameActionId: number;
+  refs: {
+    [key: string]: any;
+    input: any;
   };
 
   constructor(props) {
@@ -86,10 +119,10 @@ export default class Input extends Component {
   }
 
   handleTextareaChange = (e) => {
-    this.resizeTextarea();
-    if (this.props.onChange) {
-      this.props.onChange(e);
+    if (!('value' in this.props)) {
+      this.resizeTextarea();
     }
+    this.props.onChange(e);
   }
 
   resizeTextarea = () => {
@@ -97,8 +130,8 @@ export default class Input extends Component {
     if (type !== 'textarea' || !autosize || !this.refs.input) {
       return;
     }
-    const minRows = autosize ? autosize.minRows : null;
-    const maxRows = autosize ? autosize.maxRows : null;
+    const minRows = autosize ? (autosize as AutoSizeType).minRows : null;
+    const maxRows = autosize ? (autosize as AutoSizeType).maxRows : null;
     const textareaStyles = calculateNodeHeight(this.refs.input, false, minRows, maxRows);
     this.setState({ textareaStyles });
   }

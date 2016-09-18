@@ -1,12 +1,12 @@
 const path = require('path');
+const CSSSplitWebpackPlugin = require('css-split-webpack-plugin').default;
 
 function pickerGenerator(module) {
   const tester = new RegExp(`^docs/${module}`);
   return (markdownData) => {
     const filename = markdownData.meta.filename;
     if (tester.test(filename) &&
-        !/\/demo$/.test(path.dirname(filename)) &&
-        !/\.en-US\.md/.test(filename)) {
+        !/\/demo$/.test(path.dirname(filename))) {
       return {
         meta: markdownData.meta,
       };
@@ -31,8 +31,7 @@ module.exports = {
     components(markdownData) {
       const filename = markdownData.meta.filename;
       if (!/^components/.test(filename) ||
-          /\/demo$/.test(path.dirname(filename)) ||
-          /\.en-US\.md/.test(filename)) return;
+          /\/demo$/.test(path.dirname(filename))) return;
 
       return {
         meta: markdownData.meta,
@@ -70,6 +69,15 @@ module.exports = {
       site: path.join(process.cwd(), 'site'),
       'react-router': 'react-router/umd/ReactRouter',
     };
+    config.plugins.push(new CSSSplitWebpackPlugin({}));
+
+    config.babel.plugins.push([
+      require.resolve('babel-plugin-transform-runtime'),
+      {
+        polyfill: false,
+        regenerator: true,
+      },
+    ]);
 
     config.babel.plugins.push([
       require.resolve('babel-plugin-antd'),

@@ -14,7 +14,7 @@ title:
 This will simply display a red badge, without a specific count.
 
 ````jsx
-import { Badge, Icon } from 'antFB';
+import { Badge, Icon } from 'antd';
 
 ReactDOM.render(<div>
   <Badge dot>

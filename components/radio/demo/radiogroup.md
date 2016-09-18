@@ -14,7 +14,7 @@ title:
 A set of mutually exclusive Radio with the use of
 
 ```jsx
-import { Radio } from 'antFB';
+import { Radio } from 'antd';
 const RadioGroup = Radio.Group;
 
 const App = React.createClass({

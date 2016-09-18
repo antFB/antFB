@@ -1,9 +1,11 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
+import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import { Row, Col, Icon, Affix } from 'antd';
 import { getChildren } from 'jsonml.js/lib/utils';
 import Demo from './Demo';
+import EditButton from './EditButton';
 
 export default class ComponentDoc extends React.Component {
   static contextTypes = {
@@ -63,7 +65,7 @@ export default class ComponentDoc extends React.Component {
       const title = demo.meta.title;
       const localizeTitle = title[locale] || title;
       return (
-        <li key={demo.meta.id}>
+        <li key={demo.meta.id} title={localizeTitle}>
           <a href={`#${demo.meta.id}`}>
             {localizeTitle}
           </a>
@@ -71,9 +73,9 @@ export default class ComponentDoc extends React.Component {
       );
     });
 
-    const { title, subtitle, chinese, english } = meta;
+    const { title, subtitle, chinese, english, filename } = meta;
     return (
-      <DocumentTitle title={`${subtitle || chinese || ''} ${title || english} - Ant Design`}>
+      <DocumentTitle title={`${subtitle || chinese || ''} ${title || english} - Ant Fable`}>
         <article>
           <Affix className="toc-affix" offsetTop={16}>
             <ul className="toc demos-anchor">
@@ -87,6 +89,7 @@ export default class ComponentDoc extends React.Component {
                 (!subtitle && !chinese) ? null :
                   <span className="subtitle">{subtitle || chinese}</span>
               }
+              <EditButton title="在 Github 上编辑此页！" filename={filename} />
             </h1>
             {
               props.utils.toReactComponent(
@@ -95,7 +98,7 @@ export default class ComponentDoc extends React.Component {
               )
             }
             <h2>
-              代码演示
+              <FormattedMessage id="app.component.examples" />
               <Icon type="appstore" className={expandTriggerClass}
                 title="展开全部代码" onClick={this.handleExpandToggle}
               />

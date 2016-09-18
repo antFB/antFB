@@ -15,7 +15,7 @@ You can customize the style of the button, just note the size limit: no more tha
 
 
 ````jsx
-import { BackTop } from 'antFB';
+import { BackTop } from 'antd';
 
 const style = {
   height: 40,

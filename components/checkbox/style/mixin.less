@@ -1,6 +1,6 @@
 @import "../../style/mixins/index";
 
-.antCheckboxFn(@checkbox-prefix-cls: ant-checkbox) {
+.antCheckboxFn(@checkbox-prefix-cls: ~"@{ant-prefix}-checkbox") {
   @checkbox-inner-prefix-cls: ~"@{checkbox-prefix-cls}-inner";
   // 一般状态
   .@{checkbox-prefix-cls} {
@@ -173,10 +173,6 @@
     margin-right: 8px;
   }
 
-  .@{checkbox-prefix-cls}-wrapper + span {
-    display: inline-block;
-  }
-
   .@{checkbox-prefix-cls}-group {
     font-size: @font-size-base;
     &-item {
@@ -186,7 +182,7 @@
 
   @ie8: \0screen;
 
-  // IE8 hack for https://github.com/ant-design/ant-design/issues/2148
+  // IE8 hack for https://github.com/antFB/antFB/issues/2148
   @media @ie8 {
     .@{checkbox-prefix-cls}-checked .@{checkbox-prefix-cls}-inner:before,
     .@{checkbox-prefix-cls}-checked .@{checkbox-prefix-cls}-inner:after {

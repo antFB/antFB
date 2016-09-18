@@ -1,6 +1,8 @@
 ---
 order: 8
-title: 卡片式页签
+title: 
+  zh-CN: 卡片式页签
+  en-US: Card type tab
 ---
 
 ## zh-CN
@@ -13,7 +15,7 @@ Another type Tabs, which doesn't support vertical mode.
 
 
 ````jsx
-import { Tabs } from 'antFB';
+import { Tabs } from 'antd';
 const TabPane = Tabs.TabPane;
 
 function callback(key) {

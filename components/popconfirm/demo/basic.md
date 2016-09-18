@@ -1,12 +1,20 @@
 ---
 order: 0
-title: 基本
+title:
+  zh-CN: 基本
+  en-US: Basic
 ---
+
+## zh-CN
 
 最简单的用法。
 
+## en-US
+
+The basic example.
+
 ````jsx
-import { Popconfirm, message } from 'antFB';
+import { Popconfirm, message } from 'antd';
 
 function confirm() {
   message.success('点击了确定');

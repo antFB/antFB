@@ -14,7 +14,7 @@ title:
 Controlled page number.
 
 ````jsx
-import { Pagination } from 'antFB';
+import { Pagination } from 'antd';
 
 const Container = React.createClass({
   getInitialState() {

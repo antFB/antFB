@@ -9,16 +9,16 @@ title:
 
 一个复杂的应用示例。
 
-## en_US
+## en-US
 
 A complex application.
 
 ````jsx
-import { Calendar } from 'antFB';
+import { Calendar } from 'antd';
 
 function getListData(value) {
   let listData;
-  switch (value.getDayOfMonth()) {
+  switch (value.date()) {
     case 8:
       listData = [
         { type: 'warning', content: '这里是警告事项.' },
@@ -61,13 +61,13 @@ function dateCellRender(value) {
 }
 
 function getMonthData(value) {
-  if (value.getMonth() === 8) {
+  if (value.month() === 8) {
     return 1394;
   }
 }
 
 function monthCellRender(value) {
-  let num = getMonthData(value);
+  const num = getMonthData(value);
   return num ? <div className="notes-month">
     <section>{num}</section>
     <span>待办事项数</span>

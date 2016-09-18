@@ -14,7 +14,7 @@ title:
 use `hideDisabledOptions` to hide the disabled options.
 
 ````jsx
-import { TimePicker } from 'antFB';
+import { TimePicker } from 'antd';
 
 function newArray(start, end) {
   const result = [];

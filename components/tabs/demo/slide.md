@@ -1,6 +1,8 @@
 ---
 order: 3
-title: 滑动
+title: 
+  zh-CN: 滑动
+  en-US: Slide
 ---
 
 ## zh-CN
@@ -12,7 +14,7 @@ title: 滑动
 Tab can be slide to left or right, which is used for a lot of tabs. 
 
 ````jsx
-import { Tabs } from 'antFB';
+import { Tabs } from 'antd';
 const TabPane = Tabs.TabPane;
 
 ReactDOM.render(

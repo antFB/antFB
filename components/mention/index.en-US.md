@@ -1,9 +1,8 @@
 ---
 category: Components
-chinese: 提及
 cols: 1
 type: Views
-english: Mention
+title: Mention
 ---
 
 Mention component。
@@ -35,7 +34,7 @@ When need to mention someone or something.
 | Property     | Description          | Type     | Default       |
 |----------|---------------|----------|--------------|
 | suggestions    | suggestion content | Array<string> or Array<Mention.Nav> | [] |
-| suggestionStyle | style of suggestion container | Objet | {} |
+| suggestionStyle | style of suggestion container | Object | {} |
 | onSearchChange | Callback function called when search content changes | function(value:String) | [] |
 | onChange | Callback function called when content of input changes | function(editorState: EditorState) | null |
 | notFoundContent| suggestion when suggestions empty | string | '无匹配结果，轻敲空格完成输入' |

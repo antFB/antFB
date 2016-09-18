@@ -1,6 +1,6 @@
 ---
 order: 7
-title: 
+title:
   zh-CN: 日期范围一
   en-US: Date range, case 1
 ---
@@ -15,7 +15,7 @@ You can use the `disabledDate` property to limit the start and end dates.
 
 
 ````jsx
-import { DatePicker } from 'antFB';
+import { DatePicker } from 'antd';
 
 const DateRange = React.createClass({
   getInitialState() {
@@ -29,13 +29,13 @@ const DateRange = React.createClass({
     if (!startValue || !this.state.endValue) {
       return false;
     }
-    return startValue.getTime() > this.state.endValue.getTime();
+    return startValue.valueOf() > this.state.endValue.valueOf();
   },
   disabledEndDate(endValue) {
     if (!endValue || !this.state.startValue) {
       return false;
     }
-    return endValue.getTime() <= this.state.startValue.getTime();
+    return endValue.valueOf() <= this.state.startValue.valueOf();
   },
   onChange(field, value) {
     this.setState({
@@ -62,7 +62,7 @@ const DateRange = React.createClass({
         <DatePicker
           disabledDate={this.disabledStartDate}
           showTime
-          format="yyyy-MM-dd HH:mm:ss"
+          format="YYYY-MM-DD HH:mm:ss"
           value={this.state.startValue}
           placeholder="开始日期"
           onChange={this.onStartChange}
@@ -71,7 +71,7 @@ const DateRange = React.createClass({
         <DatePicker
           disabledDate={this.disabledEndDate}
           showTime
-          format="yyyy-MM-dd HH:mm:ss"
+          format="YYYY-MM-DD HH:mm:ss"
           value={this.state.endValue}
           placeholder="结束日期"
           onChange={this.onEndChange}

@@ -28,8 +28,8 @@ describe('antd dist files', function() {
 
   const antd = require('../dist/antd');
 
-  // https://github.com/ant-design/ant-design/issues/1638
-  // https://github.com/ant-design/ant-design/issues/1968
+  // https://github.com/antFB/antFB/issues/1638
+  // https://github.com/antFB/antFB/issues/1968
   it('should has modules in antd', () => {
     expect('Affix' in antd).toBeTruthy();
     expect('Alert' in antd).toBeTruthy();
@@ -81,8 +81,8 @@ describe('antd dist files', function() {
     expect('BackTop' in antd).toBeTruthy();
   });
 
-  // https://github.com/ant-design/ant-design/issues/1970
-  // https://github.com/ant-design/ant-design/issues/1804
+  // https://github.com/antFB/antFB/issues/1970
+  // https://github.com/antFB/antFB/issues/1804
   it('should be compatible in IE8', () => {
     const antdJsContent = fs.readFileSync(path.join(process.cwd(), 'dist', 'antd.js'));
     expect(

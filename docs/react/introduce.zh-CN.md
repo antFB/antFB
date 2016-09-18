@@ -1,9 +1,9 @@
 ---
-order: 0
-title: AntFB Base on AntDesign
+order: 0/home/check/antFB/antDesign/docs/react/introduce.zh-CN.md
+title: Ant Fable of React
 ---
 
-这里是 Ant Design 的 React 实现，开发和服务于企业级后台产品。
+这里是 Ant Fable 的 React 实现，开发和服务于企业级后台产品。
 
 <div class="pic-plus">
   <img width="150" src="https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg">
@@ -29,40 +29,35 @@ title: AntFB Base on AntDesign
 
 ## 特性
 
-- Designed as Ant Design，提炼和服务企业级中后台产品的交互语言和视觉风格。
+- Designed as Ant Fable，提炼和服务企业级中后台产品的交互语言和视觉风格。
 - [React Component](http://react-component.github.io/badgeboard/) 基础上精心封装的高质量 UI 组件。
 - 基于 npm + webpack + babel 的工作流，支持 ES2015 和 TypeScript。
 
 ## 安装
 
 ```bash
-$ npm install antd
+$ npm install antFB
 ```
 
 ## 示例
 
 ```jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'antFB';
 ReactDOM.render(<DatePicker />, mountNode);
 ```
 
 引入样式：
 
 ```jsx
-import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
+import 'antFB/dist/antd.css';  // or 'antFB/dist/antd.less'
 ```
 
 以下两种方法都可以达到按需加载的目的：
 
-- `import DatePicker from 'antd/lib/date-picker'`
-- 配合插件 [babel-plugin-antd](https://github.com/ant-design/babel-plugin-antd) 使用 `import { DatePicker } from 'antd';`
+- `import DatePicker from 'antFB/lib/date-picker'`
+- 配合插件 [babel-plugin-antd](https://github.com/ant-design/babel-plugin-antd) 使用 `import { DatePicker } from 'antFB';`(推荐）	
 
 > babel-plugin-antd 支持 js 和 css 同时按需加载。
-
-## 版本
-
-- 稳定版：[![npm package](http://img.shields.io/npm/v/antd.svg?style=flat-square)](https://www.npmjs.org/package/antd)
-- 开发版：[![](https://cnpmjs.org/badge/v/antd.svg?&tag=beta&subject=npm)](https://www.npmjs.org/package/antd)
 
 ## 浏览器支持
 
@@ -74,7 +69,7 @@ import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
 
 - [首页](http://ant.design/)
 - [更新日志](/changelog)
-- [开发脚手架](https://github.com/ant-design/antd-init/)
+- [开发脚手架](https://github.com/antFB/antFB-init/)
 - [开发工具文档](http://ant-tool.github.io/)
 - [React 基础组件](http://react-component.github.io/)
 - [移动端组件](http://mobile.ant.design)
@@ -82,6 +77,9 @@ import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
 - [组件设计原则](https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-design.md)
 - [设计规范速查手册](https://os.alipayobjects.com/rmsportal/HTXUgPGkyyxEivE.png)
 - [社区贡献脚手架和范例](https://github.com/antFB/antFB/issues/129)
+- [常见问题](https://github.com/antFB/antFB/wiki/FAQ)
+- [CodePen 模板](http://codepen.io/benjycui/pen/KgPZrE?editors=001)
+- [Awesome Ant Fable](https://github.com/websemantics/awesome-ant-design)
 
 ## 谁在使用
 
@@ -91,7 +89,7 @@ import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
 - 新美大
 - 滴滴
 
-> 如果你的公司和产品使用了 Ant Design，欢迎到 [这里](https://github.com/antFB/antFB/issues/477) 留言。
+> 如果你的公司和产品使用了 Ant Fable，欢迎到 [这里](https://github.com/antFB/antFB/issues/477) 留言。
 
 ## 如何贡献
 

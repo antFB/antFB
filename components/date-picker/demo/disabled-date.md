@@ -18,11 +18,11 @@ Specify unselectable period by `disabledDate`.
 As in the example above: you can't select a date later than today.
 
 ````jsx
-import { DatePicker } from 'antFB';
+import { DatePicker } from 'antd';
 
 const disabledDate = function (current) {
   // can not select days after today
-  return current && current.getTime() > Date.now();
+  return current && current.valueOf() > Date.now();
 };
 
 ReactDOM.render(

@@ -14,7 +14,7 @@ title:
 Change `pageSize`.
 
 ````jsx
-import { Pagination } from 'antFB';
+import { Pagination } from 'antd';
 
 function onShowSizeChange(current, pageSize) {
   console.log(current, pageSize);

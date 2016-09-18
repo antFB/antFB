@@ -5,7 +5,19 @@ import Dropdown from './dropdown';
 const ButtonGroup = Button.Group;
 import classNames from 'classnames';
 import splitObject from '../_util/splitObject';
-export default class DropdownButton extends React.Component {
+
+export interface DropdownButtonProps {
+  type?: 'primary' | 'ghost' | 'dash';
+  onClick?: React.FormEventHandler;
+  trigger?: 'click' | 'hover';
+  overlay: React.ReactNode;
+  visible?: boolean;
+  onVisibleChange?: (visible: boolean) => void;
+  style?: React.CSSProperties;
+  prefixCls?: string;
+}
+
+export default class DropdownButton extends React.Component<DropdownButtonProps, any> {
   static defaultProps = {
     align: {
       points: ['tr', 'br'],
@@ -17,13 +29,15 @@ export default class DropdownButton extends React.Component {
       targetOffset: [0, 0],
     },
     type: 'default',
+    prefixCls: 'ant-dropdown-button',
   };
 
   render() {
-    const [{ type, overlay, trigger, align, children, className, onClick }, restProps] = splitObject(this.props,
-      ['type', 'overlay', 'trigger', 'align', 'children', 'className', 'onClick']);
+    const [{ type, overlay, trigger, align, children, className, onClick, prefixCls }, restProps] =
+     splitObject(this.props,
+       ['type', 'overlay', 'trigger', 'align', 'children', 'className', 'onClick', 'prefixCls']);
     const cls = classNames({
-      'ant-dropdown-button': true,
+      [prefixCls]: true,
       [className]: !!className,
     });
     return (

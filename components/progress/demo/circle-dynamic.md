@@ -14,7 +14,7 @@ title:
 A dynamic progress bar is better.
 
 ````jsx
-import { Progress, Button } from 'antFB';
+import { Progress, Button } from 'antd';
 const ButtonGroup = Button.Group;
 
 const MyProgress = React.createClass({

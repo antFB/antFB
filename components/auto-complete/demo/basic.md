@@ -1,6 +1,6 @@
 ---
 order: 0
-title: 
+title:
   zh-CN: 基本使用
   en-US: Basic Usage
 ---
@@ -14,7 +14,7 @@ title:
 Basic Usage, set datasource of autocomplete with `dataSource` property.
 
 ````jsx
-import { AutoComplete } from 'antFB';
+import { AutoComplete } from 'antd';
 
 const Complete = React.createClass({
   getInitialState() {

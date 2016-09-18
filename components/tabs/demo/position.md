@@ -1,6 +1,8 @@
 ---
 order: 6
-title: 位置
+title: 
+  zh-CN: 位置
+  en-US: Position
 ---
 
 ## zh-CN
@@ -12,7 +14,7 @@ title: 位置
 Tab's position: left, right, top or bottom.
 
 ````jsx
-import { Tabs, Select } from 'antFB';
+import { Tabs, Select } from 'antd';
 const TabPane = Tabs.TabPane;
 const Option = Select.Option;
 

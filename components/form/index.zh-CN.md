@@ -68,42 +68,38 @@ CustomizedForm = Form.create({})(CustomizedForm);
 |-----------|------------------------------------------|------------|
 | getFieldsValue | 获取一组输入控件的值，如不传入参数，则获取全部组件的值 | Function([fieldNames: string[]]) |
 | getFieldValue | 获取一个输入控件的值 | Function(fieldName: string) |
-| setFieldsValue | 设置一组输入控件的值 | Function(obj: object) |
+| setFieldsValue | 设置一组输入控件的值（注意：不要在 `componentWillReceiveProps` 内使用，否则会导致死循环，[更多](https://github.com/antFB/antFB/issues/2985)） | Function({ [fieldName]: value } |
 | setFields | 设置一组输入控件的值与 Error | Function(obj: object) |
 | validateFields | 校验并获取一组输入域的值与 Error | Function([fieldNames: string[]], [options: object], callback: Function(errors, values)) |
 | validateFieldsAndScroll | 与 `validateFields` 相似，但校验完后，如果校验不通过的菜单域不在可见范围内，则自动滚动进可见范围 | 参考 `validateFields` |
 | getFieldError | 获取某个输入控件的 Error | Function(name) |
 | isFieldValidating | 判断一个输入控件是否在校验状态 | Function(name) |
 | resetFields | 重置一组输入控件的值与状态，如不传入参数，则重置所有组件 | Function([names: string[]]) |
-| getFieldProps | 用于和表单进行双向绑定，详见下方描述 | |
+| getFieldDecorator | 用于和表单进行双向绑定，详见下方描述 | |
 
-### this.props.form.getFieldProps(id, options)
+### this.props.form.getFieldDecorator(id, options)
 
 #### 特别注意
 
-如果使用的是 `react@<15.3.0`，则 `getFieldProps` 调用不能位于纯函数组件中: https://github.com/facebook/react/pull/6534
+如果使用的是 `react@<15.3.0`，则 `getFieldDecorator` 调用不能位于纯函数组件中: https://github.com/facebook/react/pull/6534
 
-`getFieldProps` 返回的属性包括 `id`、`value`（或你设置的其它 `valuePropName`）、`ref`、`onChange`（或者你设置的其它 `trigger` `validateTrigger`），**所以不应再设置同样的属性**，以免冲突。如果对其返回值的细节有兴趣，可以 `console.log` 出来查看。
-
-> 在表单中 `defaultValue` 也不应该被设置，请使用下面的 `initialValue`。
-
-#### getFieldProps options
+#### getFieldDecorator 参数
 
 | 参数      | 说明                                     | 类型 | 默认值 |
 |-----------|-----------------------------------------|-----|--------|
-| options.id | 必填输入控件唯一标志 | string | |
+| id | 必填输入控件唯一标志 | string | |
 | options.valuePropName | 子节点的值的属性，如 Switch 的是 'checked' | string | 'value' |
 | options.initialValue | 子节点的初始值，类型、可选值均由子节点决定  | | |
 | options.trigger | 收集子节点的值的时机 | string | 'onChange' |
 | options.getValueFromEvent | 可以把 onChange 的参数转化为控件的值，例如 DatePicker 可设为：`(date, dateString) => dateString` | function(..args) | [reference](https://github.com/react-component/form#optiongetvaluefromevent) |
 | options.validateTrigger | 校验子节点值的时机 | string | 'onChange' |
 | options.rules | 校验规则，参见 [async-validator](https://github.com/yiminghe/async-validator) | array | |
-| options.onXXX | 由于 `getFieldProps` 会占用 `onChange` 等事件（即你所设置的 `trigger` `validateTrigger`），所以如果仍需绑定事件，请在 `options` 内设置 | function | 无 |
 | options.exclusive | 是否和其他控件互斥，特别用于 Radio 单选控件 | boolean | false |
 
 ### Form.Item
 
-> 一个 Form.Item 建议只放一个 child，有多个 child 时，`help` `required` `validateStatus` 无法自动生成。
+> * 一个 Form.Item 建议只放一个 child，有多个 child 时，`help` `required` `validateStatus` 无法自动生成。
+> * 只有当表单域为 Form.Item 的子元素时，才会自动生成 `help` `required` `validateStatus`，其它情况请自行设置。
 
 | 参数      | 说明                                     | 类型       |  可选值 | 默认值 |
 |-----------|------------------------------------------|-----------|-------|--------|

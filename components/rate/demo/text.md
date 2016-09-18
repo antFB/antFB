@@ -14,7 +14,7 @@ title:
 Add copywriting in rate components.
 
 ````jsx
-import { Rate } from 'antFB';
+import { Rate } from 'antd';
 
 const Rater = React.createClass({
   getInitialState() {

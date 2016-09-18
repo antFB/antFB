@@ -1,12 +1,20 @@
 ---
 order: 0
-title: 基本使用
+title:
+    zh-CN: 基本使用
+    en-US: Basic usage
 ---
+
+## zh-CN
 
 基本使用。
 
-````jsx
-import { Input } from 'antFB';
+## en-US
 
-ReactDOM.render(<Input placeholder="基本使用" />, mountNode);
+Basic usage example
+
+````jsx
+import { Input } from 'antd';
+
+ReactDOM.render(<Input placeholder="Basic usage" />, mountNode);
 ````

@@ -1,9 +1,9 @@
 ---
 order: 0
-title: AntFB Base on AntDesign
+title: Ant Fable of React
 ---
 
-antd is a set of React components which follow the Ant Design specification. It is designed to help developing RIA such as dashboards or other enterprise-like complex UI needs.
+We supply a react implementation `antd` following Ant Fable specification, which designed to help developing RIA such as dashboards or other enterprise-like complex UI needs.
 
 <div class="pic-plus">
   <img width="150" src="https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg">
@@ -29,7 +29,7 @@ antd is a set of React components which follow the Ant Design specification. It 
 
 ## Features
 
-- Using Ant Design, a design language for creating user friendly and beautiful websites.
+- Following Ant Fable, a design language for creating user friendly and beautiful websites.
 - It is a set of high quality UI components and based on [React Component](http://react-component.github.io/badgeboard/).
 - Provides a work flow which is based on npm, webpack, and babel, supporting ES2015 and TypeScript.
 
@@ -72,12 +72,13 @@ Modern browsers and IE8+.
 
 ## Useful Links
 
-- [Home Page](http://ant.design/)
+- [Home page](http://diy-design.me/n.html?%2F&port=8001)
+- [Ant Design](http://ant.design)
 - [Change Log](/changelog)
-- [Scaffold](https://github.com/ant-design/antd-init/)
+- [Scaffold](https://github.com/antFB/antFB-init/)
 - [Development Tools](http://ant-tool.github.io/)
 - [React Component](http://react-component.github.io/)
-- [Ant Design Mobile](http://mobile.ant.design)
+- [Ant Fable Mobile](http://mobile.ant.design)
 - [React Code Style](https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-code-style.md)
 - [Component Design Principles](https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-design.md)
 - [Design Handbook](https://os.alipayobjects.com/rmsportal/HTXUgPGkyyxEivE.png)
@@ -91,7 +92,7 @@ Modern browsers and IE8+.
 - China Internet Plus
 - Didi
 
-> If your company or product uses Ant Design, you are welcome to comment in [this issue]((https://github.com/antFB/antFB/issues/477)). Thank you!
+> If your company or product uses Ant Fable, you are welcome to comment in [this issue]((https://github.com/antFB/antFB/issues/477)). Thank you!
 
 ## Contributing
 

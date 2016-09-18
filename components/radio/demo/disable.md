@@ -14,7 +14,7 @@ Radio 不可用。
 Radio unavailable.
 
 ```jsx
-import { Radio, Button } from 'antFB';
+import { Radio, Button } from 'antd';
 
 const App = React.createClass({
   getInitialState() {
@@ -30,9 +30,9 @@ const App = React.createClass({
   render() {
     return (
       <div>
-        <Radio defaultChecked={false} disabled={this.state.disabled}>不可用</Radio>
+        <Radio defaultChecked={false} disabled={this.state.disabled}>Disabled</Radio>
         <br />
-        <Radio defaultChecked disabled={this.state.disabled}>不可用</Radio>
+        <Radio defaultChecked disabled={this.state.disabled}>Disabled</Radio>
         <div style={{ marginTop: 20 }}>
           <Button type="primary" onClick={this.toggleDisabled}>
             Toggle disabled

@@ -14,7 +14,7 @@ title:
 Timing of scrolling to the next card/picture.
 
 ````jsx
-import { Carousel } from 'antFB';
+import { Carousel } from 'antd';
 
 ReactDOM.render(
   <Carousel autoplay>

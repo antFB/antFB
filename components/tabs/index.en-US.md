@@ -6,13 +6,13 @@ english: Tabs
 
 Tabs make it easy to switch between different views.
 
-### When to use
+### When To Use
 
 Ant Design has 3 types Tabs for different situation.
 
 - Card Tabs: for managing too many closeable views.
 
-- Normall Tabs: for functional aspects of a page.
+- Normal Tabs: for functional aspects of a page.
 
 - RadioButton: for secondary tabs.
 

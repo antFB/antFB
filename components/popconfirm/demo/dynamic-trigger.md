@@ -1,14 +1,22 @@
 ---
 order: 3
-title: 条件触发
+title:
+  zh-CN: 条件触发
+  en-US: Conditional trigger
 ---
+
+## zh-CN
 
 可以判断是否需要弹出。
 
-````jsx
-import { Popconfirm, Switch, message } from 'antFB';
+## en-US
 
-let App = React.createClass({
+Make it pop up under some conditions.
+
+````jsx
+import { Popconfirm, Switch, message } from 'antd';
+
+const App = React.createClass({
   getInitialState() {
     return {
       visible: false,

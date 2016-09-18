@@ -14,7 +14,7 @@ title:
 Basic Usage.
 
 ````jsx
-import { Select } from 'antFB';
+import { Select } from 'antd';
 const Option = Select.Option;
 
 function handleChange(value) {

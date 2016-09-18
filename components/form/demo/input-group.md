@@ -1,6 +1,6 @@
 ---
 order: 4
-title: 
+title:
   zh-CN: 输入框组合
   en-US: Input group
 ---
@@ -14,7 +14,7 @@ title:
 Input group of different type input controls.
 
 ````jsx
-import { Form, Input, Select, Col } from 'antFB';
+import { Form, Input, Select, Col } from 'antd';
 const FormItem = Form.Item;
 const InputGroup = Input.Group;
 const Option = Select.Option;

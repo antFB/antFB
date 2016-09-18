@@ -1,12 +1,20 @@
 ---
 order: 14
-title: 加载中的表格
+title:
+  en-US: Loading
+  zh-CN: 加载中的表格
 ---
+
+## zh-CN
 
 用属性 `loading` 控制表格加载中状态。
 
+## en-US
+
+Controll loading states by `loading` property.
+
 ````jsx
-import { Table, Button } from 'antFB';
+import { Table, Button } from 'antd';
 
 const columns = [{
   title: '姓名',

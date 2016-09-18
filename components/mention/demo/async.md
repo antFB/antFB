@@ -9,10 +9,10 @@ title: 异步加载
 
 ## en-US
 
-asnyc
+async
 
 ````jsx
-import { Mention } from 'antFB';
+import { Mention } from 'antd';
 
 const users = ['afc163', 'benjycui', 'yiminghe', 'jljsj33', 'dqaria', 'RaoHai'];
 const AsyncMention = React.createClass({

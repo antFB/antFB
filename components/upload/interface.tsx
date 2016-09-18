@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-type UploadFileStatus = 'error' | 'success' | 'done' | 'uploading' | 'removed'
+export type UploadFileStatus = 'error' | 'success' | 'done' | 'uploading' | 'removed'
 
 export interface HttpRequestHeader {
   [key: string]: string;
@@ -18,7 +18,7 @@ export interface File {
   originFileObj?: File;
 }
 
-interface UploadChangeParam {
+export interface UploadChangeParam {
   file: File;
   fileList: Array<File>;
   event?: { percent: number };
@@ -43,6 +43,8 @@ export interface UploadProps {
   onRemove?: (file: File) => void;
   supportServerRender?: boolean;
   style?: React.CSSProperties;
+  disabled?: boolean;
+  prefixCls?: string;
 }
 
 export interface UploadListProps {
@@ -51,4 +53,5 @@ export interface UploadListProps {
   onRemove?: (file: File) => void;
   items?: Array<File>;
   progressAttr?: Object;
+  prefixCls?: string;
 }

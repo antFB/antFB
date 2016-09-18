@@ -14,7 +14,7 @@ title:
 You can custom text format by setting `format`.
 
 ````jsx
-import { Progress } from 'antFB';
+import { Progress } from 'antd';
 
 ReactDOM.render(
   <div>

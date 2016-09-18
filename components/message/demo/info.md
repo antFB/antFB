@@ -14,7 +14,7 @@ title:
 Normal messages as feedbacks.
 
 ````jsx
-import { message, Button } from 'antFB';
+import { message, Button } from 'antd';
 
 const info = function () {
   message.info('This is a normal message');

@@ -16,7 +16,7 @@ title:
 Used in standalone when children is empty.
 
 ````jsx
-import { Badge } from 'antFB';
+import { Badge } from 'antd';
 
 ReactDOM.render(<div>
   <Badge count={25} />

@@ -14,9 +14,11 @@ title:
 The `seconds` options are hidden and cannot be selected.
 
 ````jsx
-import { TimePicker } from 'antFB';
+import { TimePicker } from 'antd';
+import moment from 'moment';
 
+const format = 'HH:mm';
 ReactDOM.render(
-  <TimePicker defaultValue="12:08:23" format="HH:mm" />
+  <TimePicker defaultValue={moment('12:08', format)} format={format} />
 , mountNode);
 ````

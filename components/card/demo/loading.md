@@ -14,7 +14,7 @@ title:
 Shows a loading indicator while the contents of the card are being fetched.
 
 ````jsx
-import { Card } from 'antFB';
+import { Card } from 'antd';
 
 ReactDOM.render(
   <Card loading title="Card title" style={{ width: '34%' }}>

@@ -14,7 +14,7 @@ title:
 You can add an icon beside the slider to make it meaningful.
 
 ````jsx
-import { Slider, Icon } from 'antFB';
+import { Slider, Icon } from 'antd';
 
 const IconSlider = React.createClass({
   getInitialState() {

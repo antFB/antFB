@@ -1,7 +1,11 @@
 ---
 order: 6
-title: 重置筛选和排序
+title:
+  en-US: Reset filters and sorters
+  zh-CN: 可控的筛选和排序
 ---
+
+## zh-CN
 
 使用受控属性对筛选和排序状态进行控制。
 
@@ -11,8 +15,18 @@ title: 重置筛选和排序
 
 > 3. 务必指定 `column.key`。
 
+## en-US
+
+Control filters and sorters by `fileredValue` and `sortOrder`.
+
+> 1. Defining `fileredValue` or `sortOrder` means that it is in the controlled mode.
+
+> 2. Make sure `sortOrder` is assigned for only one column.
+
+> 3. `column.key` is required.
+
 ````jsx
-import { Table } from 'antFB';
+import { Table } from 'antd';
 
 const data = [{
   key: '1',
@@ -83,7 +97,7 @@ const App = React.createClass({
         { text: '姓胡的', value: '胡' },
       ],
       filteredValue: filteredInfo.name,
-      onFilter: (value, record) => record.name.indexOf(value) === 0,
+      onFilter: (value, record) => record.name.includes(value),
       sorter: (a, b) => a.name.length - b.name.length,
       sortOrder: sortedInfo.columnKey === 'name' && sortedInfo.order,
     }, {
@@ -101,7 +115,7 @@ const App = React.createClass({
         { text: '西湖', value: '西湖' },
       ],
       filteredValue: filteredInfo.address,
-      onFilter: (value, record) => record.address.indexOf(value) === 0,
+      onFilter: (value, record) => record.address.includes(value),
       sorter: (a, b) => a.address.length - b.address.length,
       sortOrder: sortedInfo.columnKey === 'address' && sortedInfo.order,
     }];

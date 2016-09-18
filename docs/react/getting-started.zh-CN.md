@@ -3,7 +3,7 @@ order: 1
 title: 快速上手
 ---
 
-Ant Design React 致力于提供给程序员**愉悦**的开发体验。
+Ant Fable React 致力于提供给程序员**愉悦**的开发体验。
 
 ---
 
@@ -13,7 +13,7 @@ Ant Design React 致力于提供给程序员**愉悦**的开发体验。
 
 最简单的使用方式参照以下 CodePen 演示，也推荐 Fork 本例来进行 `Bug Report`，注意不要在实际项目中这样使用。
 
-- [antd CodePen](http://codepen.io/anon/pen/wGOWGW?editors=001)
+- [antd CodePen](http://codepen.io/benjycui/pen/KgPZrE?editors=001)
 
 ## 标准开发
 
@@ -22,13 +22,13 @@ Ant Design React 致力于提供给程序员**愉悦**的开发体验。
 
 ### 1. 安装脚手架工具
 
-> 使用 `antd-init` 前，务必确认 [Node.js](https://nodejs.org/en/) 已经升级到 v4.x 或以上。
+> 使用 `antFB-init` 前，务必确认 [Node.js](https://nodejs.org/en/) 已经升级到 v4.x 或以上。
 
 ```bash
-$ npm install antd-init -g
+$ npm install antFB-init -g
 ```
 
-更多功能请参考 [脚手架工具](https://github.com/ant-design/antd-init/) 和 [开发工具文档](http://ant-tool.github.io/)。
+更多功能请参考 [脚手架工具](https://github.com/antFB/antFB-init/) 和 [开发工具文档](http://ant-tool.github.io/)。
 
 > 除了官方提供的脚手架，您也可以使用社区提供的脚手架和范例：
 >
@@ -43,11 +43,11 @@ $ npm install antd-init -g
 使用命令行进行初始化。
 
 ```bash
-$ mkdir antd-demo && cd antd-demo
-$ antd-init --type plain-react
+$ mkdir antFB-demo && cd antFB-demo
+$ antFB-init --ie8
 ```
 
-antd-init 会自动安装 npm 依赖，若有问题则可自行安装。
+antFB-init 会自动安装 npm 依赖，若有问题则可自行安装。
 
 若安装缓慢报错，可尝试用 `cnpm` 或别的镜像源自行安装：`rm -rf node_modules && cnpm install`。
 
@@ -60,7 +60,7 @@ antd-init 会自动安装 npm 依赖，若有问题则可自行安装。
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { DatePicker, message } from 'antd';
+import { DatePicker, message } from 'antFB';
 
 class App extends React.Component {
   constructor(props) {
@@ -104,11 +104,11 @@ $ npm run build
 
 入口文件会构建到 `dist` 目录中，你可以自由部署到不同环境中进行引用。
 
-> 上述例子用于帮助你理解 Ant Design React 的使用流程，并非真实的开发过程，你可以根据自己的项目开发流程进行接入。
+> 上述例子用于帮助你理解 Ant Fable React 的使用流程，并非真实的开发过程，你可以根据自己的项目开发流程进行接入。
 
 ## 兼容性
 
-Ant Design React 支持所有的现代浏览器和 IE8+。
+Ant Fable React 支持所有的现代浏览器和 IE8+。
 
 对于 IE8/9 等浏览器，需要提供 [es5-shim](https://facebook.github.io/react/docs/working-with-the-browser.html#browser-support) 等 Polyfills 的支持，推荐使用 [babel-polyfill](https://babeljs.io/docs/usage/polyfill/)。特别对于 IE8 需要配合使用 [react@0.14.x](https://facebook.github.io/react/blog/2016/01/12/discontinuing-ie8-support.html) 版本。
 
@@ -135,7 +135,7 @@ Ant Design React 支持所有的现代浏览器和 IE8+。
 
 另外，由于 `babel@6.x` 对 IE8 的支持不佳，你可能会遇到类似 [#28](https://github.com/ant-tool/atool-build/issues/28) 和 [#858](https://github.com/antFB/antFB/issues/858) 的 default 报错的问题。
 
-[antd-init](http://github.com/ant-design/antd-init) 脚手架已经解决了这个问题，你也可以参照这个 [webpack 配置](https://github.com/ant-design/antd-init/blob/f5fb9479ca973fade51fd6754e50f8b3fafbb1df/boilerplate/webpack.config.js#L4-L8)。
+[antd-init](https://github.com/antFB/antFB-init/) 脚手架已经解决了这个问题，你也可以参照这个 [webpack 配置](https://github.com/antFB/antFB-init/blob/f5fb9479ca973fade51fd6754e50f8b3fafbb1df/boilerplate/webpack.config.js#L4-L8)。
 
 > 更多 IE8 下使用 React 的相关问题可以参考：https://github.com/xcatliu/react-ie8
 
@@ -147,24 +147,24 @@ Ant Design React 支持所有的现代浏览器和 IE8+。
 
 ## 按需加载
 
-通过 `import { Button } from 'antd';` 引入会加载 antd 下所有的模块，如果要按需加载可以通过以下的写法来引用。
+通过 `import { Button } from 'antFB';` 引入会加载 antFB 下所有的模块，如果要按需加载可以通过以下的写法来引用。
 
 ```jsx
-import Button from 'antd/lib/button';
+import Button from 'antFB/lib/button';
 ```
 
 如果你使用 babel，我们推荐使用 [babel-plugin-antd](https://github.com/ant-design/babel-plugin-antd) 来进行按需加载，加入这个插件后。你可以仍然这么写：
 
 ```jsx
-import { Button } from 'antd';
+import { Button } from 'antFB';
 ```
 
 插件会帮你转换成上面的写法。另外此插件配合 [style](https://github.com/ant-design/babel-plugin-antd#usage) 属性可以做到模块样式的按需自动加载。
 
 ## 配置案例
 
-- [改变主色系](https://github.com/ant-design/antd-init/tree/master/examples/customize-antd-theme)
-- [使用本地字体](https://github.com/ant-design/antd-init/tree/master/examples/local-iconfont)
+- [改变主色系](https://github.com/antFB/antFB-init/tree/master/examples/customize-antd-theme)
+- [使用本地字体](https://github.com/antFB/antFB-init/tree/master/examples/local-iconfont)
 
 ## 小甜点
 

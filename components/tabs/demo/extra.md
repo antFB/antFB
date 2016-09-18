@@ -1,6 +1,8 @@
 ---
 order: 4
-title: 附加内容
+title: 
+  zh-CN: 附加内容
+  en-US: Extra content
 ---
 
 ## zh-CN
@@ -13,7 +15,7 @@ You can add extra actions to the right of Tabs.
 
 
 ````jsx
-import { Tabs, Button } from 'antFB';
+import { Tabs, Button } from 'antd';
 const TabPane = Tabs.TabPane;
 
 const operations = <Button>Extra Action</Button>;

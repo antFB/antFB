@@ -14,7 +14,7 @@ title:
 Simple mode.
 
 ````jsx
-import { Pagination } from 'antFB';
+import { Pagination } from 'antd';
 
 ReactDOM.render(
   <Pagination simple defaultCurrent={2} total={50} />,

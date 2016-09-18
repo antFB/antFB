@@ -1,6 +1,6 @@
 ---
 order: 6
-title: 
+title:
   zh-CN: 校验提示
   en-US: Validation message
 ---
@@ -26,7 +26,7 @@ To set `hasFeedback` property to `true` enable to display feed icon of input con
 **PS**: Feed icon is just available for `<Input />`.
 
 ````jsx
-import { Form, Input, DatePicker, Col } from 'antFB';
+import { Form, Input, DatePicker, Col } from 'antd';
 const FormItem = Form.Item;
 
 ReactDOM.render(

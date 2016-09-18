@@ -1,6 +1,6 @@
 ---
 order: 15
-title: 
+title:
   zh-CN: 动态增减表单项
   en-US: Dynamic form item
 ---
@@ -14,10 +14,15 @@ title:
 Add or remove form items dynamically.
 
 ````jsx
-import { Form, Input, Button } from 'antFB';
+import { Form, Input, Button } from 'antd';
 
 let uuid = 0;
 let Demo = React.createClass({
+  componentWillMount() {
+    this.props.form.setFieldsValue({
+      keys: [0],
+    });
+  },
   remove(k) {
     const { form } = this.props;
     // can use data-binding to get
@@ -52,10 +57,7 @@ let Demo = React.createClass({
     });
   },
   render() {
-    const { getFieldProps, getFieldValue } = this.props.form;
-    getFieldProps('keys', {
-      initialValue: [0],
-    });
+    const { getFieldDecorator, getFieldValue } = this.props.form;
 
     const formItemLayout = {
       labelCol: { span: 6 },
@@ -65,20 +67,21 @@ let Demo = React.createClass({
     const formItems = getFieldValue('keys').map((k) => {
       return (
         <Form.Item {...formItemLayout} label={`good friend${k}：`} key={k}>
-          <Input {...getFieldProps(`name${k}`, {
+          {getFieldDecorator(`name${k}`, {
             rules: [{
               required: true,
               whitespace: true,
               message: "Your good friend's name",
             }],
-          })} style={{ width: '80%', marginRight: 8 }}
-          />
+          })(
+            <Input style={{ width: '80%', marginRight: 8 }} />
+          )}
           <Button onClick={() => this.remove(k)}>remove</Button>
         </Form.Item>
       );
     });
     return (
-      <Form horizontal form={this.props.form}>
+      <Form horizontal>
         {formItems}
         <Form.Item wrapperCol={{ span: 18, offset: 6 }}>
           <Button onClick={this.add} style={{ marginRight: 8 }}>add good friend</Button>

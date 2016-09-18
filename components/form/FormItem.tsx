@@ -3,9 +3,35 @@ import classNames from 'classnames';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import Row from '../row';
 import Col from '../col';
+import { WrappedFormUtils } from './Form';
 import { FIELD_META_PROP } from './constants';
 
-export default class FormItem extends React.Component {
+export interface FormItemLabelColOption {
+  span: number;
+  offset?: number;
+}
+
+export interface FormItemProps {
+  prefixCls?: string;
+  id?: string;
+  label?: string | React.ReactNode;
+  labelCol?: FormItemLabelColOption;
+  wrapperCol?: FormItemLabelColOption;
+  help?: React.ReactNode;
+  extra?: string;
+  validateStatus?: 'success' | 'warning' | 'error' | 'validating';
+  hasFeedback?: boolean;
+  className?: string;
+  required?: boolean;
+  style?: React.CSSProperties;
+  colon?: boolean;
+}
+
+export interface FormItemContext {
+  form: WrappedFormUtils;
+}
+
+export default class FormItem extends React.Component<FormItemProps, any> {
   static defaultProps = {
     hasFeedback: false,
     prefixCls: 'ant-form',
@@ -14,7 +40,7 @@ export default class FormItem extends React.Component {
 
   static propTypes = {
     prefixCls: React.PropTypes.string,
-    label: React.PropTypes.node,
+    label: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.node]),
     labelCol: React.PropTypes.object,
     help: React.PropTypes.oneOfType([React.PropTypes.node, React.PropTypes.bool]),
     validateStatus: React.PropTypes.oneOf(['', 'success', 'warning', 'error', 'validating']),
@@ -29,6 +55,8 @@ export default class FormItem extends React.Component {
   static contextTypes = {
     form: React.PropTypes.object,
   };
+
+  context: FormItemContext;
 
   shouldComponentUpdate(...args) {
     return PureRenderMixin.shouldComponentUpdate.apply(this, args);
@@ -46,14 +74,14 @@ export default class FormItem extends React.Component {
 
   getOnlyControl() {
     const children = React.Children.toArray(this.props.children);
-    const child = children.filter((c) => {
+    const child = children.filter((c: React.ReactElement<any>) => {
       return c.props && FIELD_META_PROP in c.props;
     })[0];
     return child !== undefined ? child : null;
   }
 
   getChildProp(prop) {
-    const child = this.getOnlyControl();
+    const child = this.getOnlyControl() as React.ReactElement<any>;
     return child && child.props && child.props[prop];
   }
 
@@ -92,7 +120,7 @@ export default class FormItem extends React.Component {
       return 'validating';
     } else if (!!getFieldError(field)) {
       return 'error';
-    } else if (getFieldValue(field) !== undefined) {
+    } else if (getFieldValue(field) !== undefined && getFieldValue(field) !== null) {
       return 'success';
     }
     return '';
@@ -159,7 +187,7 @@ export default class FormItem extends React.Component {
     // remove user input colon
     let label = props.label;
     if (typeof label === 'string' && label.trim() !== '') {
-      label = props.label.replace(/[：|:]\s*$/, '');
+      label = (props.label as string).replace(/[：|:]\s*$/, '');
     }
 
     return props.label ? (
@@ -173,7 +201,7 @@ export default class FormItem extends React.Component {
 
   renderChildren() {
     const props = this.props;
-    const children = React.Children.map(props.children, (child) => {
+    const children = React.Children.map(props.children, (child: React.ReactElement<any>) => {
       if (child && typeof child.type === 'function' && !child.props.size) {
         return React.cloneElement(child, { size: 'large' });
       }

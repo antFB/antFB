@@ -14,7 +14,7 @@ title:
 The most basic usage of `Transfer` involves providing the source data and target keys arrays, plus the rendering and change callback functions.
 
 ````jsx
-import { Transfer } from 'antFB';
+import { Transfer } from 'antd';
 
 const App = React.createClass({
   getInitialState() {

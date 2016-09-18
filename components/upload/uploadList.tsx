@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Animate from 'rc-animate';
 import Icon from '../icon';
-const prefixCls = 'ant-upload';
 import Progress from '../progress';
 import classNames from 'classnames';
 import { UploadListProps } from './interface';
@@ -21,6 +20,7 @@ export default class UploadList extends React.Component<UploadListProps, any> {
       strokeWidth: 3,
       showInfo: false,
     },
+    prefixCls: 'ant-upload',
   };
 
   handleClose = (file) => {
@@ -59,6 +59,7 @@ export default class UploadList extends React.Component<UploadListProps, any> {
   }
 
   render() {
+    const { prefixCls } = this.props;
     let list = this.props.items.map(file => {
       let progress;
       let icon = <Icon type="paper-clip" />;
@@ -76,7 +77,7 @@ export default class UploadList extends React.Component<UploadListProps, any> {
               className={`${prefixCls}-list-item-thumbnail`}
               onClick={e => this.handlePreview(file, e)}
               href={file.url}
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
             >
               <img src={file.thumbUrl || file.url} alt={file.name} />
             </a>
@@ -104,7 +105,7 @@ export default class UploadList extends React.Component<UploadListProps, any> {
               ? (
                 <a
                   href={file.url}
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   className={`${prefixCls}-list-item-name`}
                   onClick={e => this.handlePreview(file, e)}
                 >
@@ -125,7 +126,7 @@ export default class UploadList extends React.Component<UploadListProps, any> {
                 <span>
                   <a
                     href={file.url}
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     style={{ pointerEvents: file.url ? '' : 'none' }}
                     onClick={e => this.handlePreview(file, e)}
                   >
@@ -146,7 +147,7 @@ export default class UploadList extends React.Component<UploadListProps, any> {
     });
     return (
       <div className={listClassNames}>
-        <Animate transitionName={`${prefixCls}-margin-top`} component="div">
+        <Animate transitionName={`${prefixCls}-margin-top`} component="">
           {list}
         </Animate>
       </div>

@@ -14,7 +14,7 @@ title:
 A small `Spin` use in loading text, default `Spin` use in loading card-level block, and large `Spin` use in loading **page**.
 
 ````jsx
-import { Spin } from 'antFB';
+import { Spin } from 'antd';
 
 ReactDOM.render(
   <div>

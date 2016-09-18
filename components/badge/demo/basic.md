@@ -14,11 +14,11 @@ title:
 Simplest Usage.
 
 ````jsx
-import { Badge } from 'antFB';
+import { Badge } from 'antd';
 
 ReactDOM.render(
   <Badge count={5}>
-    <a href="#" className="head-example"></a>
+    <a href="#" className="head-example" />
   </Badge>
 , mountNode);
 ````

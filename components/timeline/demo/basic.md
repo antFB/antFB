@@ -14,7 +14,7 @@ title:
 Basic timeline.
 
 ````jsx
-import { Timeline } from 'antFB';
+import { Timeline } from 'antd';
 
 ReactDOM.render(
   <Timeline>

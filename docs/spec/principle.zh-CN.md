@@ -32,7 +32,7 @@ title: 引言
 </a>
 </div>
 
-#### Ant Design 十大设计原则
+#### Ant Fable 十大设计原则
 
 - [亲密性 Proximity](/docs/spec/proximity)
 - [对齐 Alignment](/docs/spec/alignment)

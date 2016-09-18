@@ -3,8 +3,8 @@
 @import "../../checkbox/style/mixin";
 @import "./mixin";
 
-@tree-prefix-cls: ant-tree;
-.antCheckboxFn(@checkbox-prefix-cls: ant-tree-checkbox);
+@tree-prefix-cls: ~"@{ant-prefix}-tree";
+.antCheckboxFn(@checkbox-prefix-cls: ~"@{ant-prefix}-tree-checkbox");
 
 .@{tree-prefix-cls} {
   margin: 0;
@@ -95,6 +95,9 @@
         }
       }
       &.@{tree-prefix-cls}-switcher {
+        &.@{tree-prefix-cls}-switcher-noop {
+          cursor: auto;
+        }
         &.@{tree-prefix-cls}-roots_open,
         &.@{tree-prefix-cls}-center_open,
         &.@{tree-prefix-cls}-bottom_open,

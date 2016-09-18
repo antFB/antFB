@@ -1,6 +1,6 @@
 ---
 order: 0
-title:	
+title:
   zh-CN: 基本
   en-US: Basic
 ---
@@ -15,7 +15,7 @@ title:
 A basic calendar component with Year/Month switch.
 
 ````jsx
-import { Calendar } from 'antFB';
+import { Calendar } from 'antd';
 
 function onPanelChange(value, mode) {
   console.log(value, mode);

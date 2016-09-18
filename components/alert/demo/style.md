@@ -11,10 +11,10 @@ title:
 
 ## en-US
 
-There are 4 kinds of Alert: `success`, `info`, `warning`, `error`.
+There are 4 types of Alert: `success`, `info`, `warning`, `error`.
 
 ````jsx
-import { Alert } from 'antFB';
+import { Alert } from 'antd';
 
 ReactDOM.render(<div>
   <Alert message="Success Text" type="success" />

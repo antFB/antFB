@@ -3,7 +3,7 @@ order: 1
 english: 三大特性
 ---
 
-与众不同的是，Ant Design 不但追求『用户』的使用体验，还追求『设计者』的使用体验，真真正正贯彻和践行『以人为本』的设计理念。
+与众不同的是，Ant Fable 不但追求『用户』的使用体验，还追求『设计者』的使用体验，真真正正贯彻和践行『以人为本』的设计理念。
 
 <div style="margin-left:-40px;margin-right:-40px;overflow:hidden;margin-top:30px;">
   <div class="ant-col-8 features">
@@ -102,7 +102,7 @@ english: 三大特性
 
 ### 设计者的幸福
 
-<img class="preview-img no-padding" align="right" alt="设计者的幸福示例" description="Ant Design 无法保证业务产品能否成功，但是能帮助业务产品『正确的成功』或者『正确的失败』。" src="https://os.alipayobjects.com/rmsportal/eMcdBWuZxRbvlvW.png">
+<img class="preview-img no-padding" align="right" alt="设计者的幸福示例" description="Ant Fable 无法保证业务产品能否成功，但是能帮助业务产品『正确的成功』或者『正确的失败』。" src="https://os.alipayobjects.com/rmsportal/eMcdBWuZxRbvlvW.png">
 
 从『无』到『有』时，提供一整套设计解决方案，帮助『设计者』将商业想法快速形成产品并推向市场，快速、低成本试错。
 

@@ -14,7 +14,7 @@ value 和 onChange 需要配合使用。
 `Value` and `onChange` should be used together, 
 
 ````jsx
-import { TimePicker } from 'antFB';
+import { TimePicker } from 'antd';
 
 const Test = React.createClass({
   getInitialState() {

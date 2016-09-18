@@ -14,7 +14,7 @@ title:
 More pages.
 
 ````jsx
-import { Pagination } from 'antFB';
+import { Pagination } from 'antd';
 
 ReactDOM.render(
   <Pagination defaultCurrent={1} total={500} />,

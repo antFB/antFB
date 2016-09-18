@@ -14,7 +14,7 @@ title:
 Appropriate for a narrow area.
 
 ````jsx
-import { Progress } from 'antFB';
+import { Progress } from 'antd';
 
 ReactDOM.render(
   <div style={{ width: 170 }}>

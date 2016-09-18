@@ -1,12 +1,20 @@
 ---
 order: 5
-title: 切换菜单类型
+title:
+  zh-CN: 切换菜单类型
+  en-US: Switch the menu type
 ---
+
+## zh-CN
 
 展示动态切换模式。
 
+## en-US
+
+Show the dynamic switching mode (between 'inline' and 'vertical').
+
 ````jsx
-import { Menu, Icon, Switch } from 'antFB';
+import { Menu, Icon, Switch } from 'antd';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 

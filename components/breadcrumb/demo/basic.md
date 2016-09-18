@@ -14,7 +14,7 @@ title:
 The simplest use
 
 ````jsx
-import { Breadcrumb } from 'antFB';
+import { Breadcrumb } from 'antd';
 
 ReactDOM.render(
   <Breadcrumb>

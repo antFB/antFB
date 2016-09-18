@@ -14,7 +14,7 @@ title:
 The most basic step bar.
 
 ````jsx
-import { Steps } from 'antFB';
+import { Steps } from 'antd';
 const Step = Steps.Step;
 
 ReactDOM.render(

@@ -14,7 +14,7 @@ title:
 To mark a button as disabled, add the `disabled` property to the `Button`.
 
 ````jsx
-import { Button } from 'antFB';
+import { Button } from 'antd';
 
 ReactDOM.render(
   <div>

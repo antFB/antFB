@@ -14,7 +14,7 @@ title:
 Affix element according to offset value.
 
 ````jsx
-import { Affix, Button } from 'antFB';
+import { Affix, Button } from 'antd';
 
 ReactDOM.render(
   <Affix offsetTop={75}>

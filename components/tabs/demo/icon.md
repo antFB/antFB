@@ -1,6 +1,8 @@
 ---
 order: 2
-title: 图标
+title: 
+  zh-CN: 图标
+  en-US: Icon
 ---
 
 ## zh-CN
@@ -13,7 +15,7 @@ The Tab with Icon.
 
 
 ````jsx
-import { Tabs, Icon } from 'antFB';
+import { Tabs, Icon } from 'antd';
 const TabPane = Tabs.TabPane;
 
 ReactDOM.render(

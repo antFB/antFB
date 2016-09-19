@@ -10,10 +10,6 @@ title: Installation
 
 If using npm to install, you could use `import` or `require`.
 
-Stable version：
-
-[![npm package](http://img.shields.io/npm/v/antd.svg?style=flat-square)](https://www.npmjs.org/package/antd)
-
 ```bash
 $ npm install antFB --save
 ```
@@ -30,7 +26,7 @@ We provide React components [Scaffold tool](https://github.com/ant-design/antFB-
 $ npm install antFB-init -g
 ```
 
-Inside an empty folder run `antFB-init` to init.
+Inside an empty folder run `antFB-init --ie8` to init.
 
 You can explore the latest structure of scaffold [here](https://github.com/antFB/antFB-init/tree/master/boilerplates), it is a good habit to watch this repo to get the latest features.
 

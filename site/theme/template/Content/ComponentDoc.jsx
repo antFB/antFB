@@ -67,7 +67,7 @@ export default class ComponentDoc extends React.Component {
       return (
         <li key={demo.meta.id} title={localizeTitle}>
           <a href={`#${demo.meta.id}`}>
-            {localizeTitle}
+            here:{localizeTitle}
           </a>
         </li>
       );

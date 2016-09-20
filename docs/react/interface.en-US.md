@@ -20,65 +20,76 @@ antFB use fetch-ie8 and fetch-jsonp to invoke remote interface。
 
 ---
 
-## 特性
+## feature
 
-- 支持多种数据源，由fbMode决定，可选值如下：
-	<table style='width:100%'>
+- support multi data source, desided by parameter fbMode：
+
+<table style='width:100%'>
 		<tbody>
 			<tr>
-				<th>值</th><th>功能</th>
+				<th>value</th><th>function</th>
 			</tr>	
 			<tr>
-				<td>5</td><td>发布环境（只请求远程发布机）</td>
+				<td>5</td><td>publish envirment（just request remote server）</td>
 			</tr>
 			<tr>	
-				<td>9</td><td>发布环境（先远程发布机，失败后请求本地数据）</td>
+				<td>9</td><td>publish envirment（request remote server first,then local.）</td>
 			</tr>
 			<tr>
-				<td>6</td><td>联调环境（只请求远程联调机）</td>
+				<td>6</td><td>test envirment（just request remote test server）</td>
 			</tr>
 			<tr>
-				<td>10</td><td>联调环境（先远程联调机，失败后请求本地数据）</td>
+				<td>10</td><td>test envirment（request remote test server first,then local.）</td>
 			</tr>
 			<tr>
-				<td>16</td><td>本地环境 (只请求本地静态数据）</td>
+				<td>16</td><td>local static file (just request local static file）</td>
 			</tr>	
 		</tbody>
-	</table>
+</table>
 	
-- 支持json和jsonp
-	调用json接口：xFetch({name:'interfaceName'});
-	调用jsonp接口：xFetch({name:'interfaceName',dataType:'jsonp'});
+- support json and jsonp
+	json example：xFetch({name:'interfaceName'});
+	jsonp example：xFetch({name:'interfaceName',dataType:'jsonp'});
 
-- 支持ie8+
+- support ie8+
   
 
-## xFetch参数清单
-	<table style='width:100%'>
+## xFetch config api
+
+<table style='width:100%'>
 		<tbody>
 			<tr>
-				<th>参数名</th><th>默认值</th><th>说明</th>
+				<th>property</th><th>default</th><th>function</th>
 			</tr>	
 			<tr>
-				<td>name</td><td>undefined</td><td>请求的接口名，url和name参数不能同时为空，name不为空时，xFetch动态读取interfaces.js中定义的同名接口</td>
+				<td>name</td><td>undefined</td><td>interface name，url and name can't be undefined at same time</td>
 			</tr>
 			<tr>	
-				<td>url</td><td>undefined</td><td>请求地址，url和name参数不能同时为空</td>
+				<td>url</td><td>undefined</td><td>interface url</td>
 			</tr>
 			<tr>
-				<td>dataType</td><td>'json'</td><td>接口返回值的数据格式:'text','json','jsonp'</td>
+				<td>dataType</td><td>'json'</td><td>interface data type:'text','json','jsonp'</td>
 			</tr>
 			<tr>
-				<td>method</td><td>'get'</td><td>请求方法，'get','post'</td>
+				<td>method</td><td>'get'</td><td>request method，'get','post'</td>
 			</tr>
 			<tr>
-				<td>body</td><td>undefined</td><td>请求体,当method为get时，将拼接在url中；当method为post时，在请求体body中发出.</td>
+				<td>body</td><td>undefined</td><td>request body,when method is get，body will be put at end of url中；当method为post时，在请求体body中发出.</td>
 			</tr>
 			<tr>
-				<td>head</td><td>undefined</td><td>请求头配置</td>
+				<td>head</td><td>undefined</td><td>request head</td>
+			</tr>	
+			<tr>
+				<td>nameSuffix</td><td>''</td><td>static file suffix after file name, this is for static file</td>
+			</tr>	
+			<tr>
+				<td>jsonpCallback</td><td>'jsonpcallback'</td><td>jsonp callback function argument name</td>
+			</tr>	
+			<tr>
+				<td>timeout</td><td>5000</td><td>jsonp time out</td>
 			</tr>	
 		</tbody>
-	</table>
+</table>
 
 
 ## 示例

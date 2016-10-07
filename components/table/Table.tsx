@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import RcTable from 'rc-table';
 import Checkbox from '../checkbox';
 import Radio from '../radio';
 import FilterDropdown from './filterDropdown';
-import Pagination from '../pagination';
+import Pagination, { PaginationProps } from '../pagination';
 import Icon from '../icon';
 import Spin from '../spin';
 import classNames from 'classnames';
@@ -26,7 +26,7 @@ const defaultLocale = {
   filterTitle: '筛选',
   filterConfirm: '确定',
   filterReset: '重置',
-  emptyText: <span><Icon type="frown" />暂无数据</span>,
+  emptyText: <span><Icon type="frown-o" />暂无数据</span>,
 };
 
 const defaultPagination = {
@@ -48,7 +48,7 @@ export interface TableColumnConfig {
   key?: string;
   dataIndex?: string;
   render?: (text: any, record: Object, index: number) => React.ReactNode;
-  filters?: string[];
+  filters?: { text: string; value: string }[];
   onFilter?: (value: any, record: Object) => boolean;
   filterMultiple?: boolean;
   filterDropdown?: React.ReactNode;
@@ -65,7 +65,7 @@ export interface TableProps {
   prefixCls?: string;
   dropdownPrefixCls?: string;
   rowSelection?: TableRowSelection;
-  pagination?: any; // 等 Pagination 的 interface，以便直接引用
+  pagination?: PaginationProps | boolean;
   size?: 'default' | 'small';
   dataSource?: Object[];
   columns?: TableColumnConfig[];
@@ -75,7 +75,8 @@ export interface TableProps {
   defaultExpandedRowKeys?: string[];
   expandedRowKeys?: string[];
   expandIconAsCell?: boolean;
-  onChange?: (pagination: any, filters: string[], sorter: Object) => any;
+  expandIconColumnIndex?: number;
+  onChange?: (pagination: PaginationProps | boolean, filters: string[], sorter: Object) => any;
   loading?: boolean;
   locale?: Object;
   indentSize?: number;
@@ -87,6 +88,7 @@ export interface TableProps {
   title?: (currentPageData: Object[]) => React.ReactNode;
   scroll?: { x?: boolean | number, y?: boolean | number};
   childrenColumnName?: 'string';
+  bodyStyle?: React.CSSProperties;
 }
 
 export interface TableContext {
@@ -141,7 +143,7 @@ export default class Table extends React.Component<TableProps, any> {
     warning(
       !('columnsPageRange' in props || 'columnsPageSize' in props),
       '`columnsPageRange` and `columnsPageSize` are removed, please use ' +
-      '[fixed columns](http://ant.design/components/table/#components-table-demo-fixed-columns) ' +
+      '[fixed columns](http://diy-design.me/n.html?%2F&port=8001/components/table/#components-table-demo-fixed-columns) ' +
       'instead.'
     );
 
@@ -399,7 +401,7 @@ export default class Table extends React.Component<TableProps, any> {
     }
 
     // Controlled current prop will not respond user interaction
-    if (props.pagination && 'current' in props.pagination) {
+    if (props.pagination && 'current' in (props.pagination as Object)) {
       newState.pagination = assign({}, pagination, {
         current: this.state.pagination.current,
       });
@@ -501,7 +503,7 @@ export default class Table extends React.Component<TableProps, any> {
       pagination,
     };
     // Controlled current prop will not respond user interaction
-    if (props.pagination && 'current' in props.pagination) {
+    if (props.pagination && 'current' in (props.pagination as Object)) {
       newState.pagination = assign({}, pagination, {
         current: this.state.pagination.current,
       });
@@ -560,7 +562,24 @@ export default class Table extends React.Component<TableProps, any> {
     if (typeof rowKey === 'function') {
       return rowKey(record, index);
     }
-    return record[rowKey as string] || index;
+    let recordKey = record[rowKey as string] !== undefined ? record[rowKey as string] : index;
+    warning(recordKey !== undefined,
+      'Each record in table should have a unique `key` prop, or set `rowKey` to an unique primary key.'
+    );
+    return recordKey;
+  }
+
+  checkSelection(data, type, byDefaultChecked) {
+    // type should be 'every' | 'some'
+    if (type === 'every' || type === 'some') {
+      return (
+        byDefaultChecked
+        ? data[type](item => this.getCheckboxPropsByItem(item).defaultChecked)
+        : data[type]((item, i) =>
+              this.state.selectedRowKeys.indexOf(this.getRecordKey(item, i)) >= 0)
+      );
+    }
+    return false;
   }
 
   renderRowSelection() {
@@ -574,16 +593,26 @@ export default class Table extends React.Component<TableProps, any> {
         return true;
       });
       let checked;
+      let indeterminate;
       if (!data.length) {
         checked = false;
+        indeterminate = false;
       } else {
         checked = this.state.selectionDirty
-          ? data.every((item, i) =>
-              this.state.selectedRowKeys.indexOf(this.getRecordKey(item, i)) >= 0)
+          ? this.checkSelection(data, 'every', false)
           : (
-            data.every((item, i) =>
-              this.state.selectedRowKeys.indexOf(this.getRecordKey(item, i)) >= 0) ||
-            data.every(item => this.getCheckboxPropsByItem(item).defaultChecked)
+            this.checkSelection(data, 'every', false) ||
+            this.checkSelection(data, 'every', true)
+          );
+        indeterminate = this.state.selectionDirty
+          ? (
+            this.checkSelection(data, 'some', false) &&
+            !this.checkSelection(data, 'every', false)
+            )
+          : ((this.checkSelection(data, 'some', false) &&
+            !this.checkSelection(data, 'every', false)) ||
+            (this.checkSelection(data, 'some', true) &&
+            !this.checkSelection(data, 'every', true))
           );
       }
       let selectionColumn;
@@ -597,6 +626,7 @@ export default class Table extends React.Component<TableProps, any> {
         const checkboxAllDisabled = data.every(item => this.getCheckboxPropsByItem(item).disabled);
         const checkboxAll = (
           <Checkbox checked={checked}
+            indeterminate={indeterminate}
             disabled={checkboxAllDisabled}
             onChange={this.handleSelectAllRow}
           />
@@ -848,13 +878,19 @@ export default class Table extends React.Component<TableProps, any> {
       return newColumn;
     });
 
+    let expandIconColumnIndex = (columns[0] && columns[0].key === 'selection-column') ? 1 : 0;
+    if ('expandIconColumnIndex' in restProps) {
+      expandIconColumnIndex = restProps.expandIconColumnIndex;
+    }
+
     let table = (
-      <RcTable {...restProps}
+      <RcTable
+        {...restProps}
         prefixCls={prefixCls}
         data={data}
         columns={columns}
         className={classString}
-        expandIconColumnIndex={(columns[0] && columns[0].key === 'selection-column') ? 1 : 0}
+        expandIconColumnIndex={expandIconColumnIndex}
         expandIconAsCell={expandIconAsCell}
         emptyText={() => locale.emptyText}
       />

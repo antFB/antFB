@@ -1,6 +1,6 @@
 ---
 order: 2
-link: //github.com/antFB/antFB
-english: GitHub
+link: //github.com/ant-design/ant-design
+title: GitHub
 ---
 

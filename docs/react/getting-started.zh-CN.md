@@ -9,12 +9,6 @@ Ant Fable React 致力于提供给程序员**愉悦**的开发体验。
 
 在开始之前，推荐先学习 [React](http://facebook.github.io/react/) 和 [ES2015](http://babeljs.io/docs/learn-es2015/)。
 
-## 第一个例子
-
-最简单的使用方式参照以下 CodePen 演示，也推荐 Fork 本例来进行 `Bug Report`，注意不要在实际项目中这样使用。
-
-- [antd CodePen](http://codepen.io/benjycui/pen/KgPZrE?editors=001)
-
 ## 标准开发
 
 实际项目开发中，你会需要对 ES2015 和 JSX 代码的构建、调试、代理、打包部署等一系列工程化的需求。
@@ -55,7 +49,7 @@ antFB-init 会自动安装 npm 依赖，若有问题则可自行安装。
 
 脚手架会生成一个 Todo 应用实例（一个很有参考价值的 React 上手示例），先不管它，我们用来测试组件。
 
-直接用下面的代码替换 `src/entries/index.js` 的内容，用 React 的方式直接使用 antd 组件。
+直接用下面的代码替换 `index.js` 的内容，用 React 的方式直接使用 antd 组件。
 
 ```jsx
 import React from 'react';
@@ -90,7 +84,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ### 4. 开发调试
 
-一键启动调试，访问 http://127.0.0.1:8989 查看效果。
+一键启动调试，访问 http://127.0.0.1:8000 查看效果。
 
 ```bash
 $ npm start
@@ -108,7 +102,7 @@ $ npm run build
 
 ## 兼容性
 
-Ant Fable React 支持所有的现代浏览器和 IE8+。
+Ant Fable React 支持所有的现代浏览器和 IE9+。
 
 对于 IE8/9 等浏览器，需要提供 [es5-shim](https://facebook.github.io/react/docs/working-with-the-browser.html#browser-support) 等 Polyfills 的支持，推荐使用 [babel-polyfill](https://babeljs.io/docs/usage/polyfill/)。特别对于 IE8 需要配合使用 [react@0.14.x](https://facebook.github.io/react/blog/2016/01/12/discontinuing-ie8-support.html) 版本。
 
@@ -135,7 +129,7 @@ Ant Fable React 支持所有的现代浏览器和 IE8+。
 
 另外，由于 `babel@6.x` 对 IE8 的支持不佳，你可能会遇到类似 [#28](https://github.com/ant-tool/atool-build/issues/28) 和 [#858](https://github.com/antFB/antFB/issues/858) 的 default 报错的问题。
 
-[antd-init](https://github.com/antFB/antFB-init/) 脚手架已经解决了这个问题，你也可以参照这个 [webpack 配置](https://github.com/antFB/antFB-init/blob/f5fb9479ca973fade51fd6754e50f8b3fafbb1df/boilerplate/webpack.config.js#L4-L8)。
+[antd-init](http://github.com/antFB/antFB-init) 脚手架已经解决了这个问题，你也可以参照这个 [webpack 配置](https://github.com/antFB/antFB-init/blob/f5fb9479ca973fade51fd6754e50f8b3fafbb1df/boilerplate/webpack.config.js#L4-L8)。
 
 > 更多 IE8 下使用 React 的相关问题可以参考：https://github.com/xcatliu/react-ie8
 
@@ -153,13 +147,13 @@ Ant Fable React 支持所有的现代浏览器和 IE8+。
 import Button from 'antFB/lib/button';
 ```
 
-如果你使用 babel，我们推荐使用 [babel-plugin-antd](https://github.com/ant-design/babel-plugin-antd) 来进行按需加载，加入这个插件后。你可以仍然这么写：
+如果你使用 babel，我们推荐使用 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) 来进行按需加载，加入这个插件后。你可以仍然这么写：
 
 ```jsx
 import { Button } from 'antFB';
 ```
 
-插件会帮你转换成上面的写法。另外此插件配合 [style](https://github.com/ant-design/babel-plugin-antd#usage) 属性可以做到模块样式的按需自动加载。
+插件会帮你转换成上面的写法。另外此插件配合 [style](https://github.com/ant-design/babel-plugin-import#usage) 属性可以做到模块样式的按需自动加载。
 
 ## 配置案例
 

@@ -1,4 +1,5 @@
-import React, { Children, cloneElement } from 'react';
+import React, { PropTypes, Children, cloneElement } from 'react';
+import { FormattedMessage } from 'react-intl';
 import DocumentTitle from 'react-document-title';
 import { getChildren } from 'jsonml.js/lib/utils';
 import { Timeline } from 'antd';
@@ -6,6 +7,10 @@ import EditButton from './EditButton';
 import * as utils from '../utils';
 
 export default class Article extends React.Component {
+  static contextTypes = {
+    intl: PropTypes.object.isRequired,
+  }
+
   componentDidMount() {
     this.componentDidUpdate();
   }
@@ -15,7 +20,7 @@ export default class Article extends React.Component {
       return;
     }
     const checkImgUrl = 'http://alipay-rmsdeploy-dev-image.oss-cn-hangzhou-zmf.aliyuncs.com/rmsportal/JdVaTbZzPxEldUi.png';
-    this.pingTimer = utils.ping(checkImgUrl, status => {
+    this.pingTimer = utils.ping(checkImgUrl, (status) => {
       if (status === 'responded') {
         links.forEach(link => (link.style.display = 'block'));
       } else {
@@ -35,7 +40,7 @@ export default class Article extends React.Component {
     const timelineItems = [];
     let temp = [];
     let i = 1;
-    Children.forEach(article.props.children, child => {
+    Children.forEach(article.props.children, (child) => {
       if (child.type === 'h2' && temp.length > 0) {
         timelineItems.push(<Timeline.Item key={i}>{temp}</Timeline.Item>);
         temp = [];
@@ -55,18 +60,18 @@ export default class Article extends React.Component {
     const content = props.content;
 
     const { meta, description } = content;
-    const { title, subtitle, chinese, english, filename } = meta;
-
+    const { title, subtitle, filename } = meta;
+    const locale = this.context.intl.locale;
     return (
-      <DocumentTitle title={`${title || chinese || english} - Ant Fable`}>
+      <DocumentTitle title={`${title[locale] || title} - Ant Fable`}>
         <article className="markdown">
           <h1>
-            {title || english}
+            {title[locale] || title}
             {
-              (!subtitle && !chinese) ? null :
-                <span className="subtitle">{subtitle || chinese}</span>
+              !subtitle || locale === 'en-US' ? null :
+                <span className="subtitle">{subtitle}</span>
             }
-            <EditButton title="在 Github 上编辑此页！" filename={filename} />
+            <EditButton title={<FormattedMessage id="app.content.edit-page" />} filename={filename} />
           </h1>
           {
             !description ? null :

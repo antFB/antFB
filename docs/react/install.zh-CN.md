@@ -9,10 +9,6 @@ title: 安装
 
 可以通过 npm 直接安装到项目中，使用 `import` 或 `require` 进行引用。
 
-```bash
-$ npm install antFB --save
-```
-
 ## 开发工具
 
 我们提供了 React 前端应用开发的 [脚手架工具](https://github.com/antFB/antFB-init)，可以安装到全局直接使用。
@@ -21,7 +17,7 @@ $ npm install antFB --save
 $ npm install antFB-init -g
 ```
 
-在空目录运行 `antFB-init --ie8` 可以初始化一个 antFB 的前端应用。
+在空目录运行 `antd-init --ie8` 可以初始化一个 antFB 的前端应用。
 
 最新的脚手架结构可以到这里 [查看](https://github.com/antFB/antFB-init/tree/master/boilerplates)，建议持续关注更新以便获得最新的开发工程特性。
 

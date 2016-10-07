@@ -1,10 +1,10 @@
 ---
 category: Components
 type: Form Controls
-english: Upload
+title: Upload
 ---
 
-Upload file by selecting or dragging
+Upload file by selecting or dragging.
 
 ## When To Use
 
@@ -14,8 +14,9 @@ Uploading is the process of publishing information (web pages, text, pictures, v
 - When you need to show the process of uploading.
 - When you need to upload files by dragging and dropping.
 
-
 ## API
+
+> You can consult [jQuery-File-Upload](https://github.com/blueimp/jQuery-File-Upload/wiki) about how to implement server side upload interface.
 
 | Property       | Description                                    | Type        | Default|
 |------------|----------------------------------------------------| ----------- |--------|
@@ -53,13 +54,13 @@ When uploading state change, it returns:
 
    ```js
    {
-      uid: 'uid',      // unique identifier，negative is recommend，to prevent interference with internal generated id 
+      uid: 'uid',      // unique identifier，negative is recommend，to prevent interference with internal generated id
       name: 'xx.png'   // file name
       status: 'done',  // options：uploading, done, error, removed
       response: '{"status": "success"}',  // response from server
    }
    ```
-	
+
    > Before `antd@1.9.0`, this parameter will be Array Object `[file, ...]` in multiple mode, while in `antd@1.9.0+`, it will always be an Object.
 
 2. `fileList` current list of files

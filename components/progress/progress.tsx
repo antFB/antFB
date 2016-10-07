@@ -1,5 +1,5 @@
 import { PropTypes } from 'react';
-import * as React from 'react';
+import React from 'react';
 import Icon from '../icon';
 import { Circle } from 'rc-progress';
 import classNames from 'classnames';
@@ -92,9 +92,10 @@ export default class Progress extends React.Component<ProgressProps, any> {
         height: circleSize,
         fontSize: circleSize * 0.16 + 6,
       };
+      const circleWidth = strokeWidth || 6;
       progress = (
         <div className={`${prefixCls}-inner`} style={circleStyle}>
-          <Circle percent={percent} strokeWidth={strokeWidth || 6}
+          <Circle percent={percent} strokeWidth={circleWidth} trailWidth={circleWidth}
             strokeColor={statusColorMap[progressStatus]} trailColor={trailColor}
           />
           {progressInfo}

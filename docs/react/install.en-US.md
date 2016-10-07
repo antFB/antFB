@@ -10,17 +10,21 @@ title: Installation
 
 If using npm to install, you could use `import` or `require`.
 
+Stable version：
+
+[![npm package](https://img.shields.io/npm/v/antd.svg?style=flat-square)](https://www.npmjs.org/package/antd)
+
 ```bash
 $ npm install antFB --save
 ```
 
 You can Subscribe to this feed for new version notification: https://github.com/antFB/antFB/releases.atom
 
-
+> Here is an [example](https://github.com/antFB/antFB-init/tree/master/examples/build-antd-standalone) of how to build your own antd.js if you are using antd@<1.0.0.
 
 ## Development tool
 
-We provide React components [Scaffold tool](https://github.com/ant-design/antFB-init).
+We provide React components [Scaffold tool](https://github.com/antFB/antFB-init).
 
 ```bash
 $ npm install antFB-init -g

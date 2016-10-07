@@ -1,104 +1,95 @@
-import Affix from './affix';
-export { Affix };
+export { default as Affix } from './affix';
 
-import AutoComplete from './auto-complete';
-export { AutoComplete };
+export { default as AutoComplete } from './auto-complete';
 
-import Alert from './alert';
-export { Alert };
+export { default as Alert } from './alert';
 
-import BackTop from './back-top';
-export { BackTop };
+export { default as BackTop } from './back-top';
 
-import Badge from './badge';
-export { Badge };
+export { default as Badge } from './badge';
 
-import Breadcrumb from './breadcrumb';
-export { Breadcrumb };
+export { default as Breadcrumb } from './breadcrumb';
 
-import Button from './button';
-export { Button };
+export { default as Button } from './button';
 
-import Card from './card';
-export { Card };
+export { default as Calendar } from './calendar';
 
-import Collapse from './collapse';
-export { Collapse };
+export { default as Card } from './card';
 
-import Carousel from './carousel';
-export { Carousel };
+export { default as Collapse } from './collapse';
 
-import Cascader from './cascader';
-export { Cascader };
+export { default as Carousel } from './carousel';
 
-import LocaleProvider from './locale-provider';
-export { LocaleProvider };
+export { default as Cascader } from './cascader';
 
-import message from './message';
-export { message };
+export { default as Checkbox } from './checkbox';
 
-import Menu from './menu';
-export { Menu };
+export { default as Col } from './col';
 
-import Modal from './modal';
-export { Modal };
+export { default as DatePicker } from './date-picker';
 
-import notification from './notification';
-export { notification };
+export { default as Dropdown } from './dropdown';
 
-import Pagination from './pagination';
-export { Pagination };
+export { default as Form } from './form';
 
-import Popconfirm from './popconfirm';
-export { Popconfirm };
+export { default as Icon } from './icon';
 
-import Popover from './popover';
-export { Popover };
+export { default as Input } from './input';
 
-import Progress from './progress';
-export { Progress };
+export { default as InputNumber } from './input-number';
 
-import Radio from './radio';
-export { Radio };
+export { default as LocaleProvider } from './locale-provider';
 
-import Rate from './rate';
-export { Rate };
+export { default as message } from './message';
 
-import Select from './select';
-export { Select };
+export { default as Menu } from './menu';
 
-import Slider from './slider';
-export { Slider };
+export { default as Modal } from './modal';
 
-import Spin from './spin';
-export { Spin };
+export { default as notification } from './notification';
 
-import Steps from './steps';
-export { Steps };
+export { default as Pagination } from './pagination';
 
-import Switch from './switch';
-export { Switch };
+export { default as Popconfirm } from './popconfirm';
 
-import Transfer from './transfer';
-export { Transfer };
+export { default as Popover } from './popover';
 
-import Tree from './tree';
-export { Tree };
+export { default as Progress } from './progress';
 
-import Tabs from './tabs';
-export { Tabs }
+export { default as Radio } from './radio';
 
-import Tag from './tag';
-export { Tag }
+export { default as Rate } from './rate';
 
-import TimePicker from './time-picker';
-export { TimePicker }
+export { default as Row } from './row';
 
-import Timeline from './timeline';
-export { Timeline }
+export { default as Select } from './select';
 
-import Tooltip from './tooltip';
-export { Tooltip }
+export { default as Slider } from './slider';
 
-import Mention from './mention';
-export { Mention };
+export { default as Spin } from './spin';
+
+export { default as Steps } from './steps';
+
+export { default as Switch } from './switch';
+
+export { default as Table } from './table';
+
+export { default as Transfer } from './transfer';
+
+export { default as Tree } from './tree';
+
+export { default as TreeSelect } from './tree-select';
+
+export { default as Tabs } from './tabs';
+
+export { default as Tag } from './tag';
+
+export { default as TimePicker } from './time-picker';
+
+export { default as Timeline } from './timeline';
+
+export { default as Tooltip } from './tooltip';
+
+export { default as Mention } from './mention';
+
+export { default as Upload } from './upload';

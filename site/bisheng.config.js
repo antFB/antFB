@@ -19,7 +19,8 @@ module.exports = {
   source: [
     './components',
     './docs',
-    'CHANGELOG.md', // TODO: fix it in bisheng
+    'CHANGELOG.zh-CN.md', // TODO: fix it in bisheng
+    'CHANGELOG.en-US.md',
   ],
   lazyLoad(nodePath, nodeValue) {
     if (typeof nodeValue === 'string') {
@@ -38,7 +39,7 @@ module.exports = {
       };
     },
     changelog(markdownData) {
-      if (markdownData.meta.filename === 'CHANGELOG.md') {
+      if (/CHANGELOG/.test(markdownData.meta.filename)) {
         return {
           meta: markdownData.meta,
         };
@@ -69,7 +70,7 @@ module.exports = {
       site: path.join(process.cwd(), 'site'),
       'react-router': 'react-router/umd/ReactRouter',
     };
-    config.plugins.push(new CSSSplitWebpackPlugin({}));
+    config.plugins.push(new CSSSplitWebpackPlugin({ preserve: true }));
 
     config.babel.plugins.push([
       require.resolve('babel-plugin-transform-runtime'),
@@ -80,11 +81,11 @@ module.exports = {
     ]);
 
     config.babel.plugins.push([
-      require.resolve('babel-plugin-antd'),
+      require.resolve('babel-plugin-import'),
       {
         style: true,
         libraryName: 'antd',
-        libDir: 'components',
+        libraryDirectory: 'components',
       },
     ]);
 

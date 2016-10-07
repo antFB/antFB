@@ -1,9 +1,10 @@
-import * as React from 'react';
+import React from 'react';
 import Animate from 'rc-animate';
 import Icon from '../icon';
 import addEventListener from 'rc-util/lib/Dom/addEventListener';
 import classNames from 'classnames';
 import omit from 'omit.js';
+import getScroll from '../_util/getScroll';
 
 const reqAnimFrame = (() => {
   if (window.requestAnimationFrame) {
@@ -29,30 +30,13 @@ const easeInOutCubic = (t, b, c, d) => {
   }
 };
 
-function getScroll(target, top) {
-  if (typeof window === 'undefined') {
-    return 0;
-  }
-
-  const prop = top ? 'pageYOffset' : 'pageXOffset';
-  const method = top ? 'scrollTop' : 'scrollLeft';
-  const isWindow = target === window;
-
-  let ret = isWindow ? target[prop] : target[method];
-  // ie6,7,8 standard mode
-  if (isWindow && typeof ret !== 'number') {
-    ret = window.document.documentElement[method];
-  }
-
-  return ret;
-}
-
 export interface BackTopProps {
   visibilityHeight?: number;
   onClick?: (event) => void;
   target?: () => HTMLElement | Window;
   prefixCls?: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export default class BackTop extends React.Component<BackTopProps, any> {
@@ -60,7 +44,8 @@ export default class BackTop extends React.Component<BackTopProps, any> {
     onClick() {},
     visibilityHeight: 400,
     target() {
-      return window;
+      return typeof window !== 'undefined' ?
+        window : null;
     },
     prefixCls: 'ant-back-top',
   };

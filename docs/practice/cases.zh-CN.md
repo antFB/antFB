@@ -1,7 +1,6 @@
 ---
 order: 0
-chinese: 实践案例
-english: Cases
+title: 实践案例
 ---
 
 Ant Fable 是面向中台的 UI 设计语言。

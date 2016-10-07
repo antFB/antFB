@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 export type UploadFileStatus = 'error' | 'success' | 'done' | 'uploading' | 'removed'
 
@@ -30,7 +30,7 @@ export interface UploadProps {
   defaultFileList?: Array<File>;
   fileList?: Array<File>;
   action: string;
-  data?: Object;
+  data?: Object | ((File) => any);
   headers?: HttpRequestHeader;
   showUploadList?: boolean;
   multiple?: boolean;

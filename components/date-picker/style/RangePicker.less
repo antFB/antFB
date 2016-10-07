@@ -75,11 +75,11 @@
   }
 
   &.@{calendar-prefix-cls}-time &-middle {
-    margin-left: -29px;
+    margin-left: -12px;
   }
 
   &.@{calendar-prefix-cls}-time &-right .@{calendar-prefix-cls}-date-input-wrap {
-    margin-left: -15px;
+    margin-left: 0;
   }
 
   .@{calendar-prefix-cls}-input-wrap {
@@ -91,7 +91,7 @@
     border-radius: @border-radius-sm;
   }
   .@{calendar-prefix-cls}-input,
-  .@{timepicker-prefix-cls}-input {
+  .@{calendar-timepicker-prefix-cls}-input {
     .input;
     border-radius: @border-radius-sm;
     height: @input-height-sm;
@@ -102,15 +102,8 @@
       box-shadow: none;
     }
   }
-  .@{timepicker-prefix-cls}-icon {
+  .@{calendar-timepicker-prefix-cls}-icon {
     display: none;
-  }
-
-  .@{calendar-prefix-cls}-calendar-body,
-  .@{calendar-prefix-cls}-decade-panel-body,
-  .@{calendar-prefix-cls}-year-panel-body,
-  .@{calendar-prefix-cls}-month-panel-body {
-    border-bottom: 1px solid @border-color-split;
   }
 
   &.@{calendar-prefix-cls}-week-number {
@@ -159,7 +152,9 @@
     text-align: right;
   }
 
-  .@{calendar-prefix-cls} {
+  .@{calendar-prefix-cls},
+  .@{calendar-prefix-cls}-month-panel,
+  .@{calendar-prefix-cls}-year-panel {
     &-header {
       border-bottom: 0;
     }
@@ -169,7 +164,7 @@
   }
 
   &.@{calendar-prefix-cls}-time {
-    .@{timepicker-prefix-cls} {
+    .@{calendar-timepicker-prefix-cls} {
       height: 207px;
       top: 68px;
       z-index: 2; // cover .ant-calendar-range .ant-calendar-in-range-cell > div (z-index: 1)

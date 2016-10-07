@@ -1,9 +1,10 @@
-import * as React from 'react';
+import React from 'react';
 import { PropTypes } from 'react';
 import RcSelect, { Option, OptGroup } from 'rc-select';
 import classNames from 'classnames';
 
-export type SelectValue = string | string[] | Array<{ key: string, label: React.ReactNode }>;
+export type SelectValue = string | any[] | { key: string, label: React.ReactNode } |
+ Array<{ key: string, label: React.ReactNode }>;
 
 export interface SelectProps {
   prefixCls?: string;
@@ -12,7 +13,7 @@ export interface SelectProps {
   defaultValue?: SelectValue;
   size?: 'default' | 'large' | 'small';
   combobox?: boolean;
-  notFoundContent?: React.ReactNode;
+  notFoundContent?: React.ReactNode | string;
   showSearch?: boolean;
   transitionName?: string;
   choiceTransitionName?: string;
@@ -30,10 +31,19 @@ export interface SelectProps {
   disabled?: boolean;
   defaultActiveFirstOption?: boolean;
   labelInValue?: boolean;
-  getPopupContainer?: (triggerNode: React.ReactNode) => React.ReactNode;
+  getPopupContainer?: (triggerNode: React.ReactNode) => React.ReactNode | HTMLElement;
   style?: React.CSSProperties;
   dropdownMenuStyle?: React.CSSProperties;
   onChange?: (value) => void;
+}
+
+export interface OptionProps {
+  disabled?: boolean;
+  value?: any;
+}
+
+export interface OptGroupProps {
+  label?: string | React.ReactElement<any>;
 }
 
 export interface SelectContext {
@@ -42,11 +52,11 @@ export interface SelectContext {
   };
 }
 
-export { Option, OptGroup }
+export { Option, OptGroup };
 
 export default class Select extends React.Component<SelectProps, any> {
-  static Option = Option;
-  static OptGroup = OptGroup;
+  static Option = Option as React.ClassicComponentClass<OptionProps>;
+  static OptGroup = OptGroup as React.ClassicComponentClass<OptGroupProps>;
 
   static defaultProps = {
     prefixCls: 'ant-select',

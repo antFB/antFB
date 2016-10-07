@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import calculateNodeHeight from './calculateNodeHeight';
@@ -51,6 +51,8 @@ export interface InputProps {
   onClick?: React.FormEventHandler;
   onBlur?: React.FormEventHandler;
   autosize?: boolean | AutoSizeType;
+  autoComplete?: 'on' | 'off';
+  style?: React.CSSProperties;
 }
 
 export default class Input extends Component<InputProps, any> {

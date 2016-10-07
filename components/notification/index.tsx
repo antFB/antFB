@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Notification from 'rc-notification';
 import Icon from '../icon';
 import assign from 'object-assign';
@@ -7,13 +7,18 @@ let notificationInstance;
 let defaultDuration = 4.5;
 
 export interface ArgsProps {
-  message: React.ReactNode;
-  description: React.ReactNode;
+  message: React.ReactNode | string;
+  description: React.ReactNode | string;
   btn?: React.ReactNode;
   key?: string;
   onClose?: () => void;
   duration?: number;
   icon?: React.ReactNode;
+}
+
+export interface ConfigProps {
+  top?: number;
+  duration?: number;
 }
 
 function getNotificationInstance(prefixCls) {
@@ -96,7 +101,7 @@ const api = {
       notificationInstance.removeNotice(key);
     }
   },
-  config(options) {
+  config(options: ConfigProps) {
     if ('top' in options) {
       defaultTop = options.top;
     }

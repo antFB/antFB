@@ -28,6 +28,7 @@ Ant Fable 是一个致力于提升『用户』和『设计者』使用体验的�
 我们采用 [React](http://facebook.github.io/react/) 封装了一套 Ant Fable 的组件库，也欢迎社区其他框架的实现版本。
 
 - [Ant Fable of React](/docs/react/introduce)（官方实现）
+- <div class="outside-link"><a href="https://github.com/FE-Driver/vue-beauty" target="_blank">vue-beauty</a></div>
 - <div class="outside-link internal"><a href="http://naza.alibaba.net" target="_blank">Ant Fable of Angular 2.0</a></div>
 - <div class="outside-link"><a href="https://github.com/okoala/vue-antd" target="_blank">vue-antd</a></div>
 - <div class="outside-link"><a href="https://github.com/idcos/antd-ember" target="_blank">antd-ember</a></div>

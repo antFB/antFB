@@ -41,9 +41,9 @@ moment.tz.setDefault('Asia/Shanghai')
 | size         | 输入框大小，`large` 高度为 32px，`small` 为 22px，默认是 28px | string   | 无  |
 | locale       | 国际化配置 | object   | [默认配置](https://github.com/antFB/antFB/issues/424)  |
 | open | 控制弹层是否展开 | bool | - |
-| toggleOpen   | 弹出日历和关闭日历的回调 | function(open) | 无 |
+| onOpenChange   | 弹出日历和关闭日历的回调 | function(status) | 无 |
 | getCalendarContainer | 定义浮层的容器，默认为 body 上新建 div | function(trigger) | 无 |
-| showTime     | 增加时间选择功能  | Object or Boolean | [TimePicker Options](http://ant.design/components/time-picker/#api) |
+| showTime     | 增加时间选择功能  | Object or Boolean | [TimePicker Options](/components/time-picker/#api) |
 
 ### MonthPicker
 
@@ -69,7 +69,7 @@ moment.tz.setDefault('Asia/Shanghai')
 | defaultValue | 默认日期       | [moment, moment]   | 无           |
 | format       | 展示的日期格式  | string    | "YYYY-MM-DD HH:mm:ss" |
 | onChange     | 时间发生变化的回调，发生在用户选择时间时 | function(dates: [moment, moment], dateStrings: [string, string]) | 无           |
-| showTime     | 增加时间选择功能  | Object or Boolean | [TimePicker Options](http://ant.design/components/time-picker/#api) |
+| showTime     | 增加时间选择功能  | Object or Boolean | [TimePicker Options](/components/time-picker/#api) |
 
 `disabled` `style` `popupStyle` `size` `locale` `showTime` `onOk` `getCalendarContainer` 属性与 DatePicker 的一致。
 

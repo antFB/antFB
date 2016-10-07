@@ -1,13 +1,14 @@
-import * as React from 'react';
+import React from 'react';
 import RcDropdown from 'rc-dropdown';
 
 export interface DropDownProps {
   trigger?: Array<'click' | 'hover'>;
   overlay: React.ReactNode;
   style?: React.CSSProperties;
-  onVisibleChange?: (visible: boolean) => void;
+  onVisibleChange?: (e: {visible: boolean}) => void;
   visible?: boolean;
   align?: Object;
+  getPopupContainer?: () => HTMLElement;
 }
 
 export default class Dropdown extends React.Component<DropDownProps, any> {

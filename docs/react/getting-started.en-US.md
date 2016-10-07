@@ -9,12 +9,6 @@ Ant Fable React is dedicated to providing a **good development experience** for 
 
 Before delving into Ant Fable React, a good knowledge of [React](http://facebook.github.io/react/) and [JavaScript ES2015](http://babeljs.io/docs/learn-es2015/) is needed.
 
-## First Example
-
-The following CodePen demo is the simplest usage case, and it's also a good habit to fork this demo to provide a re-producible demo while reporting a bug. Please don't use this demo as a scaffold in real world.
-
-- [antd CodePen](http://codepen.io/anon/pen/wGOWGW?editors=001)
-
 ## Standard Development Flow
 
 During development, you may need to compile and debug JSX and ES2015 code, and even proxy some of the request to mocked data or some external services. And all of these to be done with a quick feedback provided through hot reloading of changes.
@@ -26,7 +20,7 @@ Such features, together with packaging the production version are covered in thi
 > Please make sure that you had installed [Node.js](https://nodejs.org/en/)(> v4.x) before using `antd-init`.
 
 ```bash
-$ npm install antd-init -g
+$ npm install antFB-init -g
 ```
 
 Read [the documentation of `antd-init`](https://github.com/antFB/antFB-init/) and [the documentation of `ant-tool`](http://ant-tool.github.io/) to explore more features.
@@ -50,12 +44,12 @@ $ antFB-init --ie8
 
 `antFB-init` will run `npm install` after a project is created. If it fails, you can run `npm install` by yourself.
 
-### 3. Use antFB's Components
+### 3. Use antd's Components
 
 By default, besides the scaffolding needed to start the development, a fully working Todo application is created.
 You may study this example later. For now, just follow this guide in order to get some experience working with the result of `antd-init`.
 
-Replace the content of `src/entries/index.js` with the following code.
+Replace the content of `index.js` with the following code.
 As you can see, there is no difference between antd's components and usual React components.
 
 ```jsx
@@ -91,7 +85,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ### 4. Development & Debugging
 
-Run your project and visit http://127.0.0.1:8989
+Run your project and visit http://127.0.0.1:8000
 
 ```bash
 $ npm start
@@ -110,7 +104,7 @@ Entry files will be built and generated in `dist` directory, then we can deploy 
 
 ## Compatibility
 
-Ant Fable React supports all the modern browsers and IE8+.
+Ant Fable React supports all the modern browsers and IE9+.
 
 But we need to provide [es5-shim](https://facebook.github.io/react/docs/working-with-the-browser.html#browser-support) and other polyfills for IE8/9, and [babel-polyfill](https://babeljs.io/docs/usage/polyfill/) is a better choice. What's more, use [react@0.14.x](https://facebook.github.io/react/blog/2016/01/12/discontinuing-ie8-support.html) to support IE8.
 
@@ -137,7 +131,7 @@ But we need to provide [es5-shim](https://facebook.github.io/react/docs/working-
 
 You may encounter problems like [#28](https://github.com/ant-tool/atool-build/issues/28) and [#858](https://github.com/antFB/antFB/issues/858), since `babel@6.x` doesn't support IE8.
 
-[antFB-init](https://github.com/antFB/antFB-init/) had solved those problems and you can refer to this [webpack config](https://github.com/antFB/antFB-init/blob/f5fb9479ca973fade51fd6754e50f8b3fafbb1df/boilerplate/webpack.config.js#L4-L8).
+[antFB-init](http://github.com/antFB/antFB-init) had solved those problems and you can refer to this [webpack config](https://github.com/antFB/antFB-init/blob/f5fb9479ca973fade51fd6754e50f8b3fafbb1df/boilerplate/webpack.config.js#L4-L8).
 
 > More about how to use React in IE8: https://github.com/xcatliu/react-ie8
 
@@ -151,19 +145,19 @@ There are some [scaffolds](https://github.com/antFB/antFB/issues/129) which have
 
 ## Import on Demand
 
-If we import a component like this `import { Button } from 'antd';`, then all the components of antd will be imported. But, we can import component on demand:
+If we import a component like this `import { Button } from 'antFB';`, then all the components of antd will be imported. But, we can import component on demand:
 
 ```jsx
-import Button from 'antd/lib/button';
+import Button from 'antFB/lib/button';
 ```
 
-If you use `babel`, we recommend to use [babel-plugin-antd](https://github.com/ant-design/babel-plugin-antd). This plugin will convert the following code to the above form:
+If you use `babel`, we recommend to use [babel-plugin-import](https://github.com/ant-design/babel-plugin-import). This plugin will convert the following code to the above form:
 
 ```jsx
-import { Button } from 'antd';
+import { Button } from 'antFB';
 ```
 
-And this plugin can also load styles on demand. See the [usage](https://github.com/ant-design/babel-plugin-antd#usage) for further details.
+And this plugin can also load styles on demand. See the [usage](https://github.com/ant-design/babel-plugin-import#usage) for further details.
 
 ## Customization
 

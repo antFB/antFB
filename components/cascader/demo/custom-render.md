@@ -52,7 +52,7 @@ const displayRender = (labels, selectedOptions) => labels.map((label, i) => {
   if (i === labels.length - 1) {
     return (
       <span key={option.value}>
-        {label} (<a onClick={(e) => handleAreaClick(e, label, option)}>{option.code}</a>)
+        {label} (<a onClick={e => handleAreaClick(e, label, option)}>{option.code}</a>)
       </span>
     );
   }
@@ -64,7 +64,7 @@ ReactDOM.render(
     options={options}
     defaultValue={['zhejiang', 'hangzhou', 'xihu']}
     displayRender={displayRender}
-    style={{ width: 200 }}
+    style={{ width: 270 }}
   />
 , mountNode);
 ````

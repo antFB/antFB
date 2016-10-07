@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
+import { Icon } from 'antd';
 import EditButton from './EditButton';
 
 export default class Demo extends React.Component {
@@ -16,12 +18,8 @@ export default class Demo extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.expand === undefined) return;
-
-    this.setState({
-      codeExpand: nextProps.expand,
-    });
+  shouldComponentUpdate(nextProps, nextState) {
+    return (this.state.codeExpand || this.props.expand) !== (nextState.codeExpand || nextProps.expand);
   }
 
   handleCodeExapnd = () => {
@@ -38,9 +36,10 @@ export default class Demo extends React.Component {
       highlightedCode,
       style,
       highlightedStyle,
+      expand,
     } = props;
 
-    const codeExpand = this.state.codeExpand;
+    const codeExpand = this.state.codeExpand || expand;
     const codeBoxClass = classNames({
       'code-box': true,
       expand: codeExpand,
@@ -75,13 +74,10 @@ export default class Demo extends React.Component {
             <a href={`#${meta.id}`}>
               {localizedTitle}
             </a>
-            <EditButton title="在 Github 上编辑此示例！" filename={meta.filename} />
+            <EditButton title={<FormattedMessage id="app.content.edit-page" />} filename={meta.filename} />
           </div>
           {introChildren}
-          <span className="collapse anticon anticon-circle-o-right"
-            onClick={this.handleCodeExapnd}
-            unselectable="none"
-          />
+          <Icon type="down-circle-o" title="Show Code" className="collapse" onClick={this.handleCodeExapnd} />
         </section>
         <section className={highlightClass}
           key="code"

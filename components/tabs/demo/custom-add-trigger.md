@@ -22,7 +22,7 @@ const Demo = React.createClass({
     this.newTabIndex = 0;
     const panes = [
       { title: 'Tab 1', content: 'Content of Tab Pane 1', key: '1' },
-      { title: 'Tab 2', content: 'Content of Tab Pane', key: '2' },
+      { title: 'Tab 2', content: 'Content of Tab Pane 2', key: '2' },
     ];
     return {
       activeKey: panes[0].key,
@@ -68,7 +68,7 @@ const Demo = React.createClass({
           type="editable-card"
           onEdit={this.onEdit}
         >
-        {this.state.panes.map(pane => <TabPane tab={pane.title} key={pane.key}>{pane.content}</TabPane>)}
+          {this.state.panes.map(pane => <TabPane tab={pane.title} key={pane.key}>{pane.content}</TabPane>)}
         </Tabs>
       </div>
     );

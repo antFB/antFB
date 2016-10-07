@@ -2,7 +2,7 @@
 category: Components
 type: Basic
 cols: 1
-english: Layout
+title: Layout
 ---
 
 24 Grids System。
@@ -58,7 +58,7 @@ english: Layout
 </div>
 </div>
 
-In most business situations,Ant Design need solve a lot of information storage problems within the design area,so based on 12 Grids System,we divided the design area into 24 aliquots.
+In most business situations,Ant Fable need solve a lot of information storage problems within the design area,so based on 12 Grids System,we divided the design area into 24 aliquots.
 
 We name the divided area as 'box'.We suggest that four boxes horizontal arrangement at most, one at least.Box on the proportion of the entire screen as above picture.To ensure that the level of visual comfort,we custom typography inside of the box based on the box unit.
 
@@ -81,7 +81,7 @@ Flex layout is based on a grid 24 to define each "box" in width, but not rigidly
 
 ## API
 
-Ant Design layout component if it can not meet your needs, you can use the excellent layout of the components of the community:
+Ant Fable layout component if it can not meet your needs, you can use the excellent layout of the components of the community:
 
 - [react-flexbox-grid](http://roylee0704.github.io/react-flexbox-grid/)
 - [react-blocks](http://whoisandie.github.io/react-blocks/)

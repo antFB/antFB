@@ -35,6 +35,7 @@ const App = React.createClass({
         title: `content${i + 1}`,
         description: `description of content${i + 1}`,
         chosen: Math.random() * 2 > 1,
+        disabled: Math.random() * 3 < 1,
       };
       if (data.chosen) {
         targetKeys.push(data.key);
@@ -47,12 +48,17 @@ const App = React.createClass({
     console.log(targetKeys, direction, moveKeys);
     this.setState({ targetKeys });
   },
+  handleSelectChange(sourceSelectedKeys, targetSelectedKeys) {
+    console.log('sourceSelectedKeys: ', sourceSelectedKeys);
+    console.log('targetSelectedKeys: ', targetSelectedKeys);
+  },
   render() {
     return (
       <Transfer
         dataSource={this.state.mockData}
         targetKeys={this.state.targetKeys}
         onChange={this.handleChange}
+        onSelectChange={this.handleSelectChange}
         render={item => item.title}
       />
     );

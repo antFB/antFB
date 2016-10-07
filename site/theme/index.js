@@ -2,10 +2,10 @@ const contentTmpl = './template/Content/index';
 
 module.exports = {
   categoryOrder: {
-    组件: 0,
     十大原则: 0,
+    Principles: 0,
     设计基础: 1,
-    动画: 2,
+    'Design Fundamental': 1,
   },
   typeOrder: {
     Basic: 0,
@@ -19,6 +19,7 @@ module.exports = {
     '0.10.x': 'http://010x.ant.design/',
     '0.11.x': 'http://011x.ant.design/',
     '0.12.x': 'http://012x.ant.design/',
+    '1.x': 'http://1x.ant.design/',
   },
   routes: {
     path: '/',

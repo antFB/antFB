@@ -156,27 +156,27 @@ let Demo = React.createClass({
           <Row type="flex" align="middle">
             <Col span={12}>
               <FormItem label="Confirm">
-               {getFieldDecorator('rePass', {
-                 rules: [{
-                   required: true,
-                   whitespace: true,
-                   message: 'Please confirm your password',
-                 }, {
-                   validator: this.checkPass2,
-                 }],
-               })(
-                 <Input type="password"
-                   onContextMenu={noop} onPaste={noop} onCopy={noop} onCut={noop}
-                   autoComplete="off" id="rePass"
-                 />
-               )}
+                {getFieldDecorator('rePass', {
+                  rules: [{
+                    required: true,
+                    whitespace: true,
+                    message: 'Please confirm your password',
+                  }, {
+                    validator: this.checkPass2,
+                  }],
+                })(
+                  <Input type="password"
+                    onContextMenu={noop} onPaste={noop} onCopy={noop} onCut={noop}
+                    autoComplete="off" id="rePass"
+                  />
+                )}
               </FormItem>
             </Col>
             <Col span={12}>
               {this.state.rePassBarShow ? this.renderPassStrengthBar('rePass') : null}
             </Col>
           </Row>
-          <FormItem><Button type="primary" onClick={this.handleSubmit}>提交</Button></FormItem>
+          <FormItem><Button type="primary" onClick={this.handleSubmit}>Submit</Button></FormItem>
         </Form>
       </div>
     );

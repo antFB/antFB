@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import RcMention, { Nav, toString, toEditorState, getMentions } from 'rc-editor-mention';
-import classnames from 'classnames';
+import classNames from 'classnames';
 
 export interface MentionProps {
   prefixCls: string;
@@ -11,9 +11,12 @@ export interface MentionProps {
   notFoundContent?: any;
   loading?: Boolean;
   style?: Object;
-  defaultValue?: string;
+  defaultValue?: any;
+  value?: any;
   className?: string;
   multiLines?: Boolean;
+  prefix?: string;
+  placeholder?: string;
 }
 
 export interface MentionState {
@@ -75,7 +78,7 @@ export default class Mention extends React.Component<MentionProps, MentionState>
     let { notFoundContent } = this.props;
 
     const { suggestions, focus } = this.state;
-    const cls = classnames({
+    const cls = classNames({
       [className]: !!className,
       ['active']: focus,
     });

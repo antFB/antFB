@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import RcCascader from 'rc-cascader';
 import Input from '../input';
 import Icon from '../icon';
@@ -144,6 +144,7 @@ export default class Cascader extends React.Component<CascaderProps, any> {
     this.setState({
       popupVisible,
       inputFocused: popupVisible,
+      inputValue: popupVisible ? this.state.inputValue : '',
      });
     this.props.onPopupVisibleChange(popupVisible);
   }
@@ -256,6 +257,7 @@ export default class Cascader extends React.Component<CascaderProps, any> {
     const pickerCls = classNames({
       [className]: !!className,
       [`${prefixCls}-picker`]: true,
+      [`${prefixCls}-picker-with-value`]: state.inputValue,
       [`${prefixCls}-picker-disabled`]: disabled,
     });
 

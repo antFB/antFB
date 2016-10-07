@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import RcInputNumber from 'rc-input-number';
 import splitObject from '../_util/splitObject';
@@ -13,6 +13,7 @@ export interface InputNumberProps {
   onChange?: (value: number) => void;
   disabled?: boolean;
   size?: 'large' | 'small' | 'default';
+  placeholder?: string;
 }
 
 export default class InputNumber extends React.Component<InputNumberProps, any> {

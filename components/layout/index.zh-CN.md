@@ -1,9 +1,9 @@
 ---
 category: Components
-chinese: 栅格
+subtitle: 栅格
 type: Basic
 cols: 1
-english: Layout
+title: Layout
 ---
 
 24 栅格系统。
@@ -59,7 +59,7 @@ english: Layout
 </div>
 </div>
 
-在多数业务情况下，Ant Design需要在设计区域内解决大量信息收纳的问题，因此在 12 栅格系统的基础上，我们将整个设计建议区域按照 24 等分的原则进行划分。
+在多数业务情况下，Ant Fable需要在设计区域内解决大量信息收纳的问题，因此在 12 栅格系统的基础上，我们将整个设计建议区域按照 24 等分的原则进行划分。
 
 划分之后的信息区块我们称之为『盒子』。建议横向排列的盒子数量最多四个，最少一个。『盒子』在整个屏幕上占比见上图。设计部分基于盒子的单位定制盒子内部的排版规则，以保证视觉层面的舒适感。
 
@@ -80,7 +80,7 @@ Flex 布局是基于 24 栅格来定义每一个『盒子』的宽度，但排�
 
 ## API
 
-Ant Design 的布局组件若不能满足你的需求，你也可以直接使用社区的优秀布局组件：
+Ant Fable 的布局组件若不能满足你的需求，你也可以直接使用社区的优秀布局组件：
 
 - [react-flexbox-grid](http://roylee0704.github.io/react-flexbox-grid/)
 - [react-blocks](http://whoisandie.github.io/react-blocks/)

@@ -31,16 +31,15 @@ const App = React.createClass({
     this.setState({ visible });
   },
   render() {
-    const content = (
-      <div>
-        <a onClick={this.hide}>关闭卡片</a>
-      </div>
-    );
     return (
-      <Popover content={content} title="标题" trigger="click"
-        visible={this.state.visible} onVisibleChange={this.handleVisibleChange}
+      <Popover
+        content={<a onClick={this.hide}>Close</a>}
+        title="Title"
+        trigger="click"
+        visible={this.state.visible}
+        onVisibleChange={this.handleVisibleChange}
       >
-        <Button type="primary">点击弹出卡片</Button>
+        <Button type="primary">Cilck me</Button>
       </Popover>
     );
   },

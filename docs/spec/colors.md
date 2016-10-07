@@ -1,8 +1,11 @@
 ---
-category: 设计基础
+category:
+  zh-CN: 设计基础
+  en-US: Design Fundamental
 order: 2
-chinese: 色彩
-english: Colors
+title:
+  zh-CN: 色彩
+  en-US: Colors
 ---
 
 ## 有意义的色彩

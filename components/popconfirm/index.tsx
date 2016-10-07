@@ -1,8 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 import Tooltip from '../tooltip';
 import Icon from '../icon';
 import Button from '../button';
-import getPlacements from '../popover/placements';
 import splitObject from '../_util/splitObject';
 
 const noop = () => {};
@@ -11,9 +10,10 @@ export interface PopconfirmProps {
   /**
    * Position of popup-container, options:`top`, `left`, `right`, `bottom`
    */
-  placement?: 'top' | 'left' | 'right' | 'bottom';
+  placement?: 'top' | 'left' | 'right' | 'bottom' | 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight' |
+   'leftTop' | 'leftBottom' | 'rightTop' | 'rightBottom';
   /** Description of Popconfirm */
-  title: React.ReactNode;
+  title: React.ReactNode | string;
   /** Callback when confirm */
   onConfirm?: () => void;
   /** Callback when cancel */
@@ -30,6 +30,8 @@ export interface PopconfirmProps {
   /** Style of overlay */
   overlayStyle?: React.CSSProperties;
   prefixCls?: string;
+  openClassName?: string;
+  arrowPointAtCenter?: boolean;
 }
 
 export interface PopconfirmContext {
@@ -90,9 +92,9 @@ export default class Popconfirm extends React.Component<PopconfirmProps, any> {
   }
 
   render() {
-    const [{ prefixCls, title, placement, arrowPointAtCenter }, restProps] = splitObject(
+    const [{ prefixCls, title, placement }, restProps] = splitObject(
       this.props,
-      ['prefixCls', 'title', 'placement', 'arrowPointAtCenter']
+      ['prefixCls', 'title', 'placement']
     );
     let { okText, cancelText } = this.props;
     if (this.context.antLocale && this.context.antLocale.Popconfirm) {
@@ -117,7 +119,6 @@ export default class Popconfirm extends React.Component<PopconfirmProps, any> {
     return (
       <Tooltip
         {...restProps}
-        builtinPlacements={getPlacements({ arrowPointAtCenter })}
         prefixCls={prefixCls}
         placement={placement}
         onVisibleChange={this.onVisibleChange}

@@ -31,8 +31,8 @@ export default class ComponentDoc extends React.Component {
     const { doc, location } = props;
     const { content, meta } = doc;
     const locale = this.context.intl.locale;
-    const demos = Object.keys(props.demos).map((key) => props.demos[key])
-      .filter((demoData) => !demoData.meta.hidden);
+    const demos = Object.keys(props.demos).map(key => props.demos[key])
+      .filter(demoData => !demoData.meta.hidden);
     const expand = this.state.expandAll;
 
     const isSingleCol = meta.cols === 1;
@@ -43,14 +43,14 @@ export default class ComponentDoc extends React.Component {
         if (index % 2 === 0 || isSingleCol) {
           leftChildren.push(
             <Demo {...demoData}
-              key={index} utils={props.utils}
+              key={meta.filename + index} utils={props.utils}
               expand={expand} pathname={location.pathname}
             />
           );
         } else {
           rightChildren.push(
             <Demo {...demoData}
-              key={index} utils={props.utils}
+              key={meta.filename + index} utils={props.utils}
               expand={expand} pathname={location.pathname}
             />
           );
@@ -67,15 +67,15 @@ export default class ComponentDoc extends React.Component {
       return (
         <li key={demo.meta.id} title={localizeTitle}>
           <a href={`#${demo.meta.id}`}>
-            here:{localizeTitle}
+            {localizeTitle}
           </a>
         </li>
       );
     });
 
-    const { title, subtitle, chinese, english, filename } = meta;
+    const { title, subtitle, filename } = meta;
     return (
-      <DocumentTitle title={`${subtitle || chinese || ''} ${title || english} - Ant Fable`}>
+      <DocumentTitle title={`${subtitle || ''} ${title[locale] || title} - Ant Fable`}>
         <article>
           <Affix className="toc-affix" offsetTop={16}>
             <ul className="toc demos-anchor">
@@ -84,12 +84,12 @@ export default class ComponentDoc extends React.Component {
           </Affix>
           <section className="markdown">
             <h1>
-              {title || english}
+              {title[locale] || title}
               {
-                (!subtitle && !chinese) ? null :
-                  <span className="subtitle">{subtitle || chinese}</span>
+                !subtitle ? null :
+                  <span className="subtitle">{subtitle}</span>
               }
-              <EditButton title="在 Github 上编辑此页！" filename={filename} />
+              <EditButton title={<FormattedMessage id="app.content.edit-page" />} filename={filename} />
             </h1>
             {
               props.utils.toReactComponent(

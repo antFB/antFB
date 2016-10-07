@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Notification from 'rc-notification';
 import Icon from '../icon';
 
@@ -53,7 +53,7 @@ function notice(
   }());
 }
 
-type ConfigContent = React.ReactNode;
+type ConfigContent = React.ReactNode | string;
 type ConfigDuration = number;
 type ConfigOnClose = () => void;
 

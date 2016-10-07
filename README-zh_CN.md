@@ -12,39 +12,60 @@
 
 - 提炼和服务企业级中后台产品的交互语言和视觉风格。
 - [React Component](http://react-component.github.io/badgeboard/) 基础上精心封装的高质量 UI 组件。
-- 基于 npm + webpack + babel 的工作流，支持 ES2015 和 TypeScript。
+- 使用 TypeScript 构建，提供完整的类型定义文件。
+- 基于 npm + webpack + babel + dora + [dva](https://github.com/dvajs/dva) 的企业级业务开发框架。
 
 ## 安装
 
 ```bash
-npm install antFB-init -g
-antFB-init --ie8
-npm start
+npm install antd
 ```
 
 ## 示例
 
 ```jsx
-import { DatePicker } from 'antFB';
+import { DatePicker } from 'antd';
 ReactDOM.render(<DatePicker />, mountNode);
 ```
 
+引入样式：
+
+```jsx
+import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
+```
+
+按需加载可通过此写法 `import DatePicker from 'antd/lib/date-picker'` 或使用插件 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import)。
+
+
 ## 浏览器支持
 
-现代浏览器和 IE8 及以上。
+现代浏览器和 IE9 及以上。
 
 > [IE8 issues](https://github.com/xcatliu/react-ie8)
 
+## TypeScript
+
+tsconfig.json
+
+```
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "allowSyntheticDefaultImports": true
+  }
+}
+```
+
 ## 链接
 
-- [首页](http://diy-design.me/n.html?%2F&port=8001)
-- [ant-design](http://ant.design)
-- [React 实现](http://ant.design/#/docs/react/introduce)
-- [修改记录](CHANGELOG.md)
+- [首页](http://diy-design.me/n.html?%2F&port=8001/)
+- [React 实现](http://diy-design.me/n.html?%2F&port=8001/docs/react/introduce)
+- [修改记录](CHANGELOG.zh-CN.md)
 - [开发脚手架](https://github.com/antFB/antFB-init/)
 - [开发工具文档](http://ant-tool.github.io/)
 - [React 基础组件](http://react-component.github.io/)
-- [移动端组件](http://mobile.ant.design)
+- [移动端组件](http://diy-design.me/n.html?%2F&port=8002)
 - [React 代码规范](https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-code-style.md)
 - [组件设计原则](https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-design.md)
 - [网站和组件开发说明](https://github.com/antFB/antFB/wiki/%E7%BD%91%E7%AB%99%E5%92%8C%E7%BB%84%E4%BB%B6%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E)
@@ -53,3 +74,7 @@ ReactDOM.render(<DatePicker />, mountNode);
 - [常见问题](https://github.com/antFB/antFB/wiki/FAQ)
 - [CodePen 模板](http://codepen.io/benjycui/pen/KgPZrE?editors=001)
 - [Awesome Ant Fable](https://github.com/websemantics/awesome-ant-design)
+
+## 如何贡献
+
+我们欢迎任何形式的贡献，有任何建议或意见您可以进行 [Pull Request](https://github.com/antFB/antFB/pulls)，或者给我们 [提问](https://github.com/antFB/antFB/issues)。

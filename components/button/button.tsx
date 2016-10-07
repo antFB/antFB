@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import { findDOMNode } from 'react-dom';
 import Icon from '../icon';
@@ -40,6 +40,7 @@ export interface ButtonProps {
   disabled?: boolean;
   style?: React.CSSProperties;
   prefixCls?: string;
+  className?: string;
 }
 
 export default class Button extends React.Component<ButtonProps, any> {

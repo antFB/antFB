@@ -9,6 +9,152 @@ timeline: true
 
 ---
 
+## 2.0.1
+
+`2016-10-01`
+
+- 修复无法调用 react-slick 方法的问题。[#3164](https://github.com/antFB/antFB/issues/3164)
+- 修复 Steps.Step[icon] 不支持 React.ReactNode 的问题。[#3159](https://github.com/antFB/antFB/issues/3159)
+- 修复 Affix 不支持服务端渲染的问题。[#3216](https://github.com/antFB/antFB/issues/3216)
+- 修复 Mention 不支持 `onSelect` `placeholder` 的问题。[#3236](https://github.com/antFB/antFB/issues/3236) [#3226](https://github.com/antFB/antFB/issues/3226)
+- 修复 Transfer 与 `getFieldDecorator` 一起使用时的报错问题。
+- 修复 LocaleProvider 对时间组件无效的问题。
+- 修复 Cascader 搜索模式搜索文字显示不了的问题。
+- 修复 Spin 动画与文案整体不垂直居中的问题。
+- 修复 RangePicker Modal Tag Progress 等组件样式问题。
+
+## 2.0.0
+
+`2016-09-28`
+
+很高兴的通知各位，经过四个月时间的紧密开发，`antd@2.0.0` 终于发布了。这个版本我们重构了底层代码，持续完善现有组件功能和优化细节，并提供了英文版的文档，其中很多都来自社区的贡献，无法一一感谢，欢迎各位持续关注和鞭策。在升级过程中遇到任何问题，请及时 [反馈给我们](https://github.com/antFB/antFB/issues)。
+
+### 2.x 主要变化
+
+* 开发语言改为 TypeScript，提供 **官方支持的 `.d.ts` 文件**，感谢 [#1846](https://github.com/antFB/antFB/issues/1846) 中所有参与到这次重构的人以及后期 @infeng 对其的完善。
+* **新增英文文档**， 以后将同时提供中英双语文档，感谢 [#1471](https://github.com/antFB/antFB/issues/1471) 里所有参与到翻译和审阅工作中的人。
+* 时间类组件 DatePicker、TimePicker、Calendar 等的底层 **使用 [moment](http://momentjs.com/) 替换 [gregorian-calendar](github.com/yiminghe/gregorian-calendar)**。
+* 全新设计的 [图标](http://diy-design.me/n.html?%2F&port=8001/components/icon/)。
+* 新增提及组件 [Mention](http://diy-design.me/n.html?%2F&port=8001/components/mention/)。
+* 新增自动完成组件 [AutoComplete](http://diy-design.me/n.html?%2F&port=8001/components/auto-complete/)。
+* Form 新增 `getFieldDecorator` 作为 `getFieldProps` 的替代，对于不正确的使用方式 `getFieldDecorator` 会给出提示，可以降低踩坑的概率。相关讨论见 [#1533](https://github.com/antFB/antFB/issues/1533)。
+* Table 支持 [表头分组](http://diy-design.me/n.html?%2F&port=8001/components/table/#components-table-demo-grouping-columns)。@yesmeck
+* 完全移除 `antd@1.x` 中已经废弃的 QueueAnim、Validation、Form.ValueMixin、Progress.Line、Progress.Circle、Popover[overlay] 及 Slider[marks] 对数组的支持。
+
+### 2.x 不兼容改动
+
+此版本有部分不兼容的改动，升级时确保修改相应的使用代码。
+
+* 时间类组件的 `value` 和 `defaultValue` 不再支持 `String/Date` 类型，请使用 [moment](http://momentjs.com/)。
+  ```diff
+  - <TimePicker defaultValue="12:08:23" />
+  + <TimePicker defaultValue={moment('12:08:23', 'HH:mm:ss')} />
+
+  - <DatePicker defaultValue="2015/01/01" />
+  + <DatePicker defaultValue={moment('2015/01/01', 'YYYY/MM/DD')} />
+
+  - <Calendar defaultValue={new Date('2010-10-10')} />
+  + <Calendar defaultValue={moment('2010-10-10', 'YYYY-MM-DD')} />
+  ```
+* 时间类组件的 `onChange` 和 `onPanelChange` 及其他回调函数中为 `Date/GregorianCalendar` 类型的参数，均修改为 moment 类型，两者 API 有所不同，但功能基本一致，请对照 [moment 的 API 文档](http://momentjs.com/docs/) 和 [gregorian-calendar 的文档](https://github.com/yiminghe/gregorian-calendar) 进行修改。由于 `JSON.stringy(date: moment)` 返回的值会丢失时区设置，所以要先使用 `.format` 把日期转成字符串，相关 issue 见 [#3082](https://github.com/antFB/antFB/issues/3082)：
+  ```js
+  handleSubmit() {
+    const values = this.props.form.getFieldsValue();
+    values.date = values.date.format('YYYY-MM-DD HH:mm:ss'); // 或其它格式
+    const data = JSON.stringify(values);
+    // 发送 data 到服务器
+  }
+  ```
+* 时间类组件的 `format` 属性也发生了变化，从 [gregorian-calendar-format 的格式](https://github.com/yiminghe/gregorian-calendar-format#api) 变化为与 [moment 的格式](http://momentjs.com/docs/#/parsing/string-format/)，例如原来的 `yyyy-MM-dd` 将变为 `YYYY-MM-DD`。
+* Breadcrumb 移除 `linkRender` 和 `nameRender`，请使用 `itemRender`。
+* Menu 移除 `onClose` `onOpen`，请使用 `onOpenChange`。API 差异较大，请先研究 [demo](http://beta.ant.design/components/menu/#components-menu-demo-sider-current)。
+* Table 移除列分页功能，请使用 [固定列](http://diy-design.me/n.html?%2F&port=8001/components/table/#components-table-demo-fixed-columns)。
+
+以下变化升级后旧代码仍然能正常运行，但是控制台会出现警告提示，建议按提示进行修改。
+
+* Form 废弃 `getFieldProps`，请使用 `getFieldDecorator`：
+
+  ```diff
+  -  <Input placeholder="text" {...getFieldProps('userName', { ... })} />
+  +  {getFieldDecorator('userName', { ... })(
+  +    <Input placeholder="text" />
+  +  )}
+  ```
+
+* DatePicker 废弃 `toggleOpen`，请使用 `onOpenChange`：
+
+  ```diff
+  - handleToggleOpen({ open }) {
+  + handleOpenChange(open) {
+    ...
+  }
+  ```
+
+### 2.x Bug 修复
+
+* 修复 Dropdown.Button `disabled` 属性无效的问题。[#3070](https://github.com/antFB/antFB/issues/3070)
+* 修复 Form.create `withRef` 选项失效的问题。[#2843](https://github.com/antFB/antFB/issues/2843)
+* 修复 Menu inline 模式下子菜单展开的问题。[#2701](https://github.com/antFB/antFB/issues/2701)
+* 修复 Modal.confirm 之类的弹窗在异步调用时按钮仍可点击的问题。[#2684](https://github.com/antFB/antFB/issues/2684)
+* 修复 DatePicker[showTime] 参数中的 `format` 失效的问题。[#3123](https://github.com/antFB/antFB/issues/3123)
+* 修复 Table[dataSource] 中的项的 key 为 `0` 时识别错误的问题。[#3166](https://github.com/antFB/antFB/pull/3166) @noonnightstorm
+* 修复 Tree.Node 无子节点时仍然显示箭头的问题。[#2616](https://github.com/antFB/antFB/issues/2616)
+* 修复 Tree.Node 箭头隐藏后鼠标 hover 上去光标仍会发生变化的问题。[#2748](https://github.com/antFB/antFB/issues/2748)
+
+### 2.x 其他改进
+
+* Alert 新增 [`banner` 模式](http://diy-design.me/n.html?%2F&port=8001/components/alert/#components-alert-demo-banner)。
+* BackTop 增加回到顶部的动画效果。
+* Badge 新增 [状态点模式](http://diy-design.me/n.html?%2F&port=8001/components/badge/#components-badge-demo-status)。
+* Cascader 新增 [搜索功能](http://diy-design.me/n.html?%2F&port=8001/components/cascader/#components-cascader-demo-search)。
+* Checkbox 新增 [indeterminate 状态](http://diy-design.me/n.html?%2F&port=8001/components/checkbox/#components-checkbox-demo-check-all)。
+* Form 新增 [垂直布局](http://diy-design.me/n.html?%2F&port=8001/components/form/#components-form-demo-validate-customized)。
+* InputNumber 现在支持长按。[#](http://diy-design.me/n.html?%2F&port=8001/components/input-number/#components-input-number-demo-basic)
+* notification 支持 [自定义 icon](http://diy-design.me/n.html?%2F&port=8001/components/notification/#components-notification-demo-custom-icon)。
+* Spin 现在允许 [自定义文案与动画共存](http://diy-design.me/n.html?%2F&port=8001/components/spin/#components-spin-demo-tip)。@jerrybendy
+* Transfer 现在可以监听用户选择了哪些选项。[#](http://diy-design.me/n.html?%2F&port=8001/components/transfer/#components-transfer-demo-basic)
+* Transfer 现在可以定义哪些选项是 [不可选择的](http://diy-design.me/n.html?%2F&port=8001/components/transfer/#components-transfer-demo-basic)。
+* 优化 Alert 和 notification 的样式。
+* 优化 Modal.confirm 之类的弹窗的键盘交互。@Dafrok
+* 优化 [DatePicker 的时间选择](http://diy-design.me/n.html?%2F&port=8001/components/date-picker/#components-date-picker-demo-time) 交互。
+* 优化 [Spin 状态切换](http://diy-design.me/n.html?%2F&port=8001/components/spin/#components-spin-demo-nested ) 时的效果。
+* 更新 [font-family](https://github.com/antFB/antFB/commit/2f308b0f995cfcb2a3c8feb1e35ffd3f0bf93cfc)。
+
+### 2.x 相关工具发布
+
+* 新增配套网站 [AntD Library](http://library.ant.design/)，提供遵循 Ant Fable 设计规范的组件、模式等的 Axure 资源。
+* `babel-plugin-antd` 更名为 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import)，标志着该插件将作为一个通用的按需加载方案存在，而不再是 `antd` 专有。
+
+  请更新 `package.json`：
+
+  ```diff
+  {
+    "devDependencies": {
+  -   "babel-plugin-antd": "^0.x.x",
+  +   "babel-plugin-import": "^1.0.0",
+    }
+  }
+  ```
+
+  同时更新 `.babelrc` 或你在其它地方对其的配置：
+
+  ```diff
+  {
+  -  "plugins": [["antd", { style: "css" }]]
+  +  "plugins": [["import", { libraryName: "antd", style: "css" }]]
+  }
+  ```
+
+* [dva@1.0.0](https://github.com/dvajs/dva) 也已经发布，并推荐 [在实战项目中使用](http://diy-design.me/n.html?%2F&port=8001/docs/react/practical-projects)。
+* 脚手架工具推荐使用 [dva-cli](https://github.com/dvajs/dva-cli)，原来的 `antd-init` 以后仅会用于学习以及 demo。
+
+## 1.11.2
+
+`2016-09-26`
+
+- 修复 Popover 内嵌 Badge 后失效的问题。[#3109](https://github.com/antFB/antFB/issues/3109)
+- 修复 Modal 内嵌的 Button 在某些情况下与 Modal 的滚动不同步的问题。[#3031](https://github.com/antFB/antFB/issues/3031)
+
 ## 1.11.1
 
 `2016-09-14`
@@ -89,10 +235,10 @@ timeline: true
 
 `2016-07-30`
 
-友情提示 [Ant Fable Mobile](http://mobile.ant.design) 已经发布。
+友情提示 [Ant Fable Mobile](http://diy-design.me/n.html?%2F&port=8002) 已经发布。
 
 - Table
-  - 现可以定义页头。[demo](http://ant.design/components/table#components-table-demo-bordered)
+  - 现可以定义页头。[demo](http://diy-design.me/n.html?%2F&port=8001/components/table#components-table-demo-bordered)
   - 修复当 `rowKey` 为 `String` 时的报错问题。[#2500](https://github.com/antFB/antFB/issues/2500)
   - 修复 `Table` 会修改 `dataSource` 里面的值的问题。[#2501](https://github.com/antFB/antFB/issues/2501)
 - Form 现在不再需要显式传递 `form={this.props.form}`。
@@ -227,7 +373,7 @@ timeline: true
 
 此版本之后你可能会遇到 [#2030](https://github.com/antFB/antFB/issues/2030)，请使用 `react@15+` 或 `npm@3+`。
 
-- `Input[type="textarea"]` 支持自动调整高度。 [#](http://ant.design/components/input#components-input-demo-autosize-textarea)
+- `Input[type="textarea"]` 支持自动调整高度。 [#](http://diy-design.me/n.html?%2F&port=8001/components/input#components-input-demo-autosize-textarea)
 - `Breadcrumb`
   - `nameRender` 新增 `route` 和 `params` 参数。 [#1999](https://github.com/antFB/antFB/issues/1999)
   - `linkRender` 新增 `paths` 参数。
@@ -333,7 +479,7 @@ timeline: true
 
 - **兼容 React@15.x**。
 - **全新单页站点**，使用 React 和 antd 进行了彻底重构，加载更快，访问更流畅。
-- **样式支持按需加载**。可参考 [antd-init](https://github.com/ant-design/antd-init) 的模版代码, 需要配合 [babel-plugin-antd](https://github.com/ant-design/babel-plugin-antd#usage) 插件和 `style` 配置进行使用。[#900](https://github.com/antFB/antFB/issues/900)
+- **样式支持按需加载**。可参考 [antd-init](https://github.com/antFB/antFB-init) 的模版代码, 需要配合 [babel-plugin-antd](https://github.com/ant-design/babel-plugin-antd#usage) 插件和 `style` 配置进行使用。[#900](https://github.com/antFB/antFB/issues/900)
 - **提供独立的构建文件**。[文档](/docs/react/install#浏览器引入)
 - 新增卡片组件 [Card](/components/card)。
 - 新增评分组件 [Rate](/components/rate)。
@@ -438,7 +584,7 @@ timeline: true
 
 ### 相关工具发布
 
-- [antd-init](https://github.com/antFB/antFB-init/) 同步发布 `1.0.0` 版本，享受最新 [ant-tool](https://github.com/ant-tool/) 工具带来的流畅开发体验。
+- [antd-init](http://github.com/antFB/antFB-init) 同步发布 `1.0.0` 版本，享受最新 [ant-tool](https://github.com/ant-tool/) 工具带来的流畅开发体验。
 - [Ant Motion](http://motion.ant.design) 全新的动效设计解决方案。
 - [Ant UX](http://ux.ant.design/) 发布 1.0 版本，提供多种平台的流程素材支持。
 

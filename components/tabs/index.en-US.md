@@ -1,14 +1,14 @@
 ---
 category: Components
 type: Navigation
-english: Tabs
+title: Tabs
 ---
 
 Tabs make it easy to switch between different views.
 
 ### When To Use
 
-Ant Design has 3 types Tabs for different situation.
+Ant Fable has 3 types Tabs for different situation.
 
 - Card Tabs: for managing too many closeable views.
 

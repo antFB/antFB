@@ -4,7 +4,7 @@ title: Ant Fable
 ---
 
 <div style="text-align:center;background:#FBFBFB;margin:40px 0;">
-  <img align="middle" width="600" src="https://os.alipayobjects.com/rmsportal/mgesTPFxodmIwpi.png">
+  <img style="width: 600px" src="https://os.alipayobjects.com/rmsportal/mgesTPFxodmIwpi.png">
 </div>
 
 In the development process of middleware products, many different design specs and implementations would be involved, which might cause designers and developers difficulties and duplication and reduce the efficiency of development. After massive project practice and summaries, Ant Fable, a design language for middleware, is refined by Experience Technology Department of Ant Financial, which aims to uniform the user interface specs for middleware projects, reduce the unnecessary cost of design differences and implementation and liberate the resources of design and front-end development.
@@ -26,9 +26,11 @@ Ant Fable, created specially for middleware design, is committed to improving th
 
 [React](http://facebook.github.io/react/) is used to encapsulate a library of Ant Fable components. Any other version of frameworks to implement is also welcome.
 
-- [Ant Fable of React](/docs/react/introduce)（official implementation）
-- [vue-antd](https://github.com/okoala/vue-antd)
-- [antd-ember](https://github.com/idcos/antd-ember)
+- [Ant Fable of React](/docs/react/introduce) (official implementation)
+- <div class="outside-link"><a href="https://github.com/FE-Driver/vue-beauty" target="_blank">vue-beauty</a></div>
+- <div class="outside-link internal"><a href="http://naza.alibaba.net" target="_blank">Ant Fable of Angular 2.0</a></div>
+- <div class="outside-link"><a href="https://github.com/okoala/vue-antd" target="_blank">vue-antd</a></div>
+- <div class="outside-link"><a href="https://github.com/idcos/antd-ember" target="_blank">antd-ember</a></div>
 
 ## How to Contribute
 

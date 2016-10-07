@@ -1,16 +1,16 @@
 ---
-order: 0/home/check/antFB/antDesign/docs/react/introduce.zh-CN.md
+order: 0
 title: Ant Fable of React
 ---
 
-这里是 Ant Fable 的 React 实现，开发和服务于企业级后台产品。
+这里是 Ant Fable 的 React 实现，基于ant design开发，服务于企业级后台产品。
 
 <div class="pic-plus">
   <img width="150" src="https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg">
   <span>+</span>
   <img width="160" src="https://t.alipayobjects.com/images/rmsweb/T16xRhXkxbXXXXXXXX.svg">
   <span>+</span>
-  <img width="160" src="/images/icon.svg">
+  <img width="150" src="/images/icon.svg">
 </div>
 
 <style>
@@ -36,7 +36,8 @@ title: Ant Fable of React
 ## 安装
 
 ```bash
-$ npm install antFB
+$ npm install antFB-init
+antFB-init --ie8
 ```
 
 ## 示例
@@ -46,33 +47,14 @@ import { DatePicker } from 'antFB';
 ReactDOM.render(<DatePicker />, mountNode);
 ```
 
-引入样式：
-
-```jsx
-import 'antFB/dist/antd.css';  // or 'antFB/dist/antd.less'
-```
-
-以下两种方法都可以达到按需加载的目的：
-
-- `import DatePicker from 'antFB/lib/date-picker'`
-- 配合插件 [babel-plugin-antd](https://github.com/ant-design/babel-plugin-antd) 使用 `import { DatePicker } from 'antFB';`(推荐）	
-
-> babel-plugin-antd 支持 js 和 css 同时按需加载。
-
-## 浏览器支持
-
-现代浏览器和 IE8 及以上。
-
-> [IE8 issues](https://github.com/xcatliu/react-ie8)
-
 ## 链接
 
-- [首页](http://ant.design/)
+- [首页](http://diy-design.me/n.html?%2F&port=8001/)
 - [更新日志](/changelog)
 - [开发脚手架](https://github.com/antFB/antFB-init/)
 - [开发工具文档](http://ant-tool.github.io/)
 - [React 基础组件](http://react-component.github.io/)
-- [移动端组件](http://mobile.ant.design)
+- [移动端组件](http://diy-design.me/n.html?%2F&port=8002)
 - [React 代码规范](https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-code-style.md)
 - [组件设计原则](https://github.com/react-component/react-component.github.io/blob/master/docs/zh-cn/component-design.md)
 - [设计规范速查手册](https://os.alipayobjects.com/rmsportal/HTXUgPGkyyxEivE.png)

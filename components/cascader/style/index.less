@@ -11,8 +11,6 @@
     cursor: pointer;
     width: 100%;
     z-index: 1;
-    background: transparent;
-    color: transparent;
   }
   &-picker {
     position: relative;
@@ -22,6 +20,10 @@
     font-size: @font-size-base;
     background-color: #fff;
     border-radius: @border-radius-base;
+
+    &-with-value &-label {
+      color: transparent;
+    }
 
     &-disabled {
       cursor: not-allowed;
@@ -80,7 +82,7 @@
       margin-top: -6px;
       line-height: 12px;
       color: #999;
-      .iconfont-size-under-12px(8px);
+      .iconfont-size-under-12px(9px);
       &:before {
         transition: transform 0.2s ease;
       }
@@ -170,7 +172,7 @@
     &-expand {
       position: relative;
       &:after {
-        .iconfont-font("\e600");
+        .iconfont-font("\e61f");
         .iconfont-size-under-12px(8px);
         color: #999;
         position: absolute;

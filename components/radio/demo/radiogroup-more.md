@@ -14,7 +14,7 @@ title:
 Vertical RadioGroup, with more radios.
 
 ```jsx
-import { Radio, Input } from 'antd';
+import { Radio, Input } from 'antFB';
 const RadioGroup = Radio.Group;
 
 const App = React.createClass({

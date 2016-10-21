@@ -14,7 +14,7 @@ title:
 Input.Group example
 
 ````jsx
-import { Input, Col } from 'antd';
+import { Input, Col } from 'antFB';
 const InputGroup = Input.Group;
 
 ReactDOM.render(

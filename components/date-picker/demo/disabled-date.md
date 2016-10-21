@@ -18,7 +18,7 @@ Specify unselectable period by `disabledDate`.
 As in the example above: you can't select a date later than today.
 
 ````jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'antFB';
 
 const disabledDate = function (current) {
   // can not select days after today

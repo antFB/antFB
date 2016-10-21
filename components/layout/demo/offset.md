@@ -19,7 +19,7 @@ Column offset.
 
 
 ````jsx
-import { Row, Col } from 'antd';
+import { Row, Col } from 'antFB';
 
 ReactDOM.render(
   <div>

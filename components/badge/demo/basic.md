@@ -14,7 +14,7 @@ title:
 Simplest Usage.
 
 ````jsx
-import { Badge } from 'antd';
+import { Badge } from 'antFB';
 
 ReactDOM.render(
   <Badge count={5}>

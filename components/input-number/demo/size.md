@@ -14,7 +14,7 @@ title:
 There are three sizes available to a numeric input box. By default, the size is `28px`. The two additional sizes are `large` and `small` which means `32px` and `22px`, respectively.
 
 ````jsx
-import { InputNumber } from 'antd';
+import { InputNumber } from 'antFB';
 
 function onChange(value) {
   console.log('changed', value);

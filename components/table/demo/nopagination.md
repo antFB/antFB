@@ -14,7 +14,7 @@ title:
 Set `pagination={false}`, then no data paging and pagination will be shown.
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'antFB';
 
 const columns = [{
   title: 'Name',

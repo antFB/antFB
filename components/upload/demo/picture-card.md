@@ -14,7 +14,7 @@ title:
 If uploade file is picture, a thumbnail can be shown.
 
 ````jsx
-import { Upload, Icon, Modal } from 'antd';
+import { Upload, Icon, Modal } from 'antFB';
 
 const ImageUploadList = React.createClass({
   getInitialState() {

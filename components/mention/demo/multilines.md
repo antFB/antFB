@@ -14,7 +14,7 @@ title:
 Multi lines mode.
 
 ````jsx
-import { Mention } from 'antd';
+import { Mention } from 'antFB';
 const { toString } = Mention;
 
 function onChange(editorState) {

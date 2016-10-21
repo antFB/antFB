@@ -14,7 +14,7 @@ title:
 The most basic usage. 
 
 ````jsx
-import { TimePicker } from 'antd';
+import { TimePicker } from 'antFB';
 
 function onChange(time, timeString) {
   console.log(time, timeString);

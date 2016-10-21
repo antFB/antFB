@@ -15,7 +15,7 @@ If uploade file is picture, a thumbnail can be shown. `IE8/9` do not support loc
 
 
 ````jsx
-import { Upload, Button, Icon } from 'antd';
+import { Upload, Button, Icon } from 'antFB';
 
 const props = {
   action: '/upload.do',

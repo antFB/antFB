@@ -14,7 +14,7 @@ title:
 There are two built-in themes: 'light' and 'dark'. The default value is 'light'.
 
 ````jsx
-import { Menu, Icon, Switch } from 'antd';
+import { Menu, Icon, Switch } from 'antFB';
 const SubMenu = Menu.SubMenu;
 
 const Sider = React.createClass({

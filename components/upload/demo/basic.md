@@ -14,7 +14,7 @@ title:
 Classic mode. File selection dialog pops up when upload button is clicked 
 
 ````jsx
-import { Upload, message, Button, Icon } from 'antd';
+import { Upload, message, Button, Icon } from 'antFB';
 
 const props = {
   name: 'file',

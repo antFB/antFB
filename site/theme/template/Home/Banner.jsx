@@ -33,7 +33,7 @@ export default function Banner() {
             </Link>
           </div>
           <GitHubButton key="github-button" type="stargazers"
-            namespace="ant-design" repo="ant-design"
+            namespace="antFB" repo="antFB"
           />
         </QueueAnim>
         <Icon type="down" className="down" />

@@ -14,7 +14,7 @@ title:
 The count will be animated as it changes.
 
 ````jsx
-import { Badge, Button, Icon } from 'antd';
+import { Badge, Button, Icon } from 'antFB';
 const ButtonGroup = Button.Group;
 
 const Test = React.createClass({

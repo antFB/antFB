@@ -14,7 +14,7 @@ title:
 Rows can be selectable by making fisrt column as a selectable column.
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'antFB';
 
 const columns = [{
   title: 'Name',

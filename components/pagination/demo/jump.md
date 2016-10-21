@@ -14,7 +14,7 @@ title:
 Jump to a page directly.
 
 ````jsx
-import { Pagination } from 'antd';
+import { Pagination } from 'antFB';
 
 ReactDOM.render(
   <Pagination showQuickJumper defaultCurrent={2} total={500} />,

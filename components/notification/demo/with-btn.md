@@ -14,7 +14,7 @@ title:
 To customize the style or font of the close button.
 
 ````jsx
-import { Button, notification } from 'antd';
+import { Button, notification } from 'antFB';
 
 const close = function () {
   console.log('Notification was closed. Either the close button was clicked or duration time elapsed.');

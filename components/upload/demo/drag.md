@@ -15,7 +15,7 @@ You can drag files to a specific area, to upload. Meanwhile you can also upload 
 
 
 ````jsx
-import { Upload, Icon, message } from 'antd';
+import { Upload, Icon, message } from 'antFB';
 const Dragger = Upload.Dragger;
 
 const props = {

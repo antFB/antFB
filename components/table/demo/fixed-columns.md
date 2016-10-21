@@ -22,7 +22,7 @@ Fix some columns and scroll in other columns. You must set `scoll.x` meanwhile.
 > A fixed width for `scroll.x` is recommended.
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'antFB';
 
 const columns = [
   { title: 'Full Name', width: 100, dataIndex: 'name', key: 'name', fixed: 'left' },

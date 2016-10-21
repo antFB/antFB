@@ -14,7 +14,7 @@ title:
 when use pagination in table.
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'antFB';
 
 const columns = [{
   title: 'Name',

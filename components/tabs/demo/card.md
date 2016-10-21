@@ -15,7 +15,7 @@ Another type Tabs, which doesn't support vertical mode.
 
 
 ````jsx
-import { Tabs } from 'antd';
+import { Tabs } from 'antFB';
 const TabPane = Tabs.TabPane;
 
 function callback(key) {

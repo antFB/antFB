@@ -14,7 +14,7 @@ title:
 Affix to bottom.
 
 ````jsx
-import { Affix, Button } from 'antd';
+import { Affix, Button } from 'antFB';
 
 ReactDOM.render(
   <Affix offsetBottom={20}>

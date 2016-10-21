@@ -14,7 +14,7 @@ title:
 Simple demo of tag, 'closable' property represents which can be closed.
 
 ````jsx
-import { Tag } from 'antd';
+import { Tag } from 'antFB';
 
 function onClose(e) {
   console.log(e);

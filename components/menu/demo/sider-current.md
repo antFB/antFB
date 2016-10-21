@@ -18,7 +18,7 @@ Click the menu and you will see that all the other menus gets collapsed to keep 
 > This demo is for antd@2.0+.
 
 ````jsx
-import { Menu, Icon } from 'antd';
+import { Menu, Icon } from 'antFB';
 const SubMenu = Menu.SubMenu;
 
 const Sider = React.createClass({

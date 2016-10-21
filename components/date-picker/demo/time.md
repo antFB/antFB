@@ -14,7 +14,7 @@ title:
 This property provide an additional time selection. When `showTime` is an Object, its properties will be passed on to `TimePicker`, which is a built-in function.
 
 ````jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'antFB';
 
 function onChange(value) {
   console.log('Selected Time: ', value);

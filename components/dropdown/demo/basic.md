@@ -14,7 +14,7 @@ title:
 The most basic dropdown menu.
 
 ````jsx
-import { Menu, Dropdown, Icon } from 'antd';
+import { Menu, Dropdown, Icon } from 'antFB';
 
 const menu = (
   <Menu>

@@ -14,7 +14,7 @@ title:
 When `Alert` is used as banner, it has particular style, Icon and `type`(warning) are specified by default.
 
 ````jsx
-import { Alert } from 'antd';
+import { Alert } from 'antFB';
 
 ReactDOM.render(
   <div>

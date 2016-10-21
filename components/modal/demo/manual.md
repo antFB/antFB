@@ -14,7 +14,7 @@ title:
 Manually destroying a modal.
 
 ````jsx
-import { Modal, Button } from 'antd';
+import { Modal, Button } from 'antFB';
 
 function success() {
   const modal = Modal.success({

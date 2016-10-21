@@ -14,7 +14,7 @@ title:
 A disabled state of the `DatePicker`.
 
 ````jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'antFB';
 import moment from 'moment';
 
 ReactDOM.render(

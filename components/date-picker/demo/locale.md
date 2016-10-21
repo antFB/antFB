@@ -19,7 +19,7 @@ moment will use your time zone automatically. If you want to set other time zone
 
 
 ````jsx
-import { DatePicker } from 'antd';
+import { DatePicker } from 'antFB';
 import enUS from 'antd/lib/date-picker/locale/en_US';
 import moment from 'moment-timezone/moment-timezone';
 // It's recommended to set moment locale and time zone globally in entry file,

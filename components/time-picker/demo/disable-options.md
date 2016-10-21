@@ -13,7 +13,7 @@ title:
 You can't select the time from `20:30` to `23:30`.
 
 ````jsx
-import { TimePicker } from 'antd';
+import { TimePicker } from 'antFB';
 
 function newArray(start, end) {
   const result = [];

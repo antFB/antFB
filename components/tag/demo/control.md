@@ -18,7 +18,7 @@ Generating a set of tag by array, you can dynamically add and remove.
 Using 'afterClose' property, There are animated when a tag was removed.
 
 ````jsx
-import { Tag, Button } from 'antd';
+import { Tag, Button } from 'antFB';
 
 let index = 3;
 const App = React.createClass({

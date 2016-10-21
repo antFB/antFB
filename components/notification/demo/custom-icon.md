@@ -14,7 +14,7 @@ title:
 The icon can be customized to any react node.
 
 ````jsx
-import { Button, notification, Icon } from 'antd';
+import { Button, notification, Icon } from 'antFB';
 
 const openNotification = function () {
   notification.open({

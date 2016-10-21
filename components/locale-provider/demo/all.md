@@ -15,7 +15,7 @@ Components which need localization support are listed here, you can toggle the l
 
 ````jsx
 import { LocaleProvider, Pagination, DatePicker, TimePicker, Calendar,
-         Popconfirm, Table, Modal, Button, Select, Transfer, Radio } from 'antd';
+         Popconfirm, Table, Modal, Button, Select, Transfer, Radio } from 'antFB';
 import enUS from 'antd/lib/locale-provider/en_US';
 import moment from 'moment';
 import 'moment/locale/zh-cn';

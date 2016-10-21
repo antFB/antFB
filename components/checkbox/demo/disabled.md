@@ -14,7 +14,7 @@ checkbox 不可用。
 Disabled checkbox.
 
 ````jsx
-import { Checkbox } from 'antd';
+import { Checkbox } from 'antFB';
 
 ReactDOM.render(<div>
   <Checkbox defaultChecked={false} disabled />

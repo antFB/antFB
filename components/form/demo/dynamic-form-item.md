@@ -14,7 +14,7 @@ title:
 Add or remove form items dynamically.
 
 ````jsx
-import { Form, Input, Button } from 'antd';
+import { Form, Input, Button } from 'antFB';
 
 let uuid = 0;
 let Demo = React.createClass({

@@ -14,7 +14,7 @@ module.exports = {
     'app.content.edit-page': '在 Github 上编辑此页！',
     'app.content.edit-demo': '在 Github 上编辑此示例！',
     'app.component.examples': '代码演示',
-    'app.home.slogan': '一个 UI 设计语言',
+    'app.home.slogan': '基于Ant-Design实现',
     'app.home.introduce': '介绍',
     'app.home.start': '开始使用',
     'app.home.best-practice': '最佳实践',

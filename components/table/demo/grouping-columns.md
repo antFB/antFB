@@ -14,7 +14,7 @@ title:
 Group table head with `columns[n].children`。
 
 ```jsx
-import { Table } from 'antd';
+import { Table } from 'antFB';
 
 const columns = [
   {

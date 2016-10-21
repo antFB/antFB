@@ -14,7 +14,7 @@ title:
 Additional description for alert message.
 
 ````jsx
-import { Alert } from 'antd';
+import { Alert } from 'antFB';
 
 ReactDOM.render(<div>
   <Alert

@@ -37,6 +37,8 @@ class Footer extends React.Component {
   }
 
   infoNewVersion() {
+    return;
+    
     const messages = this.props.intl.messages;
     Modal.info({
       title: messages['app.publish.title'],
@@ -74,7 +76,7 @@ class Footer extends React.Component {
           <li>
             <h2>GitHub</h2>
             <div>
-              <a target="_blank " href="https://github.com/ant-design/ant-design">
+              <a target="_blank " href="https://github.com/antFB/antFB">
                 <FormattedMessage id="app.footer.repo" />
               </a>
             </div>
@@ -135,7 +137,7 @@ class Footer extends React.Component {
               </a>
             </div>
             <div>
-              <a target="_blank" rel="noopener noreferrer" href="https://gitter.im/ant-design/ant-design">
+              <a target="_blank" rel="noopener noreferrer" href="https://gitter.im/antFB/antFB">
                 <FormattedMessage id="app.footer.discuss" />
               </a>
             </div>

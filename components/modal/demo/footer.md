@@ -16,7 +16,7 @@ the dialog will change to loading state after clicking submit button , when the 
 the modal dialog will be closed.
 
 ````jsx
-import { Modal, Button } from 'antd';
+import { Modal, Button } from 'antFB';
 
 const Test = React.createClass({
   getInitialState() {

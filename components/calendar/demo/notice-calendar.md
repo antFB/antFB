@@ -14,7 +14,7 @@ title:
 A complex application.
 
 ````jsx
-import { Calendar } from 'antd';
+import { Calendar } from 'antFB';
 
 function getListData(value) {
   let listData;

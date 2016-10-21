@@ -14,7 +14,7 @@ title:
 Set props to Checkbox or Radio.
 
 ````jsx
-import { Table } from 'antd';
+import { Table } from 'antFB';
 
 const columns = [{
   title: 'Name',

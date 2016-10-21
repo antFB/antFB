@@ -14,7 +14,7 @@ title:
 Basic Usage, set datasource of autocomplete with `dataSource` property.
 
 ````jsx
-import { AutoComplete } from 'antd';
+import { AutoComplete } from 'antFB';
 
 const Complete = React.createClass({
   getInitialState() {

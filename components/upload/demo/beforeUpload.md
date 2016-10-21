@@ -15,7 +15,7 @@ title:
 You can use `beforeUpload` to check whether user can upload, for example, limit file type only to be JPG. Checking can also be asynchronous. The return value can also be a Promise for function `beforeUpload`
 
 ````jsx
-import { Upload, Button, Icon, message } from 'antd';
+import { Upload, Button, Icon, message } from 'antFB';
 
 const props = {
   action: '/upload.do',

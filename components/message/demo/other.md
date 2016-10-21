@@ -14,7 +14,7 @@ title:
 Messages of success, error and warning types.
 
 ````jsx
-import { message, Button } from 'antd';
+import { message, Button } from 'antFB';
 
 const success = function () {
   message.success('This is a message of success');

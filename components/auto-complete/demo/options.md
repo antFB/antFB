@@ -14,7 +14,7 @@ title:
 You could pass `AutoComplete.Option` as children of `AutoComplete`, instead of using `dataSource`。
 
 ````jsx
-import { AutoComplete } from 'antd';
+import { AutoComplete } from 'antFB';
 
 const Option = AutoComplete.Option;
 

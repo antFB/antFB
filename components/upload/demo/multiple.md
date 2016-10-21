@@ -15,7 +15,7 @@ title:
 You can select multiple files with CTRL holding down. `IE10+` supported.
 
 ````jsx
-import { Upload, message, Button, Icon } from 'antd';
+import { Upload, message, Button, Icon } from 'antFB';
 
 const props = {
   action: '/upload.do',

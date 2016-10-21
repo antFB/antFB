@@ -15,7 +15,7 @@ A mix to demonstrate others ant-design component related to form.
 
 ````jsx
 import { Form, Select, InputNumber, DatePicker, TimePicker, Switch, Radio,
-         Cascader, Slider, Button, Col, Upload, Icon } from 'antd';
+         Cascader, Slider, Button, Col, Upload, Icon } from 'antFB';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
 moment.locale('zh-cn');

@@ -1,5 +1,5 @@
 import React from 'react';
-import RcTable from 'rc-table';
+import RcTable from 'rc-table-fb';
 import Checkbox from '../checkbox';
 import Radio from '../radio';
 import FilterDropdown from './filterDropdown';
